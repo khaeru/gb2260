@@ -130,9 +130,8 @@ code,name_zh,name_en,alpha
 331001,市辖区,City area
 331100,,Lishui
 331101,市辖区,City area
-340000,,Anhui
+340000,,Anhui,AH
 340101,市辖区,City area
-340181,,Chaohu
 340201,市辖区,City area
 340301,市辖区,City area
 340401,市辖区,City area
@@ -355,7 +354,6 @@ code,name_zh,name_en,alpha
 520400,,Anshun,ASS
 520401,市辖区,City area
 522300,,Southwest Guizhou,QXZ
-522400,,Bijie,BJD
 522600,,Southeast Guizhou,QND
 522700,,South Guizhou,QNZ
 530000,,Yunnan,YN
@@ -412,6 +410,7 @@ code,name_zh,name_en,alpha
 620801,市辖区,City area
 620900,,Jiuquan,JQG
 620901,市辖区,City area
+621000,,Qingyang,QYI
 621001,市辖区,City area
 621100,,Dingxi,DNX
 621101,市辖区,City area
