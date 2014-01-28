@@ -1,8 +1,11 @@
-code,name,name_en
+code,name_zh,name_en,alpha
+110000,,Beijing
 110100,市辖区,City area
 110200,县,County
+120000,,Tianjin
 120100,市辖区,City area
 120200,县,County
+130000,,Hebei
 130101,市辖区,City area
 130201,市辖区,City area
 130301,市辖区,City area
@@ -13,27 +16,44 @@ code,name,name_en
 130801,市辖区,City area
 130901,市辖区,City area
 131010,市辖区,City area
+131100,,Hengshui
 131101,市辖区,City area
+140000,,Shanxi,SX
 140101,市辖区,City area
 140201,市辖区,City area
 140301,市辖区,City area
 140401,市辖区,City area
 140501,市辖区,City area
 140601,市辖区,City area
+140700,,Jinzhong,JZN
 140701,市辖区,City area
+140800,,Yuncheng,YCE
 140801,市辖区,City area
+140900,,Xinzhou,XZS
 140901,市辖区,City area
+141000,,Linfen,LFN
 141010,市辖区,City area
+141100,,Luliang,LLH
 141101,市辖区,City area
+150000,,Inner Mongolia,NM
 150101,市辖区,City area
 150201,市辖区,City area
 150301,市辖区,City area
 150401,市辖区,City area
+150500,,Tongliao,TLO
 150501,市辖区,City area
+150600,,Ordos,ODS
 150601,市辖区,City area
+150700,,Hulunbei'er,HBR
 150701,市辖区,City area
+150800,,Bayannao'er,BYR
 150801,市辖区,City area
+150900,,Wulanchabu,ULS
 150901,市辖区,City area
+152200,,Xing'an,HIN
+152500,,Xilingol,XGO
+210000,,Liaoning,LN
+210100,,Shenyang,SHE
 210101,市辖区,City area
 210201,市辖区,City area
 210301,市辖区,City area
@@ -47,15 +67,22 @@ code,name,name_en
 211101,市辖区,City area
 211201,市辖区,City area
 211301,市辖区,City area
+211400,,Huludao,HLD
 211401,市辖区,City area
+220000,,Jilin
 220101,市辖区,City area
 220201,市辖区,City area
 220301,市辖区,City area
 220401,市辖区,City area
 220501,市辖区,City area
+220600,,Baishan
 220601,市辖区,City area
+220700,,Songyuan
 220701,市辖区,City area
+220800,,Baicheng,BCS
 220801,市辖区,City area
+230000,,Heilongjiang
+230100,,Harbin,HRB
 230101,市辖区,City area
 230201,市辖区,City area
 230301,市辖区,City area
@@ -67,9 +94,13 @@ code,name,name_en
 230901,市辖区,City area
 231001,市辖区,City area
 231101,市辖区,City area
+231200,,Suihua
 231201,市辖区,City area
+232700,,Daxing'anling,DHL
+310000,,Shanghai
 310100,市辖区,City area
 310200,县,County
+320000,,Jiangsu,JS
 320101,市辖区,City area
 320201,市辖区,City area
 320301,市辖区,City area
@@ -77,12 +108,16 @@ code,name,name_en
 320501,市辖区,City area
 320601,市辖区,City area
 320701,市辖区,City area
+320800,,Huai'an,HAS
 320801,市辖区,City area
 320901,市辖区,City area
 321001,市辖区,City area
 321101,市辖区,City area
+321200,,Taizhou,TZS
 321201,市辖区,City area
+321300,,Suqian
 321301,市辖区,City area
+330000,,Zhejiang
 330101,市辖区,City area
 330201,市辖区,City area
 330301,市辖区,City area
@@ -93,8 +128,11 @@ code,name,name_en
 330801,市辖区,City area
 330901,市辖区,City area
 331001,市辖区,City area
+331100,,Lishui
 331101,市辖区,City area
+340000,,Anhui
 340101,市辖区,City area
+340181,,Chaohu
 340201,市辖区,City area
 340301,市辖区,City area
 340401,市辖区,City area
@@ -104,12 +142,19 @@ code,name,name_en
 340801,市辖区,City area
 341001,市辖区,City area
 341101,市辖区,City area
+341200,,Fuyang,FYS
 341201,市辖区,City area
+341300,,Suzhou,SUZ
 341301,市辖区,City area
+341500,,Lu'an
 341501,市辖区,City area
+341600,,Bozhou
 341601,市辖区,City area
+341700,,Chizhou
 341701,市辖区,City area
+341800,,Xuancheng
 341801,市辖区,City area
+350000,,Fujian
 350101,市辖区,City area
 350201,市辖区,City area
 350301,市辖区,City area
@@ -117,19 +162,29 @@ code,name,name_en
 350501,市辖区,City area
 350601,市辖区,City area
 350701,市辖区,City area
+350800,,Longyan
 350801,市辖区,City area
+350900,,Ningde
 350901,市辖区,City area
+360000,,Jiangxi
 360101,市辖区,City area
 360201,市辖区,City area
 360301,市辖区,City area
 360401,市辖区,City area
 360501,市辖区,City area
 360601,市辖区,City area
+360700,,Ganzhou
 360701,市辖区,City area
+360800,,Ji'an,JAS
 360801,市辖区,City area
+360900,,Yichun,YCN
 360901,市辖区,City area
+361000,,Fuzhou,FUZ
 361001,市辖区,City area
+361100,,Shangrao
 361101,市辖区,City area
+370000,,Shandong,SD
+370100,,Jinan,TNA
 370101,市辖区,City area
 370201,市辖区,City area
 370301,市辖区,City area
@@ -137,16 +192,24 @@ code,name,name_en
 370501,市辖区,City area
 370601,市辖区,City area
 370701,市辖区,City area
+370800,,Jining,JNG
 370801,市辖区,City area
+370900,,Tai'an,TAI
 370901,市辖区,City area
 371001,市辖区,City area
 371101,市辖区,City area
 371201,市辖区,City area
+371300,,Linyi,LYI
 371301,市辖区,City area
+371400,,Dezhou,DZS
 371401,市辖区,City area
+371500,,Liaocheng,LCH
 371501,市辖区,City area
+371600,,Binzhou,BZH
 371601,市辖区,City area
+371700,,Heze,HZS
 371701,市辖区,City area
+410000,,Henan,HA
 410101,市辖区,City area
 410201,市辖区,City area
 410301,市辖区,City area
@@ -160,12 +223,17 @@ code,name,name_en
 411101,市辖区,City area
 411201,市辖区,City area
 411301,市辖区,City area
+411400,,Shangqiu,SQS
 411401,市辖区,City area
+411500,,Xinyang,XYG
 411501,市辖区,City area
+411600,,Zhoukou,ZKS
 411601,市辖区,City area
+411700,,Zhumadian,ZMD
 411701,市辖区,City area
 411801,市辖区,City area
 411901,省直辖县级行政区划,Directly under the provincial level administrative divisions
+420000,,Hubei,HB
 420101,市辖区,City area
 420201,市辖区,City area
 420301,市辖区,City area
@@ -175,13 +243,19 @@ code,name,name_en
 420801,市辖区,City area
 420901,市辖区,City area
 421001,市辖区,City area
+421100,,Huanggang
 421101,市辖区,City area
+421200,,Xianning
 421201,市辖区,City area
+421300,,Suizhou
 421301,市辖区,City area
 429000,省直辖县级行政区划,Directly under the provincial level administrative divisions
+430000,,Hunan,HN
 430101,市辖区,City area
 430201,市辖区,City area
+430300,,Xiangtan,XGT
 430301,市辖区,City area
+430400,,Hengyang,HNY
 430401,市辖区,City area
 430501,市辖区,City area
 430601,市辖区,City area
@@ -189,9 +263,14 @@ code,name,name_en
 430801,市辖区,City area
 430901,市辖区,City area
 431001,市辖区,City area
+431100,,Yongzhou,YZS
 431101,市辖区,City area
+431200,,Huaihua,HHS
 431201,市辖区,City area
+431300,,Loudi,LDI
 431301,市辖区,City area
+433100,,West Hunan,ZZX
+440000,,Guangdong
 440101,市辖区,City area
 440201,市辖区,City area
 440301,市辖区,City area
@@ -211,6 +290,7 @@ code,name,name_en
 445101,市辖区,City area
 445201,市辖区,City area
 445301,市辖区,City area
+450000,,Guangxi
 450101,市辖区,City area
 450201,市辖区,City area
 450301,市辖区,City area
@@ -218,20 +298,31 @@ code,name,name_en
 450501,市辖区,City area
 450601,市辖区,City area
 450701,市辖区,City area
+450800,,Guigang
 450801,市辖区,City area
+450900,,Yulin
 450901,市辖区,City area
+451000,,Baise
 451001,市辖区,City area
+451100,,Hezhou
 451101,市辖区,City area
+451200,,Hechi
 451201,市辖区,City area
+451300,,Laibin
 451301,市辖区,City area
+451400,,Chongzuo
 451401,市辖区,City area
+460000,,Hainan
 460101,市辖区,City area
 460201,市辖区,City area
 469000,省直辖县级行政区划,Directly under the provincial level administrative divisions
+500000,,Chongqing
 500100,市辖区,City area
 500200,县,County
+510000,,Sichuan,SC
 510101,市辖区,City area
 510301,市辖区,City area
+510400,,Panzhihua,PZH
 510401,市辖区,City area
 510501,市辖区,City area
 510601,市辖区,City area
@@ -241,53 +332,109 @@ code,name,name_en
 511001,市辖区,City area
 511101,市辖区,City area
 511301,市辖区,City area
+511400,,Meishan
 511401,市辖区,City area
+511500,,Yibin
 511501,市辖区,City area
+511600,,Guang'an
 511601,市辖区,City area
+511700,,Dazhou
 511701,市辖区,City area
+511800,,Ya'an
 511801,市辖区,City area
+511900,,Bazhong
 511901,市辖区,City area
+512000,,Ziyang,ZYS
 512001,市辖区,City area
+513300,,Ganzi,GAZ
+520000,,Guizhou,GZ
 520101,市辖区,City area
+520200,,Liupanshui,LPS
+520300,,Zunyi,ZNY
 520301,市辖区,City area
+520400,,Anshun,ASS
 520401,市辖区,City area
+522300,,Southwest Guizhou,QXZ
+522400,,Bijie,BJD
+522600,,Southeast Guizhou,QND
+522700,,South Guizhou,QNZ
+530000,,Yunnan,YN
 530101,市辖区,City area
+530300,,Qujing,QJS
 530301,市辖区,City area
+530400,,Yuxi,YXS
 530401,市辖区,City area
+530500,,Baoshan,BOS
 530501,市辖区,City area
+530600,,Zhaotong,ZTS
 530601,市辖区,City area
+530700,,Lijiang,LJH
 530701,市辖区,City area
+530800,,Pu'er,PRS
 530801,市辖区,City area
+530900,,Lincang,LIH
 530901,市辖区,City area
+533300,,Nujiang,NUJ
+533400,,Diqing,DEZ
+540000,,Tibet,XZ
 540101,市辖区,City area
+542100,,Qamdu
+542200,,Lhokha
+542400,,Nagqu
+542500,,Ngari
+610000,,Shaanxi,SN
 610101,市辖区,City area
 610201,市辖区,City area
 610301,市辖区,City area
 610401,市辖区,City area
 610501,市辖区,City area
+610600,,Yan'an,YNA
 610601,市辖区,City area
+610700,,Hanzhong,HZJ
 610701,市辖区,City area
+610800,,Yulin,YLN
 610801,市辖区,City area
+610900,,Ankang,ANK
 610901,市辖区,City area
+611000,,Shangluo,SLH
 611001,市辖区,City area
+620000,,Gansu,GS
 620101,市辖区,City area
 620201,市辖区,City area
 620301,市辖区,City area
 620401,市辖区,City area
 620501,市辖区,City area
+620600,,Wuwei,WWS
 620601,市辖区,City area
+620700,,Zhangye,ZYE
 620701,市辖区,City area
+620800,,Pingliang,PLS
 620801,市辖区,City area
+620900,,Jiuquan,JQG
 620901,市辖区,City area
 621001,市辖区,City area
+621100,,Dingxi,DNX
 621101,市辖区,City area
+621200,,Longnan,LGN,
 621201,市辖区,City area
+630000,,Qinghai,QH
 630101,市辖区,City area
+632100,,Haidong,HDD
+632800,,Haixi,HXZ
+640000,,Ningxia
 640101,市辖区,City area
 640201,市辖区,City area
+640300,,Wuzhong
 640301,市辖区,City area
+640400,,Guyuan,GYN
 640401,市辖区,City area
+640500,,Zhongwei
 640501,市辖区,City area
+650000,,Xinjiang
 650101,市辖区,City area
 650201,市辖区,City area
+653100,,Kashi
 659000,自治区直辖县级行政区划,Autonomous region directly under the county administrative divisions
+710000,,Taiwan
+810000,,Hong Kong
+820000,,Macau
