@@ -17,10 +17,12 @@ import jianfan
 
 
 __all__ = [
+    'alpha',
+    'AmbiguousKeyError',
     'codes',
+    'level',
     'lookup',
     'parent',
-    'partial',
     'split',
     'within',
     ]
@@ -32,7 +34,34 @@ URL = "http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201401/t20140116_501070.html"
 codes = {}
 
 
+class AmbiguousKeyError(IndexError):
+    """Exception for lookup()"""
+    pass
+
+# Construct the path to a filename in the package's data directory
 data_fn = lambda base: os.path.join(DATA_DIR, '{}.csv'.format(base))
+
+
+def alpha(code, prefix='CN-'):
+    """Return an 'ISO 3166-2-like' alpha code for *code*.
+    
+    ISO 3166-2:CN defines codes like "CN-11" for Beijing, where "11" are the
+    first two digits of the GB/T 2260 code, 110000. An 'ISO 3166-2-like' alpha
+    code uses the official GB/T 2260 two-letter alpha codes for province-level
+    divisions (e.g. 'BJ'), and three-letter alpha codes for lower divisions,
+    separated by hyphens.
+    """
+    result = prefix
+    for parent_level in range(1, level(code)):
+        parent_code = codes[parent(code, parent_level)]['alpha']
+        if len(parent_code) == 0:
+            raise ValueError('No alpha code for parent division {}.'.format(
+                             parent(code)))
+        result += parent_code + '-'
+    alpha_ = codes[code]['alpha']
+    if len(alpha_) == 0:
+        raise ValueError('No alpha code for {}.'.format(code))
+    return result + alpha_
 
 
 def dict_update(a, b, conflict='raise'):
@@ -64,21 +93,37 @@ def load_file(f, key):
     return result
 
 
-def lookup(name, lang='en', fragment=None, top=True):
+def level(code):
+    """Return the administrative level of *code*."""
+    return 3 - sum([1 if c == 0 else 0 for c in split(code)])
+
+
+def lookup(name, lang='en', parent=None, highest=True):
+    """Lookup a code for the given *name*.
+
+    The *name* is given in language *lang* (either 'en' or 'zh').
+
+    The *parent* and *highest* arguments determine how to resolve ambiguities
+    (cases where more than one name_en or name_zh match *name*). If a GB/T 2260
+    code *parent* is given, only codes for children of the parent region will
+    be returned. For instance, with parent=350000, only codes from 350000 to
+    360000 (exclusive) will be returned. If *highest* is True (the default),
+    then of two regions with matching names, the one at a higher administrative
+    level will be returned.
+    """
     name_key = 'name_{}'.format(lang)
-    if fragment is not None:
-        digits = ceil(log10(fragment))
-        min_ = fragment * 10 ** (6 - digits)
-        max_ = (fragment + 1) * 10 ** (6 - digits)
-        fragment = lambda x: x >= min_ and x < max_
+    if parent is not None:
+        min_ = parent
+        max_ = parent + 10 ** (6 - 2 * level(parent))
+        parent = lambda x: x > min_ and x < max_
     matches = set()
-    for code in filter(fragment, sorted(codes.keys())):
+    for code in filter(parent, sorted(codes.keys())):
         if name in codes[code].get(name_key, ''):
             matches.add(code)
     if len(matches) == 1:
         return matches.pop()
     elif len(matches) > 1:
-        if top:
+        if highest:
             best = codes[min(matches, key=lambda x:
                          codes[x]['level'])]['level']
             matches = list(filter(lambda x: codes[x]['level'] == best,
@@ -89,7 +134,7 @@ def lookup(name, lang='en', fragment=None, top=True):
         message = ["{} name '{}' is ambiguous:".format(lang.upper(), name)]
         for code in matches:
             message.append('  {} {}'.format(code, codes[code][name_key]))
-        raise KeyError('\n'.join(message))
+        raise AmbiguousKeyError('\n'.join(message), name)
     else:
         raise KeyError("name '{}' not found".format(name))
 
@@ -108,7 +153,19 @@ def match_names(official, other):
         return False
 
 
-parent = lambda code, digits: code - (code % 10 ** (6 - digits))
+def parent(code, parent_level=None):
+    """Return a valid GB/T 2260 code that is the parent of *code*."""
+    l = level(code)
+    if parent_level is not None:
+        assert l - parent_level > 0, ("Code {} is at level {}, no parent at "
+                                      "level {}").format(code, l, parent_level)
+        l = parent_level
+    else:
+        l = level(code) - 1
+        assert l > 0, "No parent of top-level code {}.".format(code)
+    result = code - (code % 10 ** (6 - 2 * l))
+    assert code in codes
+    return result
 
 
 def parse_raw(f):
@@ -141,10 +198,6 @@ def parse_raw(f):
             'level': int(len(d['level']) / 2)
             }
     return result
-
-
-def partial(code, digits=2):
-    return int(code / 10 ** (6 - digits))
 
 
 split = lambda code: (int(code / 1e4), int(code % 1e4 / 100), code % 100)
@@ -231,6 +284,7 @@ def update(f, verbose=False):
 
 
 def within(a, b):
+    """Return True if division *a* is within (or the same as) division *b*."""
     a_ = split(a)
     b_ = split(b)
     if b_[2] == 0:
