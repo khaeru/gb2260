@@ -1,5 +1,5 @@
 code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
-110000,北京市,Beijing,,,1,39.9081726,116.3979471
+110000,北京市,Beijing,,BJ,1,39.9081726,116.3979471
 110100,市辖区,City area,Beijing shixiaqu,,2,,
 110101,东城区,Beijing: Dongcheng qu,Beijing: Dongcheng qu,,3,39.9351199,116.4093947
 110102,西城区,Beijing: Xicheng qu,Beijing: Xicheng qu,,3,39.9351775,116.3638616
@@ -18,7 +18,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 110200,县,County,Beijing shixiaxian,,2,,
 110228,密云县,Miyun,Miyun,,3,40.5088887,117.0934224
 110229,延庆县,Yanqing,Yanqing,,3,40.526351,116.154896
-120000,天津市,Tianjin,,,1,39.1038561,117.2523808
+120000,天津市,Tianjin,,TJ,1,39.1038561,117.2523808
 120100,市辖区,City area,Tianjin shixiaqu,,2,,
 120101,和平区,Tianjin: Heping qu,Tianjin: Heping qu,,3,39.119648,117.1986401
 120102,河东区,Tianjin: Hedong qu,Tianjin: Hedong qu,,3,39.1210713,117.2568977
@@ -26,19 +26,19 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 120104,南开区,Tianjin: Nankai qu,Tianjin: Nankai qu,,3,39.107128,117.1532679
 120105,河北区,Tianjin: Hebei qu,Tianjin: Hebei qu,,3,39.1618784,117.2140682
 120106,红桥区,Tianjin: Hongqiao qu,Tianjin: Hongqiao qu,,3,39.1663205,117.1602416
-120110,东丽区,,,,3,39.1204804,117.4016726
-120111,西青区,,,,3,39.0002343,117.1217895
-120112,津南区,,,,3,38.9608437,117.3934865
-120113,北辰区,,,,3,39.2567314,117.1766567
+120110,东丽区,Tianjin: Dongli qu,Tianjin: Dongli qu,,3,39.1204804,117.4016726
+120111,西青区,Tianjin: Xiqing qu,Tianjin: Xiqing qu,,3,39.0002343,117.1217895
+120112,津南区,Tianjin: Jinnan qu,Tianjin: Jinnan qu,,3,38.9608437,117.3934865
+120113,北辰区,Tianjin: Beichen qu,Tianjin: Beichen qu,,3,39.2567314,117.1766567
 120114,武清区,,,,3,39.4223536,117.0672548
 120115,宝坻区,,,,3,39.5961733,117.4242568
 120116,滨海新区,,,,3,,
 120200,县,County,Tianjin shixiaxian,,2,,
-120221,宁河县,Ninghe,Ninghe,,3,39.3865823,117.6742923
+120221,宁河县,,,,3,39.3865823,117.6742923
 120223,静海县,Jinghai,Jinghai,,3,38.8266031,116.9773901
 120225,蓟县,Ji xian,Ji xian,,3,40.0026596,117.473706
-130000,河北省,Hebei,,,1,38.0451279,114.4897766
-130100,石家庄市,Shijiazhuang shi,Shijiazhuang shi,,2,38.0741259,114.4892442
+130000,河北省,Hebei,,HE,1,38.0451279,114.4897766
+130100,石家庄市,Shijiazhuang shi,Shijiazhuang shi,SJW,2,38.0741259,114.4892442
 130101,市辖区,City area,Shijiazhuang shixiaqu,,3,,
 130102,长安区,Shijiazhuang: Chang'an qu,Shijiazhuang: Chang'an qu,,3,33.9910854,108.902683
 130103,桥东区,Shijiazhuang: Qiaodong qu,Shijiazhuang: Qiaodong qu,,3,37.0680193,114.5072579
@@ -63,7 +63,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130183,晋州市,Jinzhou shi,Jinzhou shi,,3,37.9810353,115.0889003
 130184,新乐市,Xinle shi,Xinle shi,,3,38.3742818,114.7130692
 130185,鹿泉市,Luquan shi,Luquan shi,,3,38.0838296,114.3474627
-130200,唐山市,Tangshan shi,Tangshan shi,,2,39.630581,118.1804037
+130200,唐山市,Tangshan shi,Tangshan shi,TGS,2,39.630581,118.1804037
 130201,市辖区,City area,Tangshan shixiaqu,,3,,
 130202,路南区,Tangshan: Lunan qu,Tangshan: Lunan qu,,3,39.5981243,118.1861758
 130203,路北区,Tangshan: Lubei qu,Tangshan: Lubei qu,,3,39.6471382,118.1632698
@@ -79,16 +79,16 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130229,玉田县,Yutian,Yutian,,3,39.7686261,117.7334297
 130281,遵化市,Zunhua shi,Zunhua shi,,3,40.1409671,117.9049194
 130283,迁安市,,,,3,40.0521003,118.692019
-130300,秦皇岛市,Qinhuangdao shi,Qinhuangdao shi,,2,39.9541782,119.6335709
+130300,秦皇岛市,Qinhuangdao shi,Qinhuangdao shi,SHP,2,39.9541782,119.6335709
 130301,市辖区,City area,Qinhuangdao shixiaqu,,3,,
 130302,海港区,Qinhuangdao: Haigang qu,Qinhuangdao: Haigang qu,,3,39.9341245,119.6125638
 130303,山海关区,Qinhuangdao: Shanhaiguan qu,Qinhuangdao: Shanhaiguan qu,,3,39.978378,119.7768331
 130304,北戴河区,Qinhuangdao: Beidaihe qu,Qinhuangdao: Beidaihe qu,,3,39.834056,119.4838929
-130321,青龙满族自治县,Qinglong,Qinglong,,3,40.3465605,119.0931273
+130321,青龙满族自治县,Qinglong Manzu zizhixian,Qinglong Manzu zizhixian,,3,40.3465605,119.0931273
 130322,昌黎县,Changli,Changli,,3,39.6237058,119.0599751
-130323,抚宁县,Funing,Funing,,3,40.0216087,119.4196486
+130323,抚宁县,,,,3,40.0216087,119.4196486
 130324,卢龙县,Lulong,Lulong,,3,39.9274194,118.9732218
-130400,邯郸市,Handan shi,Handan shi,,2,36.6096371,114.4806397
+130400,邯郸市,Handan shi,Handan shi,HDS,2,36.6096371,114.4806397
 130401,市辖区,City area,Handan shixiaqu,,3,,
 130402,邯山区,Handan: Hanshan qu,Handan: Hanshan qu,,3,36.5996549,114.4827747
 130403,丛台区,,,,3,36.6187225,114.4934821
@@ -109,7 +109,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130434,魏县,Wei xian,Wei xian,,3,36.2343045,114.9341583
 130435,曲周县,Quzhou,Quzhou,,3,36.7696408,115.0388503
 130481,武安市,Wu'an shi,Wu'an shi,,3,36.6784094,114.0685773
-130500,邢台市,Xingtai shi,Xingtai shi,,2,37.0683018,114.4932461
+130500,邢台市,Xingtai shi,Xingtai shi,XTS,2,37.0683018,114.4932461
 130501,市辖区,City area,Xingtai shixiaqu,,3,,
 130502,桥东区,Xingtai: Qiaodong qu,Xingtai: Qiaodong qu,,3,37.0680193,114.5072579
 130503,桥西区,Xingtai: Qiaoxi qu,Xingtai: Qiaoxi qu,,3,37.0598434,114.4680333
@@ -120,7 +120,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130525,隆尧县,Longyao,Longyao,,3,37.3501598,114.7705221
 130526,任县,Ren xian,Ren xian,,3,37.1288961,114.682889
 130527,南和县,Nanhe,Nanhe,,3,37.0050374,114.6836507
-130528,宁晋县,Ningjin,Ningjin,,3,37.6198828,114.9192989
+130528,宁晋县,,,,3,37.6198828,114.9192989
 130529,巨鹿县,Julu,Julu,,3,37.2211106,115.037477
 130530,新河县,Xinhe,Xinhe,,3,37.5287532,115.2420866
 130531,广宗县,Guangzong,Guangzong,,3,37.0747135,115.1429093
@@ -130,7 +130,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130535,临西县,Linxi,Linxi,,3,36.8707377,115.5016494
 130581,南宫市,,,,3,37.3614937,115.3867006
 130582,沙河市,,,,3,36.854952,114.5033205
-130600,保定市,Baoding shi,Baoding shi,,2,38.8674883,115.4743874
+130600,保定市,Baoding shi,Baoding shi,BDS,2,38.8674883,115.4743874
 130601,市辖区,City area,Baoding shixiaqu,,3,,
 130602,新市区,Baoding: Xinshi qu,Baoding: Xinshi qu,,3,43.8436738,87.5739634
 130603,北市区,Baoding: Beishi qu,Baoding: Beishi qu,,3,38.8827819,115.4971969
@@ -157,7 +157,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130682,定州市,,,,3,38.507745,114.991565
 130683,安国市,Anguo shi,Anguo shi,,3,38.4018146,115.3362858
 130684,高碑店市,Gaobeidian shi,Gaobeidian shi,,3,39.2393083,115.9998751
-130700,张家口市,Zhangjiakou shi,Zhangjiakou shi,,2,40.4923439,115.1055193
+130700,张家口市,Zhangjiakou shi,Zhangjiakou shi,ZJK,2,40.4923439,115.1055193
 130701,市辖区,City area,Zhangjiakou shixiaqu,,3,,
 130702,桥东区,Zhangjiakou: Qiaodong qu,Zhangjiakou: Qiaodong qu,,3,40.7884538,114.8943007
 130703,桥西区,Zhangjiakou: Qiaoxi qu,Zhangjiakou: Qiaoxi qu,,3,40.8194605,114.8696244
@@ -176,7 +176,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130731,涿鹿县,Zhuolu,Zhuolu,,3,40.0825782,115.226208
 130732,赤城县,Chicheng,Chicheng,,3,40.9518431,115.9477437
 130733,崇礼县,Chongli,Chongli,,3,41.0328888,115.1907599
-130800,承德市,Chengde shi,Chengde shi,,2,41.0299509,117.8852105
+130800,承德市,Chengde shi,Chengde shi,CDS,2,41.0299509,117.8852105
 130801,市辖区,City area,Chengde shixiaqu,,3,,
 130802,双桥区,Chengde: Shuangqiao qu,Chengde: Shuangqiao qu,,3,40.9746655,117.9431999
 130803,双滦区,Chengde: Shuangluan qu,Chengde: Shuangluan qu,,3,40.9590463,117.8001523
@@ -186,10 +186,10 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130823,平泉县,Pingquan,Pingquan,,3,41.0250137,118.8045967
 130824,滦平县,Luanping,Luanping,,3,40.9604237,117.2734523
 130825,隆化县,Longhua,Longhua,,3,41.4921048,117.5274467
-130826,丰宁满族自治县,Fengning Manzu zizhixian,Fengning Manzu zizhixian,,3,41.3648119,116.6501498
+130826,丰宁满族自治县,,,,3,41.3648119,116.6501498
 130827,宽城满族自治县,Kuancheng Manzu zizhixian,Kuancheng Manzu zizhixian,,3,40.5107077,118.6906993
 130828,围场满族蒙古族自治县,Weichang Manzu Mengguzu zizhixian,Weichang Manzu Mengguzu zizhixian,,3,42.0937881,117.5275326
-130900,沧州市,Cangzhou shi,Cangzhou shi,,2,38.3044528,116.8388379
+130900,沧州市,Cangzhou shi,Cangzhou shi,CGZ,2,38.3044528,116.8388379
 130901,市辖区,City area,Cangzhou shixiaqu,,3,,
 130902,新华区,Cangzhou: Xinhua qu,Cangzhou: Xinhua qu,,3,38.3086959,116.8743503
 130903,运河区,Cangzhou: Yunhe qu,Cangzhou: Yunhe qu,,3,38.3110363,116.8474102
@@ -198,7 +198,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130923,东光县,Dongguang,Dongguang,,3,37.8840923,116.5432477
 130924,海兴县,Haixing,Haixing,,3,38.1411977,117.496655
 130925,盐山县,Yanshan,Yanshan,,3,38.0552047,117.2337341
-130926,肃宁县,Suning,Suning,,3,38.4285047,115.836432
+130926,肃宁县,,,,3,38.4285047,115.836432
 130927,南皮县,Nanpi,Nanpi,,3,38.0417879,116.709491
 130928,吴桥县,Wuqiao,Wuqiao,,3,37.6330197,116.4104998
 130929,献县,Xian xian,Xian xian,,3,38.1889166,116.1276126
@@ -207,7 +207,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 130982,任丘市,Renqiu shi,Renqiu shi,,3,38.703941,116.083298
 130983,黄骅市,Huanghua shi,Huanghua shi,,3,38.370707,117.3516119
 130984,河间市,Hejian shi,Hejian shi,,3,38.4431444,116.0951149
-131000,廊坊市,Langfang shi,Langfang shi,,2,39.3932239,116.7555177
+131000,廊坊市,Langfang shi,Langfang shi,LFS,2,39.3932239,116.7555177
 131001,市辖区,Langfang shixiaqu,Langfang shixiaqu,,3,,
 131002,安次区,Langfang: Anci qu,Langfang: Anci qu,,3,39.5205702,116.7030859
 131003,广阳区,,,,3,39.523111,116.7117441
@@ -219,7 +219,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 131028,大厂回族自治县,Dachang Huizu zizhixian,Dachang Huizu zizhixian,,3,39.9076788,116.9510293
 131081,霸州市,Bazhou shi,Bazhou shi,,3,39.1041808,116.5993488
 131082,三河市,Sanhe shi,Sanhe shi,,3,39.9490296,117.0100486
-131100,衡水市,Hengshui,,,2,37.7352989,115.6986845
+131100,衡水市,Hengshui,,HGS,2,37.7352989,115.6986845
 131101,市辖区,City area,,,3,,
 131102,桃城区,,,,3,37.7349935,115.6752956
 131121,枣强县,,,,3,37.5138194,115.7242084
@@ -233,7 +233,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 131181,冀州市,,,,3,37.5510251,115.5793798
 131182,深州市,,,,3,38.0008212,115.5600142
 140000,山西省,Shanxi,,SX,1,37.8357424,112.5223053
-140100,太原市,Taiyuan shi,Taiyuan shi,,2,37.8357424,112.5223053
+140100,太原市,Taiyuan shi,Taiyuan shi,TYN,2,37.8357424,112.5223053
 140101,市辖区,City area,Taiyuan shixiaqu,,3,,
 140105,小店区,,,,3,37.7360371,112.565639
 140106,迎泽区,,,,3,37.8632671,112.563386
@@ -245,7 +245,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 140122,阳曲县,Yangqu,Yangqu,,3,38.1364384,112.668432
 140123,娄烦县,Loufan,Loufan,,3,38.0391347,111.7827344
 140181,古交市,Gujiao shi,Gujiao shi,,3,37.910414,112.0436811
-140200,大同市,Datong shi,Datong shi,,2,40.0557794,113.2266212
+140200,大同市,Datong shi,Datong shi,DTG,2,40.0557794,113.2266212
 140201,市辖区,City area,Datong shixiaqu,,3,,
 140202,城区,Datong: Chengqu,Datong: Chengqu,,3,40.075666,113.2980001
 140203,矿区,Datong: Kuangqu,Datong: Kuangqu,,3,40.0368562,113.1772041
@@ -258,14 +258,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 140225,浑源县,Hunyuan,Hunyuan,,3,39.6989818,113.6903751
 140226,左云县,Zuoyun,Zuoyun,,3,40.0137947,112.7029359
 140227,大同县,Datong,Datong,,3,40.0402979,113.6124408
-140300,阳泉市,Yangquan shi,Yangquan shi,,2,37.8563212,113.5925388
+140300,阳泉市,Yangquan shi,Yangquan shi,YQS,2,37.8563212,113.5925388
 140301,市辖区,City area,Yangquan shixiaqu,,3,,
 140302,城区,Yangquan: Chengqu,Yangquan: Chengqu,,3,37.8474092,113.6006927
 140303,矿区,Yangquan: Kuangqu,Yangquan: Kuangqu,,3,37.8689504,113.5567689
 140311,郊区,Yangquan: Jiaoqu,Yangquan: Jiaoqu,,3,37.9413969,113.5853934
 140321,平定县,Pingding,Pingding,,3,37.8042996,113.6295426
 140322,盂县,Yu xian,Yu xian,,3,38.0856199,113.4123266
-140400,长治市,Changzhi shi,Changzhi shi,,2,36.2008671,113.1234741
+140400,长治市,Changzhi shi,Changzhi shi,CZS,2,36.2008671,113.1234741
 140401,市辖区,City area,Changzhi shixiaqu,,3,,
 140402,城区,Changzhi: Chengqu,Changzhi: Chengqu,,3,36.2035163,113.1230879
 140411,郊区,Changzhi: Jiaoqu,Changzhi: Jiaoqu,,3,36.1991875,113.1265318
@@ -280,7 +280,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 140430,沁县,Qin xian,Qin xian,,3,36.7561465,112.6991594
 140431,沁源县,Qinyuan,Qinyuan,,3,36.5002016,112.3374474
 140481,潞城市,Lucheng shi,Lucheng shi,,3,36.33409,113.2288957
-140500,晋城市,Jincheng shi,Jincheng shi,,2,35.4908655,112.8517663
+140500,晋城市,Jincheng shi,Jincheng shi,JCG,2,35.4908655,112.8517663
 140501,市辖区,City area,Jincheng shixiaqu,,3,,
 140502,城区,Jincheng: Chengqu,Jincheng: Chengqu,,3,35.501592,112.8532577
 140521,沁水县,Qinshui,Qinshui,,3,35.690276,112.1866643
@@ -288,7 +288,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 140524,陵川县,Lingchuan,Lingchuan,,3,35.7756862,113.2806838
 140525,泽州县,,,,3,35.019032,110.99762
 140581,高平市,Gaoping shi,Gaoping shi,,3,35.7979925,112.9239392
-140600,朔州市,Shuozhou shi,Shuozhou shi,,2,39.4151262,112.3714364
+140600,朔州市,Shuozhou shi,Shuozhou shi,SZJ,2,39.4151262,112.3714364
 140601,市辖区,City area,Shuozhou shixiaqu,,3,,
 140602,朔城区,Shuozhou: Shuocheng qu,Shuozhou: Shuocheng qu,,3,39.3198236,112.4319041
 140603,平鲁区,Shuozhou: Pinglu qu,Shuozhou: Pinglu qu,,3,39.5121611,112.2883308
@@ -375,7 +375,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 141181,孝义市,,,,3,37.1464039,111.77899
 141182,汾阳市,,,,3,37.2654551,111.7877555
 150000,内蒙古自治区,Inner Mongolia,,NM,1,40.8209419,111.6632996
-150100,呼和浩特市,Hohhot shi,Huhehaote shi,,2,40.8672334,111.8145561
+150100,呼和浩特市,Hohhot shi,Huhehaote shi,HET,2,40.8672334,111.8145561
 150101,市辖区,City area,Huhehaote shixiaqu,,3,,
 150102,新城区,Hohhot: Xincheng qu,Huhehaote: Xincheng qu,,3,40.8582918,111.6655433
 150103,回民区,Hohhot: Huimin qu,Huhehaote: Huimin qu,,3,40.8082793,111.6240227
@@ -386,7 +386,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 150123,和林格尔县,,,,3,40.3853242,111.8784249
 150124,清水河县,,,,3,39.9246714,111.681937
 150125,武川县,,,,3,41.0830793,111.1985493
-150200,包头市,Baotou shi,Baotou shi,,2,40.6428669,109.9300361
+150200,包头市,Baotou shi,Baotou shi,BTS,2,40.6428669,109.9300361
 150201,市辖区,City area,Baotou shixiaqu,,3,,
 150202,东河区,Baotou: Donghe qu,Baotou: Donghe qu,,3,40.5836892,110.0293851
 150203,昆都仑区,,,,3,40.6407991,109.837532
@@ -397,12 +397,12 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 150221,土默特右旗,Tumd youqi,Tumote youqi,,3,40.5509421,110.6896913
 150222,固阳县,Guyang,Guyang,,3,41.0184896,110.0636959
 150223,达尔罕茂明安联合旗,,,,3,41.975596,110.4747069
-150300,乌海市,Wuhai shi,Wuhai shi,,2,39.6905118,106.8226969
+150300,乌海市,Wuhai shi,Wuhai shi,WHM,2,39.6905118,106.8226969
 150301,市辖区,City area,Wuhai shixiaqu,,3,,
 150302,海勃湾区,Wuhai: Haibowan qu,Wuhai: Haibowan qu,,3,39.6695551,106.8222141
 150303,海南区,Wuhai: Hainan qu,Wuhai: Hainan qu,,3,39.4414546,106.8914258
 150304,乌达区,Wuhai: Ud qu,Wuhai: Ud qu,,3,39.5057212,106.7176294
-150400,赤峰市,Chifeng shi,Chifeng shi,,2,42.2903817,118.9847445
+150400,赤峰市,Chifeng shi,Chifeng shi,CFS,2,42.2903817,118.9847445
 150401,市辖区,City area,Chifeng shixiaqu,,3,,
 150402,红山区,Chifeng: Hongshan qu,Chifeng: Hongshan qu,,3,42.2652018,118.9593172
 150403,元宝山区,Chifeng: Yuanbaoshan qu,Chifeng: Yuanbaoshan qu,,3,42.0389747,119.2888212
@@ -414,7 +414,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 150425,克什克腾旗,Hexigten qi,Keshiketeng qi,,3,43.265136,117.5458038
 150426,翁牛特旗,Ongniud qi,Wengniute qi,,3,42.9316205,119.0302455
 150428,喀喇沁旗,Harqin qi,Kalaqin qi,,3,41.927362,118.7019324
-150429,宁城县,Ningcheng,Ningcheng,,3,41.5939503,119.3427444
+150429,宁城县,,,,3,41.5939503,119.3427444
 150430,敖汉旗,Aohan qi,Aohan qi,,3,42.2914769,119.9217904
 150500,通辽市,Tongliao,,TLO,2,46.0871771,122.1346986
 150501,市辖区,City area,,,3,,
@@ -494,7 +494,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 152529,正镶白旗,,,,3,42.3086015,114.997555
 152530,正蓝旗,Zhenglan qi,Zhenglan qi,,3,42.2523698,116.0036194
 152531,多伦县,Duolun,Duolun,,3,42.2035909,116.4855587
-152900,阿拉善盟,Alxa meng,Alashan meng,,2,38.8463676,105.6860733
+152900,阿拉善盟,Alxa meng,Alashan meng,ALM,2,38.8463676,105.6860733
 152921,阿拉善左旗,Alxa zuoqi,Alashan zuoqi,,3,38.837301,105.664787
 152922,阿拉善右旗,Alxa youqi,Alashan youqi,,3,39.2152729,101.6708815
 152923,额济纳旗,Ejin qi,Ejina qi,,3,41.9585407,101.0689294
@@ -514,7 +514,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 210123,康平县,Kangping,Kangping,,3,42.7499509,123.3535159
 210124,法库县,Faku,Faku,,3,42.5038859,123.4084046
 210181,新民市,Xinmin shi,Xinmin shi,,3,42.0039368,122.8834856
-210200,大连市,Dalian shi,Dalian shi,,2,38.9144527,121.6164851
+210200,大连市,Dalian shi,Dalian shi,DLC,2,38.9144527,121.6164851
 210201,市辖区,City area,Dalian shixiaqu,,3,,
 210202,中山区,Dalian: Zhongshan qu,Dalian: Zhongshan qu,,3,38.9034576,121.6748607
 210203,西岗区,Dalian: Xigang qu,Dalian: Xigang qu,,3,38.9064131,121.6226113
@@ -526,7 +526,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 210281,瓦房店市,Wafangdian shi,Wafangdian shi,,3,39.743288,121.7532778
 210282,普兰店市,Pulandian shi,Pulandian shi,,3,39.6504921,122.2347021
 210283,庄河市,Zhuanghe shi,Zhuanghe shi,,3,39.8404325,123.0054939
-210300,鞍山市,Anshan shi,Anshan shi,,2,41.0631905,123.0268979
+210300,鞍山市,Anshan shi,Anshan shi,ASN,2,41.0631905,123.0268979
 210301,市辖区,City area,Anshan shixiaqu,,3,,
 210302,铁东区,Anshan: Tiedong qu,Anshan: Tiedong qu,,3,41.1046518,122.9887998
 210303,铁西区,Anshan: Tiexi qu,Anshan: Tiexi qu,,3,41.1197757,122.9696703
@@ -534,33 +534,33 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 210311,千山区,,,,3,41.0751051,122.9610658
 210321,台安县,Tai'an,Tai'an,,3,41.2883761,122.4239373
 210323,岫岩满族自治县,Xiuyan Manzu zizhixian,Xiuyan Manzu zizhixian,,3,40.4161917,123.3195376
-210381,海城市,Haicheng shi,Haicheng shi,,3,40.8279527,122.7332819
-210400,抚顺市,Fushun shi,Fushun shi,,2,41.8769985,123.9538801
+210381,海城市,,,,3,40.8279527,122.7332819
+210400,抚顺市,Fushun shi,Fushun shi,FSN,2,41.8769985,123.9538801
 210401,市辖区,City area,Fushun shixiaqu,,3,,
 210402,新抚区,Fushun: Xinfu qu,Fushun: Xinfu qu,,3,41.8736113,123.907907
 210403,东洲区,,,,3,41.8129149,124.0055609
 210404,望花区,Fushun: Wanghua qu,Fushun: Wanghua qu,,3,41.8620983,123.7945139
-210411,顺城区,,,,3,41.9477691,123.9348257
+210411,顺城区,Fushun: Shuncheng qu,Fushun: Shuncheng qu,,3,41.9477691,123.9348257
 210421,抚顺县,Fushun,Fushun,,3,41.7642138,124.0833771
-210422,新宾满族自治县,Xinbin,Xinbin,,3,41.6096589,124.8642969
+210422,新宾满族自治县,Xinbin Manzu zizhixian,Xinbin Manzu zizhixian,,3,41.6096589,124.8642969
 210423,清原满族自治县,Qingyuan Manzu zizhixian,Qingyuan Manzu zizhixian,,3,42.1432007,124.9143469
-210500,本溪市,Benxi shi,Benxi shi,,2,41.2927534,123.7990844
+210500,本溪市,Benxi shi,Benxi shi,BXS,2,41.2927534,123.7990844
 210501,市辖区,City area,Benxi shixiaqu,,3,,
 210502,平山区,Benxi: Pingshan qu,Benxi: Pingshan qu,,3,41.3017167,123.7625742
 210503,溪湖区,Benxi: Xihu qu,Benxi: Xihu qu,,3,41.3288813,123.7675738
 210504,明山区,Benxi: Mingshan qu,Benxi: Mingshan qu,,3,41.3082772,123.8174629
-210505,南芬区,Benxi: Nanfen qu,Benxi: Nanfen qu,,3,41.1025983,123.7464595
+210505,南芬区,,,,3,41.1025983,123.7464595
 210521,本溪满族自治县,Benxi Manzu zizhixian,Benxi Manzu zizhixian,,3,41.1934379,124.1748083
 210522,桓仁满族自治县,Huanren Manzu zizhixian,Huanren Manzu zizhixian,,3,41.241126,125.2414477
-210600,丹东市,Dandong shi,Dandong shi,,2,40.1246436,124.3842137
+210600,丹东市,Dandong shi,Dandong shi,DDG,2,40.1246436,124.3842137
 210601,市辖区,City area,Dandong shixiaqu,,3,,
 210602,元宝区,Dandong: Yuanbao qu,Dandong: Yuanbao qu,,3,40.1625671,124.3243253
 210603,振兴区,Dandong: Zhenxing qu,Dandong: Zhenxing qu,,3,40.0585303,124.3405259
 210604,振安区,Dandong: Zhen'an qu,Dandong: Zhen'an qu,,3,40.2057958,124.4288135
-210624,宽甸满族自治县,Kuandian,Kuandian,,3,40.6789375,125.024575
+210624,宽甸满族自治县,Kuandian Manzu zizhixian,Kuandian Manzu zizhixian,,3,40.6789375,125.024575
 210681,东港市,Donggang shi,Donggang shi,,3,39.9909966,123.87115
 210682,凤城市,Fengcheng shi,Fengcheng shi,,3,40.5730225,124.0363097
-210700,锦州市,Jinzhou shi,Jinzhou shi,,2,41.1255059,121.0968018
+210700,锦州市,Jinzhou shi,Jinzhou shi,JNZ,2,41.1255059,121.0968018
 210701,市辖区,City area,Jinzhou shixiaqu,,3,,
 210702,古塔区,Jinzhou: Guta qu,Jinzhou: Guta qu,,3,41.1172539,121.1283231
 210703,凌河区,Jinzhou: Linghe qu,Jinzhou: Linghe qu,,3,41.114918,121.1509395
@@ -569,39 +569,39 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 210727,义县,Yi xian,Yi xian,,3,41.5467614,121.3037288
 210781,凌海市,Linghai shi,Linghai shi,,3,28.8488922,121.1184464
 210782,北镇市,,,,3,41.5961808,121.8002379
-210800,营口市,Yingkou shi,Yingkou shi,,2,40.600244,122.2985065
+210800,营口市,Yingkou shi,Yingkou shi,YIK,2,40.600244,122.2985065
 210801,市辖区,City area,Yingkou shixiaqu,,3,,
 210802,站前区,Yingkou: Zhanqian qu,Yingkou: Zhanqian qu,,3,40.6826965,122.2607732
 210803,西市区,Yingkou: Xishi qu,Yingkou: Xishi qu,,3,40.6653645,122.2124076
 210804,鲅鱼圈区,,,,3,40.263211,122.1288085
-210811,老边区,,,,3,40.6800685,122.3788655
+210811,老边区,Yingkou: Laobian qu,Yingkou: Laobian qu,,3,40.6800685,122.3788655
 210881,盖州市,Gaizhou shi,Gaizhou shi,,3,40.2469414,122.4236584
 210882,大石桥市,Dashiqiao shi,Dashiqiao shi,,3,40.6304265,122.550838
-210900,阜新市,Fuxin shi,Fuxin shi,,2,42.0181663,121.6748285
+210900,阜新市,Fuxin shi,Fuxin shi,FXS,2,42.0181663,121.6748285
 210901,市辖区,City area,Fuxin shixiaqu,,3,,
 210902,海州区,Fuxin: Haizhou qu,Fuxin: Haizhou qu,,3,42.0136228,121.6566217
 210903,新邱区,,,,3,42.0875859,121.7924595
 210904,太平区,Fuxin: Taiping qu,Fuxin: Taiping qu,,3,42.0106653,121.678648
 210905,清河门区,Fuxin: Qinghemen qu,Fuxin: Qinghemen qu,,3,41.7935205,121.4511216
-210911,细河区,,,,3,42.0253317,121.6801393
+210911,细河区,Fuxin: Xihe qu,Fuxin: Xihe qu,,3,42.0253317,121.6801393
 210921,阜新蒙古族自治县,Fuxin Mongolzu zizhixian,Fuxin Mongolzu zizhixian,,3,42.1727232,121.7313695
 210922,彰武县,Zhangwu,Zhangwu,,3,42.3865473,122.5388002
-211000,辽阳市,Liaoyang shi,Liaoyang shi,,2,41.1512896,123.4018064
+211000,辽阳市,Liaoyang shi,Liaoyang shi,LYL,2,41.1512896,123.4018064
 211001,市辖区,City area,Liaoyang shixiaqu,,3,,
 211002,白塔区,Liaoyang: Baita qu,Liaoyang: Baita qu,,3,41.270122,123.1743228
 211003,文圣区,Liaoyang: Wensheng qu,Liaoyang: Wensheng qu,,3,41.2628077,123.185395
 211004,宏伟区,Liaoyang: Hongwei qu,Liaoyang: Hongwei qu,,3,41.2175889,123.196553
 211005,弓长岭区,Liaoyang: Gongchangling qu,Liaoyang: Gongchangling qu,,3,41.1527276,123.4322977
-211011,太子河区,,,,3,41.253589,123.1815004
+211011,太子河区,Liaoyang: Taizihe qu,Liaoyang: Taizihe qu,,3,41.253589,123.1815004
 211021,辽阳县,Liaoyang,Liaoyang,,3,41.0106776,123.3635688
 211081,灯塔市,,,,3,41.4173231,123.2832849
-211100,盘锦市,Panjin shi,Panjin shi,,2,41.1628974,122.0311439
+211100,盘锦市,Panjin shi,Panjin shi,PJS,2,41.1628974,122.0311439
 211101,市辖区,City area,Panjin shixiaqu,,3,,
 211102,双台子区,Panjin: Shuangtaizi qu,Panjin: Shuangtaizi qu,,3,41.1905476,122.0602942
 211103,兴隆台区,Panjin: Xinglongtai qu,Panjin: Xinglongtai qu,,3,41.1240269,122.0754433
 211121,大洼县,Dawa,Dawa,,3,40.9162043,122.0688558
 211122,盘山县,Panshan,Panshan,,3,41.1554257,122.2823381
-211200,铁岭市,Tieling shi,Tieling shi,,2,42.2862545,123.8423431
+211200,铁岭市,Tieling shi,Tieling shi,TLS,2,42.2862545,123.8423431
 211201,市辖区,City area,Tieling shixiaqu,,3,,
 211202,银州区,Tieling: Yinzhou qu,Tieling: Yinzhou qu,,3,42.29508,123.8573098
 211204,清河区,Tieling: Qinghe qu,Tieling: Qinghe qu,,3,42.5484961,124.1579103
@@ -610,7 +610,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 211224,昌图县,Changtu,Changtu,,3,42.785748,124.1108537
 211281,调兵山市,,,,3,42.4674831,123.5672557
 211282,开原市,Kaiyuan shi,Kaiyuan shi,,3,42.5463067,124.0382731
-211300,朝阳市,Chaoyang shi,Chaoyang shi,,2,41.585276,120.4546273
+211300,朝阳市,Chaoyang shi,Chaoyang shi,CYS,2,41.585276,120.4546273
 211301,市辖区,City area,Chaoyang shixiaqu,,3,,
 211302,双塔区,Chaoyang: Shuangta qu,Chaoyang: Shuangta qu,,3,41.5660055,120.4538548
 211303,龙城区,Chaoyang: Longcheng qu,Chaoyang: Longcheng qu,,3,41.5926424,120.4371929
@@ -622,13 +622,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 211400,葫芦岛市,Huludao,,HLD,2,40.7110119,120.8363163
 211401,市辖区,City area,Jinxi shixiaqu,,3,,
 211402,连山区,Jinxi: Lianshan qu,Jinxi: Lianshan qu,,3,40.9279996,120.6384015
-211403,龙港区,,,,3,40.751963,120.9070301
+211403,龙港区,Jinxi: Longgang qu,Jinxi: Longgang qu,,3,40.751963,120.9070301
 211404,南票区,Jinxi: Nanpiao qu,Jinxi: Nanpiao qu,,3,41.0708184,120.6503212
 211421,绥中县,Suizhong,Suizhong,,3,40.304289,120.0487876
 211422,建昌县,Jianchang,Jianchang,,3,40.7586841,119.7591841
 211481,兴城市,Xingcheng shi,Xingcheng shi,,3,40.5508932,120.4709458
-220000,吉林省,Jilin,,,1,43.8925629,125.3154297
-220100,长春市,Changchun shi,Changchun shi,,2,43.8868593,125.3247893
+220000,吉林省,Jilin,,JL,1,43.8925629,125.3154297
+220100,长春市,Changchun shi,Changchun shi,CGQ,2,43.8868593,125.3247893
 220101,市辖区,City area,Changchun shixiaqu,,3,,
 220102,南关区,Changchun: Nanguang qu,Changchun: Nanguang qu,,3,43.7108042,125.414139
 220103,宽城区,Changchun: Kuancheng qu,Changchun: Kuancheng qu,,3,43.9917262,125.3383505
@@ -640,7 +640,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 220181,九台市,Jiutai shi,Jiutai shi,,3,44.1898897,125.9623933
 220182,榆树市,Yushu shi,Yushu shi,,3,44.8812427,126.5594316
 220183,德惠市,Dehui shi,Dehui shi,,3,44.4652506,125.8296776
-220200,吉林市,Jilin shi,Jilin shi,,2,43.8735427,126.4687943
+220200,吉林市,Jilin shi,Jilin shi,JLS,2,43.8735427,126.4687943
 220201,市辖区,City area,Jilin shixiaqu,,3,,
 220202,昌邑区,Jilin: Changyi qu,Jilin: Changyi qu,,3,43.8818176,126.5747094
 220203,龙潭区,Jilin: Longtan qu,Jilin: Longtan qu,,3,43.9106316,126.5620065
@@ -651,7 +651,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 220282,桦甸市,Huadian shi,Huadian shi,,3,43.1203133,127.0076072
 220283,舒兰市,Shulan shi,Shulan shi,,3,44.3039039,127.0880198
 220284,磐石市,,,,3,43.1058709,126.1361468
-220300,四平市,Siping shi,Siping shi,,2,43.0968622,124.4146514
+220300,四平市,Siping shi,Siping shi,SPS,2,43.0968622,124.4146514
 220301,市辖区,City area,Siping shixiaqu,,3,,
 220302,铁西区,Siping: Tiexi qu,Siping: Tiexi qu,,3,43.150346,124.344978
 220303,铁东区,Siping: Tiedong qu,Siping: Tiedong qu,,3,43.1624228,124.4097698
@@ -659,13 +659,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 220323,伊通满族自治县,Yitong Manzu zizhixian,Yitong Manzu zizhixian,,3,43.3515448,125.3047585
 220381,公主岭市,Gongzhuling shi,Gongzhuling shi,,3,43.6574247,124.985286
 220382,双辽市,,,,3,43.7342824,123.7038016
-220400,辽源市,Liaoyuan shi,Liaoyuan shi,,2,42.9042229,125.1461112
+220400,辽源市,Liaoyuan shi,Liaoyuan shi,LYH,2,42.9042229,125.1461112
 220401,市辖区,City area,Liaoyuan shixiaqu,,3,,
 220402,龙山区,Liaoyuan: Longshan qu,Liaoyuan: Longshan qu,,3,42.8971418,125.1364124
 220403,西安区,Liaoyuan: Xi'an qu,Liaoyuan: Xi'an qu,,3,42.9275906,125.1485896
 220421,东丰县,Dongfeng,Dongfeng,,3,42.6751868,125.531534
 220422,东辽县,Dongliao,Dongliao,,3,42.9282033,124.9921095
-220500,通化市,Tonghua shi,Tonghua shi,,2,41.7508802,125.9941506
+220500,通化市,Tonghua shi,Tonghua shi,THS,2,41.7508802,125.9941506
 220501,市辖区,City area,Tonghua shixiaqu,,3,,
 220502,东昌区,Tonghua: Dongchang qu,Tonghua: Dongchang qu,,3,41.7284965,125.9550977
 220503,二道江区,Tonghua: Erdaojiang qu,Tonghua: Erdaojiang qu,,3,41.7740242,126.042484
@@ -674,7 +674,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 220524,柳河县,Liuhe,Liuhe,,3,42.2846036,125.7447374
 220581,梅河口市,Meihekou shi,Meihekou shi,,3,42.530338,125.6838298
 220582,集安市,Ji'an shi,Ji'an shi,,3,41.1304032,126.1840725
-220600,白山市,Baishan,,,2,41.9399965,126.423583
+220600,白山市,Baishan,,BSN,2,41.9399965,126.423583
 220601,市辖区,City area,Baicheng shixiaqu,,3,,
 220602,浑江区,,,,3,,
 220605,江源区,,,,3,42.0567731,126.591146
@@ -682,21 +682,21 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 220622,靖宇县,Jingyu,Jingyu,,3,42.3887978,126.8135977
 220623,长白朝鲜族自治县,Changbai Chaoxianzu zizhixian,Changbai Chaoxianzu zizhixian,,3,41.4200505,128.2008147
 220681,临江市,Linjiang shi,Linjiang shi,,3,41.8120033,126.9181395
-220700,松原市,Songyuan,,,2,45.1417912,124.8251152
-220701,市辖区,City area,,,3,,
+220700,松原市,Songyuan,Songyuan shi,SYU,2,45.1417912,124.8251152
+220701,市辖区,City area,Songyuan shixiaqu,,3,,
 220702,宁江区,,,,3,45.1718798,124.8170149
 220721,前郭尔罗斯蒙古族自治县,,,,3,45.1171684,124.8235595
 220722,长岭县,,,,3,44.2771783,123.9822793
 220723,乾安县,Qian'an,Qian'an,,3,45.0048497,124.0280163
 220781,扶余市,,,,3,,
-220800,白城市,Baicheng,,BCS,2,45.6216692,122.8510523
-220801,市辖区,City area,,,3,,
+220800,白城市,Baicheng,Baicheng shi,BCS,2,45.6216692,122.8510523
+220801,市辖区,City area,Baicheng shixiaqu,,3,,
 220802,洮北区,Baicheng: Taobei qu,Baicheng: Taobei qu,,3,45.6216692,122.8510523
 220821,镇赉县,Zhenlai,Zhenlai,,3,45.8474336,123.1998897
 220822,通榆县,Tongyu,Tongyu,,3,44.8130111,123.0884385
 220881,洮南市,Tao'nan shi,Tao'nan shi,,3,45.3359628,122.7867329
 220882,大安市,Da'an shi,Da'an shi,,3,45.5060085,124.272548
-222400,延边朝鲜族自治州,Yanbian Chaoxianzu zizhizhou,Yanbian Chaoxianzu zizhizhou,,2,42.894155,129.4976521
+222400,延边朝鲜族自治州,Yanbian Chaoxianzu zizhizhou,Yanbian Chaoxianzu zizhizhou,YBZ,2,42.894155,129.4976521
 222401,延吉市,Yanji shi,Yanji shi,,3,43.1279169,129.3687987
 222402,图们市,Tumen shi,Tumen shi,,3,42.9870539,129.8552549
 222403,敦化市,Dunhua shi,Dunhua shi,,3,43.6226094,128.3468664
@@ -705,8 +705,8 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 222406,和龙市,Helong shi,Helong shi,,3,42.6044471,128.9693642
 222424,汪清县,Wangqing,Wangqing,,3,43.5804453,129.881798
 222426,安图县,Antu,Antu,,3,42.7865039,128.5144937
-230000,黑龙江省,Heilongjiang,,,1,45.7414932,126.6433411
-230100,哈尔滨市,Harbin,Ha'erin shi,HRB,2,45.9734191,126.7237866
+230000,黑龙江省,Heilongjiang,,HL,1,45.7414932,126.6433411
+230100,哈尔滨市,Harbin,Ha'erbin shi,HRB,2,45.9734191,126.7237866
 230101,市辖区,City area,Ha'erbin shixiaqu,,3,,
 230102,道里区,Harbin: Daoli qu,Ha'erbin: Daoli qu,,3,45.7558615,126.6170561
 230103,南岗区,Harbin: Nangang qu,Ha'erbin: Nangang qu,,3,45.7614755,126.6690481
@@ -726,15 +726,15 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 230182,双城市,,,,3,45.4202176,126.1988032
 230183,尚志市,,,,3,45.0431982,128.2252657
 230184,五常市,,,,3,44.7518383,127.4094987
-230200,齐齐哈尔市,Qiqihar shi,Qiqiha'er shi,,2,47.4318033,123.9433444
+230200,齐齐哈尔市,Qiqihar shi,Qiqiha'er shi,NDG,2,47.4318033,123.9433444
 230201,市辖区,City area,Qiqiha'er shixiaqu,,3,,
 230202,龙沙区,Qiqihar: Longsha qu,Qiqiha'er: Longsha qu,,3,47.3173776,123.9575601
 230203,建华区,Qiqihar: Jianhua qu,Qiqiha'er: Jianhua qu,,3,47.3542412,123.9555001
 230204,铁锋区,Qiqihar: Tiefeng qu,Qiqiha'er: Tiefeng qu,,3,47.3406912,123.9782345
 230205,昂昂溪区,Qiqihar: Ang'angxi qu,Qiqiha'er: Ang'angxi qu,,3,47.4318033,123.9433444
 230206,富拉尔基区,Qiqihar: Fulaerji qu,Qiqiha'er: Fulaerji qu,,3,47.2094966,123.6296868
-230207,碾子山区,,,,3,47.5168891,122.887702
-230208,梅里斯达斡尔族区,,,,3,47.3090924,123.7520385
+230207,碾子山区,Qiqihar: Nianzishan qu,Qiqiha'er: Nianzishan qu,,3,47.5168891,122.887702
+230208,梅里斯达斡尔族区,Qiqihar: Meilisi Dawoerzu qu,Qiqiha'er: Meilisi Dawoerzu qu,,3,47.3090924,123.7520385
 230221,龙江县,Longjiang,Longjiang,,3,47.1988692,123.0546212
 230223,依安县,Yi'an,Yi'an,,3,47.6999857,125.258646
 230224,泰来县,Tailai,Tailai,,3,46.6777763,123.510865
@@ -744,7 +744,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 230230,克东县,Kedong,Kedong,,3,47.9812327,126.3424516
 230231,拜泉县,Baiquan,Baiquan,,3,47.6082752,126.0342658
 230281,讷河市,Nehe shi,Nehe shi,,3,48.3962927,125.0148976
-230300,鸡西市,Jixi shi,Jixi shi,,2,45.3239173,130.938642
+230300,鸡西市,Jixi shi,Jixi shi,JXI,2,45.3239173,130.938642
 230301,市辖区,City area,Jixi shixiaqu,,3,,
 230302,鸡冠区,Jixi: Jiguan qu,Jixi: Jiguan qu,,3,45.3039614,130.9813964
 230303,恒山区,,,,3,45.210668,130.9049642
@@ -755,7 +755,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 230321,鸡东县,Jidong,Jidong,,3,45.2605246,131.1243045
 230381,虎林市,,,,3,45.762673,132.9371345
 230382,密山市,,,,3,45.5464695,131.8778229
-230400,鹤岗市,Hegang shi,Hegang shi,,2,47.3336749,130.3008235
+230400,鹤岗市,Hegang shi,Hegang shi,HEG,2,47.3336749,130.3008235
 230401,市辖区,City area,Hegang shixiaqu,,3,,
 230402,向阳区,Hegang: Xiangyang qu,Hegang: Xiangyang qu,,3,47.3424796,130.294311
 230403,工农区,Hegang: Gongnong qu,Hegang: Gongnong qu,,3,47.3186941,130.274688
@@ -765,7 +765,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 230407,兴山区,Hegang: Xingshan qu,Hegang: Xingshan qu,,3,47.357759,130.2927232
 230421,萝北县,Luobei,Luobei,,3,47.5774956,130.8286285
 230422,绥滨县,Suibin,Suibin,,3,47.2913394,131.8598843
-230500,双鸭山市,Shuangyashan shi,Shuangyashan shi,,2,46.6210885,131.1882269
+230500,双鸭山市,Shuangyashan shi,Shuangyashan shi,SYS,2,46.6210885,131.1882269
 230501,市辖区,City area,Shuangyashan shixiaqu,,3,,
 230502,尖山区,Shuangyashan: Jianshan qu,Shuangyashan: Jianshan qu,,3,46.6463502,131.1584115
 230503,岭东区,Shuangyashan: Lingdong qu,Shuangyashan: Lingdong qu,,3,46.5927187,131.1647201
@@ -775,7 +775,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 230522,友谊县,Youyi,Youyi,,3,46.7674405,131.8080533
 230523,宝清县,Baoqing,Baoqing,,3,46.3269648,132.1972311
 230524,饶河县,Raohe,Raohe,,3,46.7981646,134.0138698
-230600,大庆市,Daqing shi,Daqing shi,,2,46.4018304,124.7575128
+230600,大庆市,Daqing shi,Daqing shi,DQG,2,46.4018304,124.7575128
 230601,市辖区,City area,Daqing shixiaqu,,3,,
 230602,萨尔图区,Daqing: Sairt qu,Daqing: Sairt qu,,3,46.5937361,125.0881863
 230603,龙凤区,Daqing: Longfeng qu,Daqing: Longfeng qu,,3,46.5328345,125.1161027
@@ -786,7 +786,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 230622,肇源县,Zhaoyuan,Zhaoyuan,,3,45.6864559,124.888351
 230623,林甸县,Lindain,Lindain,,3,47.1497718,124.8179162
 230624,杜尔伯特蒙古族自治县,Dorbod Mongolzu zizhixian,Du'erbote Mengguzu zizhixian,,3,46.5041009,124.2356193
-230700,伊春市,Yichun shi,Yichun shi,,2,47.7753219,128.9185202
+230700,伊春市,Yichun shi,Yichun shi,YCH,2,47.7753219,128.9185202
 230701,市辖区,City area,Yichun shixiaqu,,3,,
 230702,伊春区,Yichun: Yichun qu,Yichun: Yichun qu,,3,47.7280015,128.9075232
 230703,南岔区,Yichun: Nancha qu,Yichun: Nancha qu,,3,47.1380304,129.2834723
@@ -805,7 +805,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 230716,上甘岭区,Yichun: Shangganling qu,Yichun: Shangganling qu,,3,47.9747114,129.0242636
 230722,嘉荫县,Jiayin,Jiayin,,3,48.8889667,130.4030478
 230781,铁力市,Tieli shi,Tieli shi,,3,46.9860639,128.025012
-230800,佳木斯市,Jiamusi shi,Jiamusi shi,,2,46.7704167,130.2756
+230800,佳木斯市,Jiamusi shi,Jiamusi shi,JMU,2,46.7704167,130.2756
 230801,市辖区,City area,Jiamusi shixiaqu,,3,,
 230803,向阳区,Jiamusi: Xiangyang qu,Jiamusi: Xiangyang qu,,3,46.8077044,130.3651321
 230804,前进区,Jiamusi: Qianjin qu,Jiamusi: Qianjin qu,,3,46.814012,130.3749704
@@ -817,25 +817,25 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 230833,抚远县,Fuyuan,Fuyuan,,3,47.9510467,134.0982413
 230881,同江市,Tongjiang shi,Tongjiang shi,,3,47.8641118,133.2192063
 230882,富锦市,Fujin shi,Fujin shi,,3,47.2450007,132.4408293
-230900,七台河市,Qitaihe shi,Qitaihe shi,,2,45.7695811,131.0157502
+230900,七台河市,Qitaihe shi,Qitaihe shi,QTH,2,45.7695811,131.0157502
 230901,市辖区,City area,Qitaihe shixiaqu,,3,,
 230902,新兴区,Qitaihe: Xinxin qu,Qitaihe: Xinxin qu,,3,45.8159467,130.9320223
 230903,桃山区,Qitaihe: Taoshan qu,Qitaihe: Taoshan qu,,3,45.7683163,131.0169089
 230904,茄子河区,Qitaihe: Qiezihe qu,Qitaihe: Qiezihe qu,,3,45.7851902,131.0680747
 230921,勃利县,Boli,Boli,,3,45.7600758,130.5774987
-231000,牡丹江市,Mudanjiang shi,Mudanjiang shi,,2,44.5137905,129.7007489
+231000,牡丹江市,Mudanjiang shi,Mudanjiang shi,MDG,2,44.5137905,129.7007489
 231001,市辖区,City area,Mudanjiang shixiaqu,,3,,
 231002,东安区,Mudanjiang: Dong'an qu,Mudanjiang: Dong'an qu,,3,44.5813896,129.6267521
 231003,阳明区,Mudanjiang: Yangming qu,Mudanjiang: Yangming qu,,3,44.5961056,129.6357107
 231004,爱民区,Mudanjiang: Aiming qu,Mudanjiang: Aiming qu,,3,44.5963577,129.5901883
 231005,西安区,Mudanjiang: Xi'an qu,Mudanjiang: Xi'an qu,,3,44.5776298,129.616152
-231024,东宁县,Dongning,Dongning,,3,44.1611034,130.8220732
+231024,东宁县,,,,3,44.1611034,130.8220732
 231025,林口县,Linkou,Linkou,,3,45.3170221,129.9646461
 231081,绥芬河市,Suifenhe shi,Suifenhe shi,,3,44.4162948,131.0878909
 231083,海林市,Hailin shi,Hailin shi,,3,44.9101768,129.0952349
-231084,宁安市,Ning'an shi,Ning'an shi,,3,43.9917339,129.2358255
+231084,宁安市,,,,3,43.9917339,129.2358255
 231085,穆棱市,,,,3,44.4750353,130.3633404
-231100,黑河市,Heihe shi,Heihe shi,,2,50.247891,127.5009406
+231100,黑河市,Heihe shi,Heihe shi,HEK,2,50.247891,127.5009406
 231101,市辖区,City area,Heihe shixiaqu,,3,,
 231102,爱辉区,Heihe: Aihui qu,Heihe: Aihui qu,,3,50.1951782,126.7605543
 231121,嫩江县,Nenjiang,Nenjiang,,3,49.1751878,125.2175975
@@ -843,7 +843,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 231124,孙吴县,Sunwu,Sunwu,,3,49.4253998,127.3365641
 231181,北安市,Bei'an shi,Bei'an shi,,3,48.2391375,126.4818621
 231182,五大连池市,Wudalianchi shi,Wudalianchi shi,,3,48.5167891,126.2060988
-231200,绥化市,Suihua,,,2,46.6366344,126.9800019
+231200,绥化市,Suihua,,SUH,2,46.6366344,126.9800019
 231201,市辖区,City area,,,3,,
 231202,北林区,,,,3,46.6373563,126.9856453
 231221,望奎县,,,,3,46.8327174,126.4860785
@@ -859,11 +859,11 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 232721,呼玛县,Huma,Huma,,3,51.7256392,126.6653144
 232722,塔河县,Tahe,Tahe,,3,52.549636,124.716797
 232723,漠河县,Mohe,Mohe,,3,52.9225621,122.4074231
-310000,上海市,Shanghai,,,1,31.2381763,121.4692688
+310000,上海市,Shanghai,,SH,1,31.2381763,121.4692688
 310100,市辖区,City area,Shanghai shixiaqu,,2,,
 310101,黄浦区,Shanghai: Huangpu qu,Shanghai: Huangpu qu,,3,31.2188206,121.4864302
 310104,徐汇区,Shanghai: Xuhui qu,Shanghai: Xuhui qu,,3,31.1644509,121.435082
-310105,长宁区,Shanghai: Changning qu,Shanghai: Changning qu,,3,31.208764,121.3812232
+310105,长宁区,,,,3,31.208764,121.3812232
 310106,静安区,Shanghai: Jing'an qu,Shanghai: Jing'an qu,,3,31.2289037,121.4460039
 310107,普陀区,,,,3,31.2615492,121.3835621
 310108,闸北区,Shanghai: Zhabei qu,Shanghai: Zhabei qu,,3,31.2504974,121.4539969
@@ -880,7 +880,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 310200,县,County,Shanghai shixian,,2,,
 310230,崇明县,Chongming,Chongming,,3,31.643417,121.55738
 320000,江苏省,Jiangsu,,JS,1,32.0476151,118.7727814
-320100,南京市,Nanjing shi,Nanjing shi,,2,32.0556449,118.7977409
+320100,南京市,Nanjing shi,Nanjing shi,NKG,2,32.0556449,118.7977409
 320101,市辖区,City area,Nanjing shixiaqu,,3,,
 320102,玄武区,Nanjing: Xuanwu qu,Nanjing: Xuanwu qu,,3,32.0549175,118.8453662
 320104,秦淮区,Nanjing: Qinhuai qu,Nanjing: Qinhuai qu,,3,32.0031266,118.8040388
@@ -893,7 +893,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 320116,六合区,,,,3,32.3909786,118.8239944
 320117,溧水区,,,,3,,
 320118,高淳区,,,,3,,
-320200,无锡市,Wuxi shi,Wuxi shi,,2,31.5260471,120.31968
+320200,无锡市,Wuxi shi,Wuxi shi,WUX,2,31.5260471,120.31968
 320201,市辖区,City area,Wuxi shixiaqu,,3,,
 320202,崇安区,Wuxi: Chong'an qu,Wuxi: Chong'an qu,,3,31.5799339,120.2994561
 320203,南长区,Wuxi: Nanchang qu,Wuxi: Nanchang qu,,3,31.5637272,120.3088546
@@ -903,28 +903,28 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 320211,滨湖区,,,,3,31.5218127,120.2945638
 320281,江阴市,Jiangyin shi,Jiangyin shi,,3,31.842493,120.2957225
 320282,宜兴市,Yixing shi,Yixing shi,,3,31.3750189,119.8233426
-320300,徐州市,Xuzhou shi,Xuzhou shi,,2,34.29166,118.3506918
+320300,徐州市,Xuzhou,,XUZ,2,34.29166,118.3506918
 320301,市辖区,City area,Xuzhou shixiaqu,,3,,
-320302,鼓楼区,Xuzhou: Gulou qu,Xuzhou: Gulou qu,,3,34.2885132,117.1855938
+320302,鼓楼区,,,,3,34.2885132,117.1855938
 320303,云龙区,,,,3,34.2489603,117.2305262
 320305,贾汪区,Xuzhou: Jiawang qu,Xuzhou: Jiawang qu,,3,34.4431144,117.4536324
-320311,泉山区,,,,3,34.2440559,117.1941662
+320311,泉山区,Xuzhou: Quanshan qu,Xuzhou: Quanshan qu,,3,34.2440559,117.1941662
 320312,铜山区,,,,3,,
 320321,丰县,Feng xian,Feng xian,,3,34.6732498,116.6145515
 320322,沛县,Pei xian,Pei xian,,3,34.7058727,116.921525
-320324,睢宁县,Suining,Suining,,3,33.9440453,117.852037
-320381,新沂市,Xinyi shi,Xinyi shi,,3,34.36929,118.3543932
-320382,邳州市,Pizhou shi,Pizhou shi,,3,34.3912494,117.8877747
-320400,常州市,Changzhou shi,Changzhou shi,,2,31.7558405,119.939214
+320324,睢宁县,,,,3,33.9440453,117.852037
+320381,新沂市,,,,3,34.36929,118.3543932
+320382,邳州市,,,,3,34.3912494,117.8877747
+320400,常州市,,,CZX,2,31.7558405,119.939214
 320401,市辖区,City area,Changzhou shixiaqu,,3,,
-320402,天宁区,Changzhou: Tianning qu,Changzhou: Tianning qu,,3,31.7525015,119.9514663
+320402,天宁区,,,,3,31.7525015,119.9514663
 320404,钟楼区,,,,3,31.7823108,119.9482799
-320405,戚墅堰区,Changzhou: Qishuyan qu,Changzhou: Qishuyan qu,,3,31.7200086,120.0607932
+320405,戚墅堰区,Changzhou: Qishuyan qu,Changzhou: Qishuyan qu,QSY,3,31.7200086,120.0607932
 320411,新北区,,,,3,31.8304798,119.9714327
 320412,武进区,,,,3,31.7012158,119.9422073
 320481,溧阳市,Liyang shi,Liyang shi,,3,31.4204692,119.3807888
 320482,金坛市,Jintan shi,Jintan shi,,3,31.7234766,119.5273876
-320500,苏州市,Suzhou shi,Suzhou shi,,2,31.2370225,120.4069161
+320500,苏州市,,,,2,31.2370225,120.4069161
 320501,市辖区,City area,Suzhou shixiaqu,,3,,
 320505,虎丘区,,,,3,31.2953019,120.5734599
 320506,吴中区,,,,3,31.2625855,120.6322968
@@ -935,17 +935,17 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 320582,张家港市,Zhangjiagang shi,Zhangjiagang shi,,3,31.8783776,120.6448388
 320583,昆山市,Kunshan shi,Kunshan shi,,3,31.3199693,120.9802222
 320585,太仓市,Taicang shi,Taicang shi,,3,31.5564045,121.1741567
-320600,南通市,Nantong shi,Nantong shi,,2,31.9542742,120.9084785
+320600,南通市,Nantong shi,Nantong shi,NTG,2,31.9542742,120.9084785
 320601,市辖区,City area,Nantong shixiaqu,,3,,
 320602,崇川区,,,,3,32.0099592,120.8568835
-320611,港闸区,,,,3,32.0312814,120.8181524
+320611,港闸区,Nantong: Gangzha qu,Nantong: Gangzha qu,,3,32.0312814,120.8181524
 320612,通州区,,,,3,,
 320621,海安县,Hai'an,Hai'an,,3,32.5320614,120.5469167
 320623,如东县,Rudong,Rudong,,3,32.4054818,121.0684884
 320681,启东市,Qidong shi,Qidong shi,,3,31.8622686,121.6972411
 320682,如皋市,Rugao shi,Rugao shi,,3,32.2431962,120.5900681
 320684,海门市,,,,3,31.9365578,121.3005102
-320700,连云港市,Lianyungang shi,Lianyungang shi,,2,34.6086631,119.5067668
+320700,连云港市,Lianyungang shi,Lianyungang shi,LYG,2,34.6086631,119.5067668
 320701,市辖区,City area,Lianyungang shixiaqu,,3,,
 320703,连云区,Lianyungang: Lianyun qu,Lianyungang: Lianyun qu,,3,34.7528171,119.3727744
 320705,新浦区,,,,3,34.6053516,119.1763079
@@ -964,31 +964,31 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 320829,洪泽县,Hongze,Hongze,,3,33.294225,118.8731432
 320830,盱眙县,,,,3,32.8722686,118.5797981
 320831,金湖县,Jinhu,Jinhu,,3,32.8722686,118.5797981
-320900,盐城市,Yancheng shi,Yancheng shi,,2,33.3474688,120.1635003
+320900,盐城市,Yancheng shi,Yancheng shi,YCK,2,33.3474688,120.1635003
 320901,市辖区,City area,Yancheng shixiaqu,,3,,
 320902,亭湖区,,,,3,33.4217529,120.1525033
 320903,盐都区,,,,3,33.2763144,120.0449896
 320921,响水县,Xiangshui,Xiangshui,,3,34.2163713,119.8040307
-320922,滨海县,Binhai,Binhai,,3,34.0978662,120.0012159
-320923,阜宁县,Funing,Funing,,3,33.6912633,119.7263432
+320922,滨海县,,,,3,34.0978662,120.0012159
+320923,阜宁县,,,,3,33.6912633,119.7263432
 320924,射阳县,Sheyang,Sheyang,,3,33.7543526,120.2649629
 320925,建湖县,Jianhu,Jianhu,,3,33.4818092,119.8286211
 320981,东台市,Dongtai shi,Dongtai shi,,3,32.79357,120.5180883
 320982,大丰市,,,,3,33.2444573,120.5613256
-321000,扬州市,Yangzhou shi,Yangzhou shi,,2,32.3944755,119.4132006
+321000,扬州市,Yangzhou shi,Yangzhou shi,YZH,2,32.3944755,119.4132006
 321001,市辖区,City area,Yangzhou shixiaqu,,3,,
 321002,广陵区,Yangzhou:  Guangling qu,Yangzhou:  Guangling qu,,3,32.3920657,119.4845152
 321003,邗江区,,,,3,32.4396968,119.4984519
 321012,江都区,,,,3,,
 321023,宝应县,Baoying,Baoying,,3,33.2141953,119.4315898
 321081,仪征市,Yizheng shi,Yizheng shi,,3,32.4145756,119.1916609
-321084,高邮市,Gaoyou shi,Gaoyou shi,,3,32.8454499,119.507314
-321100,镇江市,Zhenjiang shi,Zhenjiang shi,,2,32.0590639,119.4183183
+321084,高邮市,,,,3,32.8454499,119.507314
+321100,镇江市,Zhenjiang shi,Zhenjiang shi,ZHE,2,32.0590639,119.4183183
 321101,市辖区,City area,Zhenjiang shixiaqu,,3,,
-321102,京口区,,,,3,32.1980945,119.4694734
+321102,京口区,Zhenjiang: Jingkou qu,Zhenjiang: Jingkou qu,,3,32.1980945,119.4694734
 321111,润州区,,,,3,32.1980945,119.4694734
 321112,丹徒区,,,,3,32.1318583,119.4338429
-321181,丹阳市,Danyang shi,Danyang shi,,3,31.9333438,119.6502972
+321181,丹阳市,,,,3,31.9333438,119.6502972
 321182,扬中市,Yangzhong shi,Yangzhong shi,,3,32.1654138,119.8352408
 321183,句容市,,,,3,31.9222803,119.1741621
 321200,泰州市,Taizhou,,TZS,2,32.3599442,119.911834
@@ -999,15 +999,15 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 321281,兴化市,,,,3,32.944437,119.9746943
 321282,靖江市,,,,3,32.0363656,120.2898109
 321283,泰兴市,,,,3,32.1710991,120.1401114
-321300,宿迁市,Suqian,,,2,33.9624939,118.2752788
+321300,宿迁市,Suqian,,SUQ,2,33.9624939,118.2752788
 321301,市辖区,City area,,,3,,
 321302,宿城区,,,,3,33.9422029,118.291415
 321311,宿豫区,,,,3,33.9472138,118.330543
 321322,沭阳县,,,,3,34.1145316,118.7687624
 321323,泗阳县,,,,3,33.7211183,118.7036598
 321324,泗洪县,,,,3,33.459077,118.2164204
-330000,浙江省,Zhejiang,,,1,30.265995,120.1592484
-330100,杭州市,Hangzhou shi,Hangzhou shi,,2,30.2739768,120.1729739
+330000,浙江省,Zhejiang,,ZJ,1,30.265995,120.1592484
+330100,杭州市,Hangzhou shi,Hangzhou shi,HGH,2,30.2739768,120.1729739
 330101,市辖区,City area,Hangzhou shixiaqu,,3,,
 330102,上城区,Hangzhou: Shangcheng qu,Hangzhou: Shangcheng qu,,3,30.2297974,120.1836276
 330103,下城区,Hangzhou: Xiacheng qu,Hangzhou: Xiacheng qu,,3,30.3045396,120.1813531
@@ -1022,22 +1022,22 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 330182,建德市,Jiande shi,Jiande shi,,3,29.4896382,119.3368542
 330183,富阳市,Fuyang shi,Fuyang shi,,3,29.9718698,119.8029792
 330185,临安市,,,,3,30.1960215,119.3662834
-330200,宁波市,Ningbo shi,Ningbo shi,,2,29.8683357,121.5439904
+330200,宁波市,Ningbo,,NGB,2,29.8683357,121.5439904
 330201,市辖区,City area,Ningbo shixiaqu,,3,,
 330203,海曙区,Ningbo: Haishu qu,Ningbo: Haishu qu,,3,29.867396,121.5317917
 330204,江东区,Ningbo: Jiangdong qu,Ningbo: Jiangdong qu,,3,29.856482,121.5742779
 330205,江北区,Ningbo: Jiangbei qu,Ningbo: Jiangbei qu,,3,29.9651407,121.5085852
-330206,北仑区,,,,3,29.860604,121.8959069
+330206,北仑区,Ningbo: Beilun qu,Ningbo: Beilun qu,,3,29.860604,121.8959069
 330211,镇海区,Ningbo: Zhenhai qu,Ningbo: Zhenhai qu,,3,29.9851501,121.6277826
 330212,鄞州区,,,,3,29.7843992,121.5065467
 330225,象山县,Xiangshan,Xiangshan,,3,29.3991697,121.7851746
-330226,宁海县,Ninghai,Ninghai,,3,29.3125499,121.4907753
+330226,宁海县,,,,3,29.3125499,121.4907753
 330281,余姚市,Yuyao shi,Yuyao shi,,3,29.96818,121.1734807
 330282,慈溪市,Cixi shi,Cixi shi,,3,30.1826396,121.3419986
 330283,奉化市,Fenghua shi,Fenghua shi,,3,29.5906809,121.4146328
-330300,温州市,Wenzhou shi,Wenzhou shi,,2,27.9870403,120.6548595
+330300,温州市,Wenzhou shi,Wenzhou shi,WNZ,2,27.9870403,120.6548595
 330301,市辖区,City area,Wenzhou shixiaqu,,3,,
-330302,鹿城区,,,,3,28.0644256,120.5964625
+330302,鹿城区,Wenzhou: Lucheng qu,Wenzhou: Lucheng qu,,3,28.0644256,120.5964625
 330303,龙湾区,Wenzhou: Longwan qu,Wenzhou: Longwan qu,,3,27.8985724,120.8158135
 330304,瓯海区,Wenzhou: Ouhai qu,Wenzhou: Ouhai qu,,3,27.9713594,120.5389667
 330322,洞头县,Dongtou,Dongtou,,3,27.9637029,121.0994303
@@ -1048,23 +1048,23 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 330329,泰顺县,Taishun,Taishun,,3,27.5618042,119.9387312
 330381,瑞安市,Rui'an shi,Rui'an shi,,3,27.8279756,120.4757953
 330382,乐清市,,,,3,28.2535863,121.022805
-330400,嘉兴市,Jiaxing shi,Jiaxing shi,,2,30.753924,120.758543
+330400,嘉兴市,Jiaxing shi,Jiaxing shi,JIX,2,30.753924,120.758543
 330401,市辖区,City area,Jiaxing shixiaqu,,3,,
 330402,南湖区,,,,3,30.7201727,120.8170474
 330411,秀洲区,,,,3,30.7780222,120.6755877
 330421,嘉善县,Jiashan,Jiashan,,3,30.8904313,120.8924603
 330424,海盐县,Haiyan,Haiyan,,3,30.4861625,120.8884585
-330481,海宁市,Haining shi,Haining shi,,3,30.4420511,120.5730093
+330481,海宁市,,,,3,30.4420511,120.5730093
 330482,平湖市,Pinghu shi,Pinghu shi,,3,30.7172396,121.108464
 330483,桐乡市,,,,3,30.6384936,120.4834771
-330500,湖州市,Huzhou shi,Huzhou shi,,2,30.784502,120.1790035
+330500,湖州市,Huzhou shi,Huzhou shi,HZH,2,30.784502,120.1790035
 330501,市辖区,City area,Huzhou shixiaqu,,3,,
 330502,吴兴区,,,,3,30.8572161,120.1258421
 330503,南浔区,,,,3,30.7704725,120.2778697
 330521,德清县,Deqing,Deqing,,3,30.561993,120.0685072
 330522,长兴县,Changxing,Changxing,,3,30.9460988,119.8355198
 330523,安吉县,Anji,Anji,,3,30.6232519,119.5694339
-330600,绍兴市,Shaoxing shi,Shaoxing shi,,2,29.995762,120.5861092
+330600,绍兴市,Shaoxing shi,Shaoxing shi,SXG,2,29.995762,120.5861092
 330601,市辖区,City area,Shaoxing shixiaqu,,3,,
 330602,越城区,Shaoxing: Yuecheng qu,Shaoxing: Yuecheng qu,,3,30.0008073,120.6197655
 330621,绍兴县,Shaoxing,Shaoxing,,3,29.9831522,120.7487476
@@ -1072,7 +1072,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 330681,诸暨市,Zhuji shi,Zhuji shi,,3,29.6790208,120.214119
 330682,上虞市,Shangyu shi,Shangyu shi,,3,29.9873804,120.8835125
 330683,嵊州市,,,,3,29.5790836,120.7863736
-330700,金华市,Jinhua shi,Jinhua shi,,2,29.0313605,119.63238
+330700,金华市,Jinhua shi,Jinhua shi,JHA,2,29.0313605,119.63238
 330701,市辖区,City area,Jinhua shixiaqu,,3,,
 330702,婺城区,Jinhua: Wucheng qu,Jinhua: Wucheng qu,,3,29.1037736,119.6538913
 330703,金东区,,,,3,29.0994051,119.6930838
@@ -1083,7 +1083,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 330782,义乌市,Yiwu shi,Yiwu shi,,3,29.2912179,120.0484228
 330783,东阳市,Dongyang shi,Dongyang shi,,3,29.2284687,120.404942
 330784,永康市,Yongkang shi,Yongkang shi,,3,28.9298854,120.1194584
-330800,衢州市,Quzhou shi,Quzhou shi,,2,28.977144,118.9255428
+330800,衢州市,Quzhou shi,Quzhou shi,QUZ,2,28.977144,118.9255428
 330801,市辖区,City area,Quzhou shixiaqu,,3,,
 330802,柯城区,Quzhou: Kecheng qu,Quzhou: Kecheng qu,,3,28.9685181,118.8713837
 330803,衢江区,,,,3,28.9805228,118.959049
@@ -1091,13 +1091,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 330824,开化县,Kaihua,Kaihua,,3,29.1379932,118.4159875
 330825,龙游县,Longyou,Longyou,,3,29.028321,119.1722953
 330881,江山市,Jiangshan shi,Jiangshan shi,,3,28.73724,118.6270022
-330900,舟山市,Zhoushan shi,Zhoushan shi,,2,30.0275164,122.1062672
+330900,舟山市,Zhoushan shi,Zhoushan shi,ZOS,2,30.0275164,122.1062672
 330901,市辖区,City area,Zhoushan shixiaqu,,3,,
 330902,定海区,Zhoushan: Dinghai qu,Zhoushan: Dinghai qu,,3,30.0740613,122.0970511
 330903,普陀区,Zhoushan: Putuo qu,Zhoushan: Putuo qu,,3,31.2615492,121.3835621
 330921,岱山县,Daishan,Daishan,,3,30.283168,122.1621859
 330922,嵊泗县,Shengsi,Shengsi,,3,30.028678,122.104111
-331000,台州市,Taizhou shi,Taizhou shi,,2,28.6270212,121.2136173
+331000,台州市,Taizhou shi,Taizhou shi,TZZ,2,28.6270212,121.2136173
 331001,市辖区,City area,Taizhou shixiaqu,,3,,
 331002,椒江区,Taizhou: Jiaojiang qu,Taizhou: Jiaojiang qu,,3,28.4837897,121.8875679
 331003,黄岩区,Taizhou: Huangyan qu,Taizhou: Huangyan qu,,3,28.676545,121.248937
@@ -1108,7 +1108,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 331024,仙居县,,,,3,28.732762,120.6256342
 331081,温岭市,,,,3,28.3849255,121.4189994
 331082,临海市,,,,3,28.8488922,121.1184464
-331100,丽水市,Lishui,,,2,28.4518359,119.9164259
+331100,丽水市,Lishui,,LSS,2,28.4518359,119.9164259
 331101,市辖区,City area,,,3,,
 331102,莲都区,,,,3,28.4458363,119.912703
 331121,青田县,,,,3,28.1398821,120.2894354
@@ -1120,18 +1120,18 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 331127,景宁畲族自治县,,,,3,27.9733493,119.6358669
 331181,龙泉市,,,,3,28.0744132,119.1418147
 340000,安徽省,Anhui,,AH,1,31.8632545,117.2757034
-340100,合肥市,Hefei shi,Hefei shi,,2,31.7956434,117.2591507
+340100,合肥市,Hefei shi,Hefei shi,HFE,2,31.7956434,117.2591507
 340101,市辖区,City area,Hefei shixiaqu,,3,,
 340102,瑶海区,,,,3,31.8579493,117.309587
 340103,庐阳区,,,,3,31.8786418,117.264601
 340104,蜀山区,,,,3,31.8512513,117.2605455
 340111,包河区,,,,3,31.8800539,117.2826684
 340121,长丰县,Changfeng,Changfeng,,3,32.2579226,117.2117937
-340122,肥东县,,,,3,31.9207413,117.6032138
-340123,肥西县,,,,3,31.7553387,117.0665145
+340122,肥东县,Feidong,Feidong,,3,31.9207413,117.6032138
+340123,肥西县,Feixi,Feixi,,3,31.7553387,117.0665145
 340124,庐江县,,,,3,,
 340181,巢湖市,Chaohu,,http://en.wikipedia.org/wiki/Chaohu,3,,
-340200,芜湖市,Wuhu shi,Wuhu shi,,2,31.4067806,118.3732438
+340200,芜湖市,Wuhu shi,Wuhu shi,WHI,2,31.4067806,118.3732438
 340201,市辖区,City area,Wuhu shixiaqu,,3,,
 340202,镜湖区,Wuhu: Jinghu qu,Wuhu: Jinghu qu,,3,31.3403876,118.3852494
 340203,弋江区,,,,3,31.3115917,118.3729649
@@ -1141,7 +1141,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 340222,繁昌县,Fanchang,Fanchang,,3,31.1313677,118.1741917
 340223,南陵县,Nanling,Nanling,,3,30.9204965,118.2392728
 340225,无为县,,,,3,,
-340300,蚌埠市,Bengbu shi,Bengbu shi,,2,32.9468409,117.3585105
+340300,蚌埠市,Bengbu shi,Bengbu shi,BBU,2,32.9468409,117.3585105
 340301,市辖区,City area,Bengbu shixiaqu,,3,,
 340302,龙子湖区,,,,3,32.9430144,117.3937869
 340303,蚌山区,,,,3,32.9441939,117.3676193
@@ -1150,7 +1150,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 340321,怀远县,Huaiyuan,Huaiyuan,,3,33.0200351,117.0358837
 340322,五河县,Wuhe,Wuhe,,3,33.1280547,117.7557886
 340323,固镇县,Guzhen,Guzhen,,3,33.2653708,117.338233
-340400,淮南市,Huainan shi,Huainan shi,,2,32.6496737,117.0385337
+340400,淮南市,Huainan shi,Huainan shi,HNS,2,32.6496737,117.0385337
 340401,市辖区,City area,Huainan shixiaqu,,3,,
 340402,大通区,Huainan: Datong qu,Huainan: Datong qu,,3,32.631659,117.0532858
 340403,田家庵区,Huainan: Tianjia'an qu,Huainan: Tianjia'an qu,,3,32.6471533,117.0174086
@@ -1158,7 +1158,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 340405,八公山区,Huainan: Bagongshan qu,Huainan: Bagongshan qu,,3,32.6296712,116.832186
 340406,潘集区,Huainan: Panji qu,Huainan: Panji qu,,3,32.7826203,116.816833
 340421,凤台县,Fengtai,Fengtai,,3,32.7094465,116.7110467
-340500,马鞍山市,Ma'anshan shi,Ma'anshan shi,,2,31.6928176,118.5523188
+340500,马鞍山市,Ma'anshan shi,Ma'anshan shi,MAA,2,31.6928176,118.5523188
 340501,市辖区,City area,Ma'anshan shixiaqu,,3,,
 340503,花山区,Ma'anshan: Huashan qu,Ma'anshan: Huashan qu,,3,31.7001113,118.5123217
 340504,雨山区,Ma'anshan: Yushan qu,Ma'anshan: Yushan qu,,3,31.6822,118.4986961
@@ -1166,24 +1166,24 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 340521,当涂县,Dangtu,Dangtu,,3,31.4904743,118.632828
 340522,含山县,,,,3,,
 340523,和县,,,,3,,
-340600,淮北市,Huaibei shi,Huaibei shi,,2,34.0187497,116.8862915
+340600,淮北市,Huaibei shi,Huaibei shi,HBE,2,34.0187497,116.8862915
 340601,市辖区,City area,Huaibei shixiaqu,,3,,
 340602,杜集区,Huaibei: Duji qu,Huaibei: Duji qu,,3,33.9914804,116.8281412
 340603,相山区,Huaibei: Xiangshan qu,Huaibei: Xiangshan qu,,3,33.9597976,116.7946458
 340604,烈山区,Huaibei: Lieshan qu,Huaibei: Lieshan qu,,3,33.8931194,116.8132603
 340621,濉溪县,Suixi,Suixi,,3,33.9154789,116.7663002
-340700,铜陵市,Tongling shi,Tongling shi,,2,30.9237823,117.8247857
+340700,铜陵市,Tongling shi,Tongling shi,TOL,2,30.9237823,117.8247857
 340701,市辖区,City area,Tongling shixiaqu,,3,,
 340702,铜官山区,Tongling: Tongguanshan qu,Tongling: Tongguanshan qu,,3,30.9342372,117.8152585
 340703,狮子山区,Tongling: Shizishan qu,Tongling: Shizishan qu,,3,30.9502026,117.8503847
 340711,郊区,Tongling: Jiaoqu,Tongling: Jiaoqu,,3,30.9197694,117.8086817
 340721,铜陵县,Tongling,Tongling,,3,30.9528249,117.7915478
-340800,安庆市,Anqing shi,Anqing shi,,2,30.5982377,117.1100521
+340800,安庆市,Anqing shi,Anqing shi,AQG,2,30.5982377,117.1100521
 340801,市辖区,City area,Anqing shixiaqu,,3,,
 340802,迎江区,Anqing: Yingjiang qu,Anqing: Yingjiang qu,,3,30.5040696,117.0492518
 340803,大观区,Anqing: Daguan qu,Anqing: Daguan qu,,3,30.5119728,117.0344889
 340811,宜秀区,,,,3,30.535734,117.0535862
-340822,怀宁县,Huaining,Huaining,,3,30.5869335,116.7700231
+340822,怀宁县,,,,3,30.5869335,116.7700231
 340823,枞阳县,Zongyang,Zongyang,,3,30.855153,117.4078953
 340824,潜山县,Qianshan,Qianshan,,3,30.7631159,116.5068662
 340825,太湖县,Taihu,Taihu,,3,30.4529467,116.1272693
@@ -1191,16 +1191,16 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 340827,望江县,Wangjiang,Wangjiang,,3,30.2348771,116.6850829
 340828,岳西县,Yuexi,Yuexi,,3,30.9188858,116.2024677
 340881,桐城市,,,,3,30.9636722,116.9198513
-341000,黄山市,Huangshan shi,Huangshan shi,,2,29.9558362,118.2488108
+341000,黄山市,Huangshan shi,Huangshan shi,HSN,2,29.9558362,118.2488108
 341001,市辖区,City area,Huangshan shixiaqu,,3,,
 341002,屯溪区,Huangshan: Tunxi qu,Huangshan: Tunxi qu,,3,29.7113793,118.3336866
 341003,黄山区,Huangshan: Huangshan qu,Huangshan: Huangshan qu,,3,30.2729391,118.1415653
 341004,徽州区,Huangshan: Huizhou qu,Huangshan: Huizhou qu,,3,29.82794,118.3367229
 341021,歙县,She xian,She xian,,3,29.8661586,118.4313726
-341022,休宁县,Xiuning,Xiuning,,3,29.7862243,118.1824744
+341022,休宁县,,,,3,29.7862243,118.1824744
 341023,黟县,Yi xian,Yi xian,,3,29.924812,117.9382646
 341024,祁门县,Qimen,Qimen,,3,29.8540534,117.7173901
-341100,滁州市,Chuzhou shi,Chuzhou shi,,2,32.3080456,118.3084095
+341100,滁州市,Chuzhou shi,Chuzhou shi,CUZ,2,32.3080456,118.3084095
 341101,市辖区,City area,Chuzhou shixiaqu,,3,,
 341102,琅琊区,Chuzhou: Langya qu,Chuzhou: Langya qu,,3,32.2952136,118.3053839
 341103,南谯区,Chuzhou: Nanqiao qu,Chuzhou: Nanqiao qu,,3,32.318609,118.3122182
@@ -1227,7 +1227,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 341322,萧县,,,,3,34.1887308,116.9472849
 341323,灵璧县,,,,3,33.5420564,117.5578952
 341324,泗县,,,,3,33.4829725,117.9106379
-341500,六安市,Lu'an,,,2,31.7489891,116.4958906
+341500,六安市,Lu'an,,LAW,2,31.7489891,116.4958906
 341501,市辖区,City area,,,3,,
 341502,金安区,,,,3,31.7557401,116.5091193
 341503,裕安区,,,,3,31.737867,116.479851
@@ -1236,19 +1236,19 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 341523,舒城县,,,,3,31.4621912,116.948669
 341524,金寨县,,,,3,31.6783197,115.8796048
 341525,霍山县,,,,3,31.392687,116.3328874
-341600,亳州市,Bozhou,,,2,33.8762324,115.779022
+341600,亳州市,Bozhou,,BOZ,2,33.8762324,115.779022
 341601,市辖区,City area,,,3,,
 341602,谯城区,,,,3,33.8762324,115.779022
 341621,涡阳县,,,,3,33.5058684,116.2198055
 341622,蒙城县,,,,3,33.2294902,116.5609857
 341623,利辛县,,,,3,33.1168194,116.1359431
-341700,池州市,Chizhou,,,2,30.6599258,117.4907863
+341700,池州市,Chizhou,,CIZ,2,30.6599258,117.4907863
 341701,市辖区,City area,,,3,,
 341702,贵池区,,,,3,30.605847,117.4855721
 341721,东至县,,,,3,30.096685,117.0275366
 341722,石台县,,,,3,30.2101711,117.4865162
 341723,青阳县,,,,3,30.6225133,117.9277933
-341800,宣城市,Xuancheng,,,2,30.9407157,118.7588167
+341800,宣城市,Xuancheng,,XCI,2,30.9407157,118.7588167
 341801,市辖区,City area,,,3,,
 341802,宣州区,,,,3,30.9443965,118.7546217
 341821,郎溪县,,,,3,31.1263992,119.1798055
@@ -1257,8 +1257,8 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 341824,绩溪县,,,,3,30.0708674,118.595674
 341825,旌德县,,,,3,30.2863457,118.5404849
 341881,宁国市,,,,3,30.6335733,118.982985
-350000,福建省,Fujian,,,1,26.0785904,119.2978134
-350100,福州市,Fuzhou shi,Fuzhou shi,,2,26.0761062,119.3064058
+350000,福建省,Fujian,,FJ,1,26.0785904,119.2978134
+350100,福州市,Fuzhou shi,Fuzhou shi,FOC,2,26.0761062,119.3064058
 350101,市辖区,City area,Fuzhou shixiaqu,,3,,
 350102,鼓楼区,Fuzhou: Gulou qu,Fuzhou: Gulou qu,,3,26.0866676,119.2775023
 350103,台江区,Fuzhou: Taijiang qu,Fuzhou: Taijiang qu,,3,26.0604358,119.308176
@@ -1273,36 +1273,36 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 350128,平潭县,Pingtan,Pingtan,,3,25.5267294,119.7812104
 350181,福清市,Fuqing shi,Fuqing shi,,3,25.5857819,119.374094
 350182,长乐市,Changle shi,Changle shi,,3,25.8730094,119.5613015
-350200,厦门市,Xiamen shi,Xiamen shi,,2,24.4796693,118.0897665
+350200,厦门市,Xiamen shi,Xiamen shi,XMN,2,24.4796693,118.0897665
 350201,市辖区,City area,Xiamen shixiaqu,,3,,
 350203,思明区,Xiamen: Siming qu,Xiamen: Siming qu,,3,24.4626292,118.1373382
 350205,海沧区,,,,3,24.5414335,117.9820812
 350206,湖里区,Xiamen: Huli qu,Xiamen: Huli qu,,3,24.5205754,118.1388938
-350211,集美区,,,,3,24.6439844,118.0386865
+350211,集美区,Xiamen: Jimei qu,Xiamen: Jimei qu,,3,24.6439844,118.0386865
 350212,同安区,,,,3,24.7559022,118.0836296
 350213,翔安区,,,,3,24.6798945,118.2692599
-350300,莆田市,Putian shi,Putian shi,,2,25.3840067,119.1084695
+350300,莆田市,Putian shi,Putian shi,PUT,2,25.3840067,119.1084695
 350301,市辖区,City area,Putian shixiaqu,,3,,
 350302,城厢区,Putian: Chengxiang qu,Putian: Chengxiang qu,,3,25.418567,118.9946795
 350303,涵江区,Putian: Hanjiang qu,Putian: Hanjiang qu,,3,25.4587264,119.1163445
 350304,荔城区,,,,3,25.432617,119.01515
 350305,秀屿区,,,,3,25.3180277,119.1053259
 350322,仙游县,Xianyou,Xianyou,,3,25.4404553,118.6982846
-350400,三明市,Sanming shi,Sanming shi,,2,26.2564825,117.6182127
+350400,三明市,Sanming shi,Sanming shi,SMS,2,26.2564825,117.6182127
 350401,市辖区,City area,Sanming shixiaqu,,3,,
 350402,梅列区,Sanming: Meilie qu,Sanming: Meilie qu,,3,26.2657673,117.6291883
 350403,三元区,Sanming: Sanyuan qu,Sanming: Sanyuan qu,,3,26.2341673,117.6080203
 350421,明溪县,Mingxi,Mingxi,,3,26.3558242,117.202127
 350423,清流县,Qingliu,Qingliu,,3,26.1778068,116.8164253
-350424,宁化县,Ninghua,Ninghua,,3,26.2617552,116.6543663
+350424,宁化县,,,,3,26.2617552,116.6543663
 350425,大田县,Datian,Datian,,3,25.692788,117.847209
 350426,尤溪县,Youxi,Youxi,,3,26.1701713,118.1904674
 350427,沙县,Sha xian,Sha xian,,3,26.3971458,117.7927387
 350428,将乐县,Jiangle,Jiangle,,3,26.7285837,117.471807
-350429,泰宁县,Taining,Taining,,3,26.9001806,117.1757555
-350430,建宁县,Jianning,Jianning,,3,26.8309067,116.8460798
+350429,泰宁县,,,,3,26.9001806,117.1757555
+350430,建宁县,,,,3,26.8309067,116.8460798
 350481,永安市,Yong'an shi,Yong'an shi,,3,25.9590286,117.3593044
-350500,泉州市,Quanzhou shi,Quanzhou shi,,2,24.9220332,118.5822952
+350500,泉州市,Quanzhou shi,Quanzhou shi,QZJ,2,24.9220332,118.5822952
 350501,市辖区,City area,Quanzhou shixiaqu,,3,,
 350502,鲤城区,Quanzhou: Licheng qu,Quanzhou: Licheng qu,,3,24.9063672,118.5494542
 350503,丰泽区,,,,3,24.9191337,118.6209619
@@ -1316,7 +1316,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 350581,石狮市,Shishi shi,Shishi shi,,3,24.7375941,118.6872339
 350582,晋江市,Jinjiang shi,Jinjiang shi,,3,24.7044785,118.5554194
 350583,南安市,Nan'an shi,Nan'an shi,,3,24.9408005,118.3595431
-350600,漳州市,Zhangzhou shi,Zhangzhou shi,,2,24.5915293,117.6549911
+350600,漳州市,Zhangzhou shi,Zhangzhou shi,ZZU,2,24.5915293,117.6549911
 350601,市辖区,City area,Zhangzhou shixiaqu,,3,,
 350602,芗城区,Zhangzhou: Xiangcheng qu,Zhangzhou: Xiangcheng qu,,3,24.5108041,117.6540148
 350603,龙文区,,,,3,24.5157533,117.6906431
@@ -1329,7 +1329,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 350628,平和县,Pinghe,Pinghe,,3,24.3076693,117.208693
 350629,华安县,Hua'an,Hua'an,,3,24.9137626,117.5123835
 350681,龙海市,Longhai shi,Longhai shi,,3,24.3965272,117.8245175
-350700,南平市,Nanping shi,Nanping shi,,2,26.6404775,118.1823027
+350700,南平市,Nanping shi,Nanping shi,NPS,2,26.6404775,118.1823027
 350701,市辖区,City area,,,3,,
 350702,延平区,,,,3,26.6351838,118.1781399
 350721,顺昌县,Shunchang,Shunchang,,3,26.7932946,117.8102589
@@ -1341,7 +1341,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 350782,武夷山市,Wuyishan shi,Wuyishan shi,,3,27.7566588,118.0353069
 350783,建瓯市,Jian 'ou shi,Jian 'ou shi,,3,27.0233674,118.3069503
 350784,建阳市,Jianyang shi,Jianyang shi,,3,27.3319059,118.1205153
-350800,龙岩市,Longyan,,,2,25.1006494,117.0341885
+350800,龙岩市,Longyan,,LYF,2,25.1006494,117.0341885
 350801,市辖区,City area,,,3,,
 350802,新罗区,,,,3,25.0983273,117.0373213
 350821,长汀县,,,,3,25.8336073,116.3576066
@@ -1350,7 +1350,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 350824,武平县,,,,3,25.0955097,116.1003506
 350825,连城县,,,,3,25.7078789,116.7634571
 350881,漳平市,,,,3,25.2901709,117.4199009
-350900,宁德市,Ningde,,,2,26.652819,119.5366788
+350900,宁德市,Ningde,,NDS,2,26.652819,119.5366788
 350901,市辖区,City area,,,3,,
 350902,蕉城区,,,,3,26.6558,119.523804
 350921,霞浦县,,,,3,26.8081188,120.0182855
@@ -1361,8 +1361,8 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 350926,柘荣县,,,,3,27.2052991,119.9015343
 350981,福安市,,,,3,27.0441721,119.6258032
 350982,福鼎市,,,,3,27.2041254,120.1932943
-360000,江西省,Jiangxi,,,1,28.6759911,115.8999176
-360100,南昌市,Nanchang shi,Nanchang shi,,2,28.7467787,115.8269048
+360000,江西省,Jiangxi,,JX,1,28.6759911,115.8999176
+360100,南昌市,Nanchang shi,Nanchang shi,KHN,2,28.7467787,115.8269048
 360101,市辖区,City area,Nanchang shixiaqu,,3,,
 360102,东湖区,Nanchang: Donghu qu,Nanchang: Donghu qu,,3,28.6849123,115.8990133
 360103,西湖区,Nanchang: Xihu qu,Nanchang: Xihu qu,,3,28.6568887,115.8772874
@@ -1373,25 +1373,25 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 360122,新建县,Xinjian,Xinjian,,3,28.9658148,116.1040413
 360123,安义县,Anyi,Anyi,,3,28.7995549,115.6037235
 360124,进贤县,Jinxian,Jinxian,,3,28.4623626,116.2931263
-360200,景德镇市,Jingdezhen shi,Jingdezhen shi,,2,29.2345544,117.1444917
+360200,景德镇市,Jingdezhen shi,Jingdezhen shi,JDZ,2,29.2345544,117.1444917
 360201,市辖区,City area,Jingdezheng shixiaqu,,3,,
 360202,昌江区,Jingdezhen: Changjiang qu,Jingdezhen: Changjiang qu,,3,29.2734192,117.1836841
 360203,珠山区,Jingdezhen: Zhushan qu,Jingdezhen: Zhushan qu,,3,29.3012763,117.2023308
 360222,浮梁县,Fuliang,Fuliang,,3,29.5347722,117.3731768
 360281,乐平市,Leping shi,Leping shi,,3,28.981283,117.2811019
-360300,萍乡市,Pingxiang shi,Pingxiang shi,,2,27.6228684,113.8546765
+360300,萍乡市,Pingxiang shi,Pingxiang shi,PXS,2,27.6228684,113.8546765
 360301,市辖区,City area,Pingxiang shixiaqu,,3,,
-360302,安源区,,,,3,27.6152064,113.8707268
+360302,安源区,Pingxiang: Anyuan qu,Pingxiang: Anyuan qu,,3,27.6152064,113.8707268
 360313,湘东区,Pingxiang: Xiangdong qu,Pingxiang: Xiangdong qu,,3,27.6400729,113.7330544
 360321,莲花县,Lianhua,Lianhua,,3,27.1276674,113.9614606
 360322,上栗县,,,,3,27.8805648,113.7952173
 360323,芦溪县,,,,3,27.6307011,114.0296209
-360400,九江市,Jiujiang shi,Jiujiang shi,,2,29.6101497,115.9981048
+360400,九江市,Jiujiang shi,Jiujiang shi,JIU,2,29.6101497,115.9981048
 360401,市辖区,City area,Jiujiang shixiaqu,,3,,
 360402,庐山区,Jiujiang: Lushan qu,Jiujiang: Lushan qu,,3,29.6717778,115.9892213
 360403,浔阳区,Jiujiang: Xunyang qu,Jiujiang: Xunyang qu,,3,29.7274615,115.9904015
 360421,九江县,Jiujiang,Jiujiang,,3,29.5990678,115.7858777
-360423,武宁县,Wuning,Wuning,,3,29.3264881,114.9631047
+360423,武宁县,,,,3,29.3264881,114.9631047
 360424,修水县,Xiushui,Xiushui,,3,29.0101014,114.4126296
 360425,永修县,Yongxiu,Yongxiu,,3,29.124451,115.8220339
 360426,德安县,De'an,De'an,,3,29.3870176,115.6068242
@@ -1401,16 +1401,16 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 360430,彭泽县,Pengze,Pengze,,3,29.8292895,116.6226733
 360481,瑞昌市,Ruichang shi,Ruichang shi,,3,29.6201858,115.4179752
 360482,共青城市,,,,3,,
-360500,新余市,Xinyu shi,Xinyu shi,,2,27.804101,114.9341154
+360500,新余市,Xinyu shi,Xinyu shi,XYU,2,27.804101,114.9341154
 360501,市辖区,City area,Xinyu shixiaqu,,3,,
 360502,渝水区,Xinyu: Yushui qu,Xinyu: Yushui qu,,3,27.8003808,114.944576
 360521,分宜县,Fenyi,Fenyi,,3,27.8102789,114.676044
-360600,鹰潭市,Yingtan shi,Yingtan shi,,2,28.2600503,117.0692182
+360600,鹰潭市,Yingtan shi,Yingtan shi,YTS,2,28.2600503,117.0692182
 360601,市辖区,City area,Yingtan shixiaqu,,3,,
 360602,月湖区,Yingtan: Yuehu qu,Yingtan: Yuehu qu,,3,28.2387951,117.0366776
 360622,余江县,Yujiang,Yujiang,,3,28.2041765,116.8188715
 360681,贵溪市,,,,3,28.2925157,117.2454929
-360700,赣州市,Ganzhou,,,2,25.8628246,114.9418294
+360700,赣州市,Ganzhou,,GZH,2,25.8628246,114.9418294
 360701,市辖区,City area,,,3,,
 360702,章贡区,,,,3,25.8628246,114.9418294
 360721,赣县,,,,3,25.8606621,115.0116098
@@ -1470,7 +1470,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 361028,资溪县,,,,3,27.7060994,117.0602596
 361029,东乡县,,,,3,28.2361201,116.5904653
 361030,广昌县,,,,3,26.8372635,116.3257527
-361100,上饶市,Shangrao,,,2,28.4433176,117.9763734
+361100,上饶市,Shangrao,,SRS,2,28.4433176,117.9763734
 361101,市辖区,City area,,,3,,
 361102,信州区,,,,3,28.4312134,117.9668248
 361121,上饶县,,,,3,28.4489871,117.9078484
@@ -1497,7 +1497,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 370125,济阳县,,,,3,36.9775553,117.2197545
 370126,商河县,,,,3,37.3282802,117.2110534
 370181,章丘市,Zhangqiu shi,Zhangqiu shi,,3,36.714024,117.5341094
-370200,青岛市,Qingdao shi,Qingdao shi,,2,36.1079328,120.4159606
+370200,青岛市,Qingdao shi,Qingdao shi,TAO,2,36.1079328,120.4159606
 370201,市辖区,City area,Qingdao shixiaqu,,3,,
 370202,市南区,Qingdao: Shinan qu,Qingdao: Shinan qu,,3,36.0692817,120.3568554
 370203,市北区,Qingdao: Shibei qu,Qingdao: Shibei qu,,3,36.0985795,120.4053819
@@ -1509,7 +1509,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 370282,即墨市,Jimo shi,Jimo shi,,3,36.4766361,120.5601346
 370283,平度市,Pingdu shi,Pingdu shi,,3,36.761682,119.9242365
 370285,莱西市,Laixi shi,Laixi shi,,3,36.8618453,120.4365063
-370300,淄博市,Zibo shi,Zibo shi,,2,36.6358052,118.0986071
+370300,淄博市,Zibo shi,Zibo shi,ZBO,2,36.6358052,118.0986071
 370301,市辖区,City area,Zibo shixiaqu,,3,,
 370302,淄川区,Zibo: Zichuan qu,Zibo: Zichuan qu,,3,36.6434499,117.9668462
 370303,张店区,Zibo: Zhangdian qu,Zibo: Zhangdian qu,,3,36.8063984,118.0181408
@@ -1519,7 +1519,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 370321,桓台县,Huantai,Huantai,,3,36.9798523,118.0115426
 370322,高青县,Gaoqing,Gaoqing,,3,37.1757141,117.8123724
 370323,沂源县,Yiyuan,Yiyuan,,3,36.1588056,118.2154012
-370400,枣庄市,Zaozhuang shi,Zaozhuang shi,,2,34.8225145,117.3235238
+370400,枣庄市,Zaozhuang shi,Zaozhuang shi,ZZG,2,34.8225145,117.3235238
 370401,市辖区,City area,Zaozhuang shixiaqu,,3,,
 370402,市中区,Zaozhuang: Shizhong qu,Zaozhuang: Shizhong qu,,3,36.6510163,116.9974101
 370403,薛城区,Zaozhuang: Xuecheng qu,Zaozhuang: Xuecheng qu,,3,34.7950831,117.2631955
@@ -1527,14 +1527,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 370405,台儿庄区,Zaozhuang: Tai'erzhuang qu,Zaozhuang: Tai'erzhuang qu,,3,34.5628738,117.7339017
 370406,山亭区,Zaozhuang: Shanting qu,Zaozhuang: Shanting qu,,3,35.0995465,117.4613464
 370481,滕州市,Tengzhou shi,Tengzhou shi,,3,35.084017,117.1643829
-370500,东营市,Dongying shi,Dongying shi,,2,37.4350587,118.6760545
+370500,东营市,Dongying shi,Dongying shi,DYG,2,37.4350587,118.6760545
 370501,市辖区,City area,Dongying shixiaqu,,3,,
 370502,东营区,Dongying: Dongying qu,Dongying: Dongying qu,,3,37.4083378,118.5870802
 370503,河口区,Dongying: Hekou qu,Dongying: Hekou qu,,3,37.9618617,118.6277747
 370521,垦利县,Kenli,Kenli,,3,37.681307,118.7644815
 370522,利津县,Lijin,Lijin,,3,37.60971,118.5093713
 370523,广饶县,Guangrao,Guangrao,,3,37.1449158,118.6134624
-370600,烟台市,Yantai shi,Yantai shi,,2,37.4636946,121.4479458
+370600,烟台市,Yantai shi,Yantai shi,YNT,2,37.4636946,121.4479458
 370601,市辖区,City area,Yantai shixiaqu,,3,,
 370602,芝罘区,Yantai: Zhifu qu,Yantai: Zhifu qu,,3,37.5251455,121.3619542
 370611,福山区,Yantai: Fushan qu,Yantai: Fushan qu,,3,37.4458005,121.2109888
@@ -1548,7 +1548,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 370685,招远市,Zhaoyuan shi,Zhaoyuan shi,,3,37.3200044,120.3866494
 370686,栖霞市,,,,3,37.3181529,120.9171474
 370687,海阳市,,,,3,36.8740593,121.1538899
-370700,潍坊市,Weifang shi,Weifang shi,,2,36.7073582,119.1621244
+370700,潍坊市,Weifang shi,Weifang shi,WEF,2,36.7073582,119.1621244
 370701,市辖区,City area,Weifang shixiaqu,,3,,
 370702,潍城区,Weifang: Weicheng qu,Weifang: Weicheng qu,,3,36.7042015,119.0315008
 370703,寒亭区,Weifang: Hanting qu,Weifang: Hanting qu,,3,36.9449787,119.2092669
@@ -1562,10 +1562,10 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 370784,安丘市,Anqiu shi,Anqiu shi,,3,36.3619324,119.1072035
 370785,高密市,Gaomi shi,Gaomi shi,,3,36.41915,119.7245193
 370786,昌邑市,Changyi shi,Changyi shi,,3,36.7806321,119.431901
-370800,济宁市,Jining,Ji'ning shi,JNG,2,35.4066461,116.5970957
+370800,济宁市,Jining,,JNG,2,35.4066461,116.5970957
 370801,市辖区,City area,Ji'ning shixiaqu,,3,,
 370802,市中区,Ji'ning: Shizhong qu,Ji'ning: Shizhong qu,,3,35.4081939,116.596452
-370811,任城区,,,,3,35.4065937,116.5950465
+370811,任城区,Ji'ning: Rencheng qu,Ji'ning: Rencheng qu,,3,35.4065937,116.5950465
 370826,微山县,Weishan,Weishan,,3,34.8070557,117.1288061
 370827,鱼台县,Yutai,Yutai,,3,34.9967284,116.6469741
 370828,金乡县,Jinxiang,Jinxiang,,3,35.066623,116.3119233
@@ -1580,23 +1580,23 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 370901,市辖区,City area,Tai'an shixiaqu,,3,,
 370902,泰山区,Tai'an: Taishan qu,Tai'an: Taishan qu,,3,36.2137486,117.2053993
 370911,岱岳区,,,,3,36.1785445,117.3959219
-370921,宁阳县,Ningyang,Ningyang,,3,35.8208841,116.9576705
+370921,宁阳县,,,,3,35.8208841,116.9576705
 370923,东平县,Dongping,Dongping,,3,35.9754709,116.3563943
 370982,新泰市,Xintai shi,Xintai shi,,3,35.8741506,117.6219571
 370983,肥城市,Feicheng shi,Feicheng shi,,3,36.1012929,116.7362702
-371000,威海市,Weihai shi,Weihai shi,,2,37.5125003,122.1184981
+371000,威海市,Weihai shi,Weihai shi,WEH,2,37.5125003,122.1184981
 371001,市辖区,City area,Weihai shixiaqu,,3,,
 371002,环翠区,Weihai: Huancui qu,Weihai: Huancui qu,,3,37.4162801,122.1367478
 371081,文登市,Wendeng shi,Wendeng shi,,3,37.1445738,122.0232153
 371082,荣成市,Rongcheng shi,Rongcheng shi,,3,37.1306411,122.4342692
 371083,乳山市,Rushan shi,Rushan shi,,3,36.9337794,121.5203977
-371100,日照市,Rizhao shi,Rizhao shi,,2,35.4233292,119.4448936
-371101,市辖区,City area,,,3,,
+371100,日照市,Rizhao shi,Rizhao shi,RZH,2,35.4233292,119.4448936
+371101,市辖区,City area,Rizhao shixiaqu,,3,,
 371102,东港区,Rizhao: Donggang qu,Rizhao: Donggang qu,,3,35.4254712,119.4622314
 371103,岚山区,,,,3,35.1218129,119.3188083
 371121,五莲县,Wulian,Wulian,,3,35.750091,119.2087412
 371122,莒县,Ju xian,Ju xian,,3,35.5798659,118.8371265
-371200,莱芜市,Laiwu shi,Laiwu shi,,2,36.2116971,117.6780689
+371200,莱芜市,Laiwu shi,Laiwu shi,LWS,2,36.2116971,117.6780689
 371201,市辖区,City area,Laiwu shixiaqu,,3,,
 371202,莱城区,Laiwu: Laicheng qu,Laiwu: Laicheng qu,,3,36.2032046,117.659862
 371203,钢城区,Laiwu: Gangcheng qu,Laiwu: Gangcheng qu,,3,36.0585708,117.8113532
@@ -1658,7 +1658,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 371727,定陶县,,,,3,35.0713648,115.5730283
 371728,东明县,,,,3,35.2892951,115.0901234
 410000,河南省,Henan,,HA,1,34.7570343,113.6500473
-410100,郑州市,Zhengzhou shi,Zhengzhou shi,,2,34.7803771,113.6582208
+410100,郑州市,Zhengzhou shi,Zhengzhou shi,CGO,2,34.7803771,113.6582208
 410101,市辖区,City area,Zhengzhou shixiaqu,,3,,
 410102,中原区,Zhengzhou: Zhongyuan qu,Zhengzhou: Zhongyuan qu,,3,34.7711063,113.5593331
 410103,二七区,Zhengzhou: Erqi qu,Zhengzhou: Erqi qu,,3,34.7305827,113.6457217
@@ -1672,7 +1672,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 410183,新密市,Xinmi shi,Xinmi shi,,3,34.4998989,113.4204698
 410184,新郑市,Xinzheng shi,Xinzheng shi,,3,34.4612331,113.7061572
 410185,登封市,Dengfeng shi,Dengfeng shi,,3,34.4297618,113.0253911
-410200,开封市,Kaifeng shi,Kaifeng shi,,2,34.8173178,114.3468297
+410200,开封市,Kaifeng shi,Kaifeng shi,KFS,2,34.8173178,114.3468297
 410201,市辖区,City area,Kaifeng shixiaqu,,3,,
 410202,龙亭区,Kaifeng: Longting qu,Kaifeng: Longting qu,,3,34.8000345,114.3545544
 410203,顺河回族区,Kaifeng: Shunhe Huizu qu,Kaifeng: Shunhe Huizu qu,,3,34.7958673,114.3612385
@@ -1684,7 +1684,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 410223,尉氏县,Weishi,Weishi,,3,34.4065998,114.1647613
 410224,开封县,Kaifeng,Kaifeng,,3,34.7198953,114.5586598
 410225,兰考县,Lankao,Lankao,,3,34.8850333,114.980464
-410300,洛阳市,Luoyang shi,Luoyang shi,,2,34.65155,112.442075
+410300,洛阳市,Luoyang shi,Luoyang shi,LYA,2,34.65155,112.442075
 410301,市辖区,City area,Luoyang shixiaqu,,3,,
 410302,老城区,Luoyang: Laocheng qu,Luoyang: Laocheng qu,,3,34.6827433,112.4694872
 410303,西工区,Luoyang: Xigong qu,Luoyang: Xigong qu,,3,34.6700027,112.4371076
@@ -1698,10 +1698,10 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 410325,嵩县,Song xian,Song xian,,3,33.9638376,112.0375657
 410326,汝阳县,Ruyang,Ruyang,,3,34.0821039,112.4139762
 410327,宜阳县,Yiyang,Yiyang,,3,34.4901192,112.100662
-410328,洛宁县,Luoning,Luoning,,3,34.3618686,111.4983022
+410328,洛宁县,,,,3,34.3618686,111.4983022
 410329,伊川县,Yichuan,Yichuan,,3,34.3862559,112.4836278
 410381,偃师市,Yanshi shi,Yanshi shi,,3,34.6383367,112.7430832
-410400,平顶山市,Pingdingshan shi,Pingdingshan shi,,2,33.7420775,113.2643867
+410400,平顶山市,Pingdingshan shi,Pingdingshan shi,PDS,2,33.7420775,113.2643867
 410401,市辖区,City area,Pingdingshan shixiaqu,,3,,
 410402,新华区,Pingdingshan: Xinhua qu,Pingdingshan: Xinhua qu,,3,38.0508791,114.4632697
 410403,卫东区,Pingdingshan: Weidong qu,Pingdingshan: Weidong qu,,3,33.7347258,113.3351219
@@ -1713,7 +1713,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 410425,郏县,Jia xian,Jia xian,,3,33.9923611,113.2100987
 410481,舞钢市,Wugang shi,Wugang shi,,3,33.2937408,113.5325003
 410482,汝州市,Ruzhou shi,Ruzhou shi,,3,34.1425071,112.8193223
-410500,安阳市,Anyang shi,Anyang shi,,2,36.0969671,114.2752469
+410500,安阳市,Anyang shi,Anyang shi,AYS,2,36.0969671,114.2752469
 410501,市辖区,City area,Anyang shixiaqu,,3,,
 410502,文峰区,Anyang: Wenfeng qu,Anyang: Wenfeng qu,,3,36.090413,114.3596184
 410503,北关区,Anyang: Beiguan qu,Anyang: Beiguan qu,,3,36.1184809,114.3570971
@@ -1724,14 +1724,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 410526,滑县,Hua xian,Hua xian,,3,35.4516598,114.6880496
 410527,内黄县,Neihuang,Neihuang,,3,35.8898671,114.7881818
 410581,林州市,Linzhou shi,Linzhou shi,,3,36.0193315,113.8599765
-410600,鹤壁市,Hebi shi,Hebi shi,,2,35.7504828,114.2972732
+410600,鹤壁市,Hebi shi,Hebi shi,HBS,2,35.7504828,114.2972732
 410601,市辖区,City area,Hebi shixiaqu,,3,,
 410602,鹤山区,Hebi: Heshan qu,Hebi: Heshan qu,,3,35.954578,114.1633666
 410603,山城区,Hebi: Shancheng qu,Hebi: Shancheng qu,,3,35.8977329,114.184438
 410611,淇滨区,,,,3,35.7412962,114.2987859
 410621,浚县,Jun xian,Jun xian,,3,35.6762369,114.550817
 410622,淇县,Qi xian,Qi xian,,3,35.6077662,114.1976559
-410700,新乡市,Xinxiang shi,Xinxiang shi,,2,35.346898,113.8750613
+410700,新乡市,Xinxiang shi,Xinxiang shi,XXS,2,35.346898,113.8750613
 410701,市辖区,City area,Xinxiang shixiaqu,,3,,
 410702,红旗区,Xinxiang: Hongqi qu,Xinxiang: Hongqi qu,,3,35.304584,113.8752115
 410703,卫滨区,,,,3,35.3027803,113.868109
@@ -1745,7 +1745,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 410728,长垣县,Changyuan,Changyuan,,3,35.1829547,114.7450304
 410781,卫辉市,Weihui shi,Weihui shi,,3,35.5122559,114.099133
 410782,辉县市,Huixian shi,Huixian shi,,3,35.5588252,113.6699581
-410800,焦作市,Jiaozuo shi,Jiaozuo shi,,2,35.2690981,113.2743859
+410800,焦作市,Jiaozuo shi,Jiaozuo shi,JZY,2,35.2690981,113.2743859
 410801,市辖区,City area,Jiaozuo shixiaqu,,3,,
 410802,解放区,Jiaozuo: Jiefang qu,Jiaozuo: Jiefang qu,,3,35.240239,113.2293355
 410803,中站区,Jiaozuo: Zhongzhan qu,Jiaozuo: Zhongzhan qu,,3,35.236655,113.1831479
@@ -1757,7 +1757,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 410825,温县,Wen xian,Wen xian,,3,34.9412868,113.0355084
 410882,沁阳市,Qinyang shi,Qinyang shi,,3,35.1459769,112.893126
 410883,孟州市,,,,3,34.9240647,112.7533722
-410900,濮阳市,Puyang shi,Puyang shi,,2,35.7621409,115.0293338
+410900,濮阳市,Puyang shi,Puyang shi,PYS,2,35.7621409,115.0293338
 410901,市辖区,City area,Puyang shixiaqu,,3,,
 410902,华龙区,,,,3,35.7780973,115.07447
 410922,清丰县,Qingfeng,Qingfeng,,3,35.9050157,115.11289
@@ -1765,7 +1765,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 410926,范县,Fan xian,Fan xian,,3,35.8519178,115.5041599
 410927,台前县,Taiqian,Taiqian,,3,35.9961673,115.856452
 410928,濮阳县,Puyang,Puyang,,3,35.7121794,115.0293231
-411000,许昌市,Xuchang shi,Xuchang shi,,2,34.0221555,113.8322425
+411000,许昌市,Xuchang shi,Xuchang shi,XCS,2,34.0221555,113.8322425
 411001,市辖区,City area,Xuchang shixiaqu,,3,,
 411002,魏都区,Xuchang: Weidu qu,Xuchang: Weidu qu,,3,34.0400004,113.8222969
 411023,许昌县,Xuchang,Xuchang,,3,34.020457,113.9812875
@@ -1773,22 +1773,22 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 411025,襄城县,,,,3,33.8585223,113.5610068
 411081,禹州市,Yuzhou shi,Yuzhou shi,,3,34.198111,113.3595836
 411082,长葛市,Changge shi,Changge shi,,3,34.2411912,113.8608241
-411100,漯河市,Luohe shi,Luohe shi,,2,33.5814113,114.0165424
-411101,市辖区,City area,,,3,,
+411100,漯河市,Luohe shi,Luohe shi,LHS,2,33.5814113,114.0165424
+411101,市辖区,City area,Luohe shixiaqu,,3,,
 411102,源汇区,Luohe: Yuanhui qu,Luohe: Yuanhui qu,,3,33.5562734,114.0064681
 411103,郾城区,,,,3,33.5872388,114.0069401
 411104,召陵区,,,,3,33.5909657,114.1618967
 411121,舞阳县,Wuyang,Wuyang,,3,33.4378788,113.6092865
 411122,临颍县,Linying,Linying,,3,33.8094085,113.9344239
-411200,三门峡市,Sanmenxia shi,Sanmenxia shi,,2,34.7716439,111.2002122
-411201,市辖区,City area,,,3,,
+411200,三门峡市,Sanmenxia shi,Sanmenxia shi,SMX,2,34.7716439,111.2002122
+411201,市辖区,City area,Sanmenxia shixiaqu,,3,,
 411202,湖滨区,Sanmenxia: Hubin qu,Sanmenxia: Hubin qu,,3,34.7724282,111.2002337
 411221,渑池县,Mianchi,Mianchi,,3,34.7671932,111.7618024
 411222,陕县,,,,3,34.7205303,111.103406
 411224,卢氏县,Lushi,Lushi,,3,34.0541972,111.0479057
 411281,义马市,Yima shi,Yima shi,,3,34.7471842,111.8743157
 411282,灵宝市,Lingbao shi,Lingbao shi,,3,34.5168383,110.8942044
-411300,南阳市,Nanyang shi,Nanyang shi,,2,32.9950049,112.5484622
+411300,南阳市,Nanyang shi,Nanyang shi,NYS,2,32.9950049,112.5484622
 411301,市辖区,City area,Nanyang shixiaqu,,3,,
 411302,宛城区,Nanyang: Wancheng qu,Nanyang: Wancheng qu,,3,33.0039129,112.5395572
 411303,卧龙区,Nanyang: Wolong qu,Nanyang: Wolong qu,,3,32.9861589,112.5347936
@@ -1853,7 +1853,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 419000,省直辖县级行政区划,,,,2,,
 419001,济源市,,,,3,35.0903293,112.5881159
 420000,湖北省,Hubei,,HB,1,30.5675144,114.2919388
-420100,武汉市,Wuhan shi,Wuhan shi,,2,30.5611616,114.3814194
+420100,武汉市,Wuhan shi,Wuhan shi,WUH,2,30.5611616,114.3814194
 420101,市辖区,City area,Wuhan shixiaqu,,3,,
 420102,江岸区,Wuhan: Jiang'an qu,Wuhan: Jiang'an qu,,3,30.5998261,114.3094397
 420103,江汉区,Wuhan: Jianghan qu,Wuhan: Jianghan qu,,3,30.6013129,114.2707622
@@ -1868,7 +1868,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 420115,江夏区,,,,3,30.2583907,114.3232691
 420116,黄陂区,,,,3,31.0136331,114.3853033
 420117,新洲区,,,,3,30.7908893,114.7894907
-420200,黄石市,Huangshi shi,Huangshi shi,,2,30.1996564,115.0385177
+420200,黄石市,Huangshi shi,Huangshi shi,HSI,2,30.1996564,115.0385177
 420201,市辖区,City area,Huangshi shixiaqu,,3,,
 420202,黄石港区,Huangshi: Huangshigang qu,Huangshi: Huangshigang qu,,3,30.2174213,115.06549
 420203,西塞山区,,,,3,30.1684025,115.2015746
@@ -1876,8 +1876,8 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 420205,铁山区,Huangshi: Tieshan qu,Huangshi: Tieshan qu,,3,30.209485,114.9008667
 420222,阳新县,,,,3,29.8321562,115.1129329
 420281,大冶市,Daye shi,Daye shi,,3,30.0902336,114.8424697
-420300,十堰市,Shiyan shi,Shiyan shi,,2,32.5838312,110.7018042
-420301,市辖区,City area,,,3,,
+420300,十堰市,Shiyan shi,Shiyan shi,SYE,2,32.5838312,110.7018042
+420301,市辖区,City area,Shiyan shixiaqu,,3,,
 420302,茅箭区,Shiyan: Maojian qu,Shiyan: Maojian qu,,3,32.5915693,110.8136952
 420303,张湾区,Shiyan: Zhangwan qu,Shiyan: Zhangwan qu,,3,32.6519501,110.7706726
 420321,郧县,Yun xian,Yun xian,,3,32.7980793,110.6916654
@@ -1886,14 +1886,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 420324,竹溪县,Zhuxi,Zhuxi,,3,32.0893921,109.8156774
 420325,房县,Fang xian,Fang xian,,3,32.144677,110.7122111
 420381,丹江口市,Danjiangkou shi,Danjiangkou shi,,3,32.6058865,111.1958241
-420500,宜昌市,Yichang shi,Yichang shi,,2,30.9665518,111.2613451
-420501,市辖区,City area,,,3,,
+420500,宜昌市,Yichang shi,Yichang shi,YCO,2,30.9665518,111.2613451
+420501,市辖区,City area,Yichang shixiaqu,,3,,
 420502,西陵区,Yichang: Xiling qu,Yichang: Xiling qu,,3,30.7108751,111.2857533
 420503,伍家岗区,Yichang: Wujiagang qu,Yichang: Wujiagang qu,,3,30.6443921,111.3607585
 420504,点军区,Yichang: Dianjun qu,Yichang: Dianjun qu,,3,30.693403,111.2682867
 420505,猇亭区,,,,3,30.5308085,111.434809
 420506,夷陵区,,,,3,30.7689423,111.326319
-420525,远安县,Yuan'an,Yuan'an,,3,31.1099581,111.5853453
+420525,远安县,,,,3,31.1099581,111.5853453
 420526,兴山县,Xingshan,Xingshan,,3,31.3315994,110.7837188
 420527,秭归县,Zigui,Zigui,,3,30.8761411,110.717361
 420528,长阳土家族自治县,Changyang Tujiazu zizhixian,Changyang Tujiazu zizhixian,,3,30.4718123,110.853585
@@ -1901,8 +1901,8 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 420581,宜都市,,,,3,30.3472318,111.35813
 420582,当阳市,Dangyang shi,Dangyang shi,,3,30.8390704,111.8176889
 420583,枝江市,,,,3,30.4664489,111.7501509
-420600,襄阳市,Xiangyang,,,2,,
-420601,市辖区,City area,,,3,,
+420600,襄阳市,Xiangyang,,XFN,2,,
+420601,市辖区,City area,Xiangfan shixiaqu,,3,,
 420602,襄城区,Xiangfan: Xiangcheng qu,Xiangfan: Xiangcheng qu,,3,32.0101775,112.1337283
 420606,樊城区,,,,3,32.04496,112.1355736
 420607,襄州区,,,,3,,
@@ -1912,19 +1912,19 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 420682,老河口市,Laohekou shi,Laohekou shi,,3,32.4042498,111.7606652
 420683,枣阳市,Zaoyang shi,Zaoyang shi,,3,32.0251145,112.7930367
 420684,宜城市,Yicheng shi,Yicheng shi,,3,31.6712617,112.3500645
-420700,鄂州市,Ezhou shi,Ezhou shi,,2,30.3890724,114.8941398
+420700,鄂州市,Ezhou shi,Ezhou shi,EZS,2,30.3890724,114.8941398
 420701,市辖区,City area,Ezhou shixiaqu,,3,,
 420702,梁子湖区,Ezhou: Liangzihu qu,Ezhou: Liangzihu qu,,3,30.2010566,114.6216702
 420703,华容区,Ezhou: Huarong qu,Ezhou: Huarong qu,,3,30.4813177,114.7187769
 420704,鄂城区,Ezhou: Echeng qu,Ezhou: Echeng qu,,3,30.3207944,114.9030232
-420800,荆门市,Jingmen shi,Jingmen shi,,2,31.0995225,112.1123135
+420800,荆门市,Jingmen shi,Jingmen shi,JMS,2,31.0995225,112.1123135
 420801,市辖区,City area,Jingmen shixiaqu,,3,,
 420802,东宝区,Jingmen: Dongbao qu,Jingmen: Dongbao qu,,3,31.0519597,112.2013521
 420804,掇刀区,,,,3,30.9750151,112.2074139
 420821,京山县,,,,3,31.0752387,113.1101489
 420822,沙洋县,,,,3,30.6638758,112.3688293
 420881,钟祥市,,,,3,31.1547741,112.5694263
-420900,孝感市,Xiaogan shi,Xiaogan shi,,2,30.9245738,113.9169037
+420900,孝感市,Xiaogan shi,Xiaogan shi,XGE,2,30.9245738,113.9169037
 420901,市辖区,City area,Xiaogan shixiaqu,,3,,
 420902,孝南区,Xiaogan: Xiaonan qu,Xiaogan: Xiaonan qu,,3,30.9169805,113.9107239
 420921,孝昌县,Xiaochang,Xiaochang,,3,31.2581558,113.9980137
@@ -1933,17 +1933,17 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 420981,应城市,Yingcheng shi,Yingcheng shi,,3,30.9283657,113.5727119
 420982,安陆市,Anlu shi,Anlu shi,,3,31.255597,113.6890233
 420984,汉川市,,,,3,30.6612455,113.8391519
-421000,荆州市,,,,2,30.3907198,112.221694
+421000,荆州市,,,JGZ,2,30.3907198,112.221694
 421001,市辖区,City area,Jingsha shixiaqu,,3,,
 421002,沙市区,Jingsha: Shashi qu,Jingsha: Shashi qu,,3,30.3110326,112.2556508
-421003,荆州区,Jingsha: Jingzhou qu,Jingsha: Jingzhou qu,,3,30.3528332,112.1901834
+421003,荆州区,Jingsha: Jingzhou qu,Jingsha: Jingzhou qu,JZQ,3,30.3528332,112.1901834
 421022,公安县,Gong'an,Gong'an,,3,29.9697228,112.1206713
 421023,监利县,Jianli,Jianli,,3,29.8111478,112.9610503
 421024,江陵县,,,,3,30.0941416,112.4697554
 421081,石首市,,,,3,29.7235017,112.5188828
 421083,洪湖市,Honghu shi,Honghu shi,,3,29.921883,113.6123657
 421087,松滋市,,,,3,30.334444,112.224444
-421100,黄冈市,Huanggang,,,2,30.458653,114.8744845
+421100,黄冈市,Huanggang,,HGE,2,30.458653,114.8744845
 421101,市辖区,City area,,,3,,
 421102,黄州区,,,,3,30.4343642,114.880085
 421121,团风县,,,,3,30.642989,114.8728645
@@ -1955,7 +1955,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 421127,黄梅县,,,,3,30.0704774,115.9442139
 421181,麻城市,,,,3,31.1717216,115.0099683
 421182,武穴市,,,,3,29.8441058,115.5611193
-421200,咸宁市,Xianning,,,2,29.8335429,114.3217671
+421200,咸宁市,Xianning,,XNS,2,29.8335429,114.3217671
 421201,市辖区,City area,,,3,,
 421202,咸安区,,,,3,29.8511502,114.3031096
 421221,嘉鱼县,,,,3,29.9785241,113.9236307
@@ -1963,12 +1963,12 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 421223,崇阳县,,,,3,29.5397754,114.04948
 421224,通山县,,,,3,29.6042731,114.4928813
 421281,赤壁市,,,,3,29.7185448,113.8805652
-421300,随州市,Suizhou,,,2,31.7167049,113.3754945
+421300,随州市,Suizhou,,SZR,2,31.7167049,113.3754945
 421301,市辖区,City area,,,3,,
 421303,曾都区,,,,3,,
 421321,随县,,,,3,,
 421381,广水市,,,,3,31.6168522,113.825891
-422800,恩施土家族苗族自治州,,,,2,30.2899218,109.4823432
+422800,恩施土家族苗族自治州,Enshi Tujiazu Miaozu zizhizhou,Enshi Tujiazu Miaozu zizhizhou,ESH,2,30.2899218,109.4823432
 422801,恩施市,Enshi shi,Enshi shi,,3,30.2950262,109.479425
 422802,利川市,Lichuan shi,Lichuan shi,,3,30.2909964,108.9363742
 422822,建始县,Jianshi,Jianshi,,3,30.6019316,109.7266173
@@ -1981,9 +1981,9 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 429004,仙桃市,,,,3,30.767799,113.167419
 429005,潜江市,,,,3,30.6633716,113.1665298
 429006,天门市,,,,3,30.6633716,113.1665298
-429021,神农架林区,Shennongjialinqu,Shennongjialinqu,,3,30.6633716,113.1665298
+429021,神农架林区,,,,3,30.6633716,113.1665298
 430000,湖南省,Hunan,,HN,1,28.2008247,112.9812698
-430100,长沙市,Changsha shi,Changsha shi,,2,28.208469,113.0093515
+430100,长沙市,Changsha shi,Changsha shi,CSX,2,28.208469,113.0093515
 430101,市辖区,City area,Changsha shixiaqu,,3,,
 430102,芙蓉区,,,,3,28.1962435,113.0417633
 430103,天心区,,,,3,28.1147043,112.9692256
@@ -1992,9 +1992,9 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 430111,雨花区,,,,3,28.1170795,113.0493271
 430112,望城区,,,,3,,
 430121,长沙县,Changsha,Changsha,,3,28.2865071,113.2289708
-430124,宁乡县,Ningxiang,Ningxiang,,3,28.1821819,112.3397541
+430124,宁乡县,,,,3,28.1821819,112.3397541
 430181,浏阳市,Liuyang shi,Liuyang shi,,3,28.1963286,113.7201691
-430200,株洲市,Zhuzhou shi,Zhuzhou shi,,2,27.8872599,113.1686962
+430200,株洲市,Zhuzhou shi,Zhuzhou shi,ZZS,2,27.8872599,113.1686962
 430201,市辖区,City area,Zhuzhou shixiaqu,,3,,
 430202,荷塘区,,,,3,27.8558765,113.173492
 430203,芦淞区,,,,3,27.824408,113.1597269
@@ -2003,16 +2003,16 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 430221,株洲县,Zhuzhou,Zhuzhou,,3,27.5425232,113.1655848
 430223,攸县,You xian,You xian,,3,27.1002883,113.5176086
 430224,茶陵县,Chaling,Chaling,,3,26.8122841,113.6176658
-430225,炎陵县,,,,3,26.3668794,113.8449883
+430225,炎陵县,Yanling,Yanling,,3,26.3668794,113.8449883
 430281,醴陵市,Liling shi,Liling shi,,3,27.6703213,113.4685349
-430300,湘潭市,Xiangtan,,XGT,2,27.8563223,112.9073417
+430300,湘潭市,Xiangtan,Xiangtan shi,XGT,2,27.8563223,112.9073417
 430301,市辖区,City area,Xiangtan shixiaqu,,3,,
 430302,雨湖区,Xiangtan: Yuhu qu,Xiangtan: Yuhu qu,,3,27.8540742,112.8971708
 430304,岳塘区,Xiangtan: Yuetang qu,Xiangtan: Yuetang qu,,3,27.9048966,112.9914236
 430321,湘潭县,Xiangtan,Xiangtan,,3,27.7096803,112.7385986
 430381,湘乡市,Xiangxiang shi,Xiangxiang shi,,3,27.7783796,112.3277485
 430382,韶山市,Shaoshan shi,Shaoshan shi,,3,27.9363796,112.5235498
-430400,衡阳市,Hengyang,,HNY,2,26.8833876,112.6369536
+430400,衡阳市,Hengyang,Hengyang shi,HNY,2,26.8833876,112.6369536
 430401,市辖区,City area,Hengyang shixiaqu,,3,,
 430405,珠晖区,,,,3,26.8946598,112.6201737
 430406,雁峰区,,,,3,26.8887368,112.6163864
@@ -2026,8 +2026,8 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 430426,祁东县,Qidong,Qidong,,3,26.7658724,111.9421756
 430481,耒阳市,Leiyang shi,Leiyang shi,,3,26.4109356,112.9277587
 430482,常宁市,,,,3,26.3635629,112.4126029
-430500,邵阳市,Shaoyang shi,Shaoyang shi,,2,27.2397879,111.4818656
-430501,市辖区,City area,,,3,,
+430500,邵阳市,Shaoyang shi,Shaoyang shi,SYR,2,27.2397879,111.4818656
+430501,市辖区,City area,Shaoyang shixiaqu,,3,,
 430502,双清区,,,,3,27.2329101,111.4971542
 430503,大祥区,,,,3,27.2333203,111.4541316
 430511,北塔区,,,,3,27.2464936,111.4522004
@@ -2036,11 +2036,11 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 430523,邵阳县,Shaoyang,Shaoyang,,3,26.9906378,111.2738013
 430524,隆回县,Longhui,Longhui,,3,27.1139739,111.0324347
 430525,洞口县,Dongkou,Dongkou,,3,27.0603201,110.5758476
-430527,绥宁县,Suining,Suining,,3,26.5819549,110.1556528
-430528,新宁县,Xinning,Xinning,,3,26.4334185,110.8566213
+430527,绥宁县,,,,3,26.5819549,110.1556528
+430528,新宁县,,,,3,26.4334185,110.8566213
 430529,城步苗族自治县,Chengbu Miaozu zizhixian,Chengbu Miaozu zizhixian,,3,26.3552762,110.3118968
 430581,武冈市,Wugang shi,Wugang shi,,3,26.7266001,110.6318843
-430600,岳阳市,Yueyang shi,Yueyang shi,,2,29.4448858,113.0357122
+430600,岳阳市,Yueyang shi,Yueyang shi,YYG,2,29.4448858,113.0357122
 430601,市辖区,City area,Yueyang shixiaqu,,3,,
 430602,岳阳楼区,,,,3,29.3718442,113.1297505
 430603,云溪区,,,,3,29.4735741,113.2719076
@@ -2051,7 +2051,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 430626,平江县,Pingjiang,Pingjiang,,3,28.7629755,113.6534035
 430681,汨罗市,Miluo shi,Miluo shi,,3,28.7430348,113.1614542
 430682,临湘市,Linxiang shi,Linxiang shi,,3,29.5227857,113.5244322
-430700,常德市,Changde shi,Changde shi,,2,29.0434985,111.699146
+430700,常德市,Changde shi,Changde shi,CDE,2,29.0434985,111.699146
 430701,市辖区,City area,Changde shixiaqu,,3,,
 430702,武陵区,Changde: Wuling qu,Changde: Wuling qu,,3,29.1720327,111.8663228
 430703,鼎城区,Changde: Dingcheng qu,Changde: Dingcheng qu,,3,28.8083452,111.6569281
@@ -2062,13 +2062,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 430725,桃源县,Taoyuan,Taoyuan,,3,28.9189079,111.2886393
 430726,石门县,Shimen,Shimen,,3,29.6980066,111.0248494
 430781,津市市,Jinshi shi,Jinshi shi,,3,29.5099762,111.9050002
-430800,张家界市,Zhangjiajie shi,Zhangjiajie shi,,2,29.2054616,110.4753613
-430801,市辖区,City area,Dayong shixiaqu,,3,,
-430802,永定区,Dayong: Yongding qu,Dayong: Yongding qu,,3,29.1338698,110.4746532
-430811,武陵源区,Dayong: Wulingyuan qu,Dayong: Wulingyuan qu,,3,29.3457271,110.550431
+430800,张家界市,Zhangjiajie shi,Zhangjiajie shi,ZJJ,2,29.2054616,110.4753613
+430801,市辖区,City area,Zhangjiajie shixiaqu,,3,,
+430802,永定区,Zhangjiajie: Yongding qu,Zhangjiajie: Yongding qu,,3,29.1338698,110.4746532
+430811,武陵源区,Zhangjiajie: Wulingyuan qu,Zhangjiajie: Wulingyuan qu,,3,29.3457271,110.550431
 430821,慈利县,Cili,Cili,,3,29.4299733,111.1396694
 430822,桑植县,Sangzhi,Sangzhi,,3,29.3997212,110.1639247
-430900,益阳市,Yiyang shi,Yiyang shi,,2,28.5828447,112.3474467
+430900,益阳市,Yiyang shi,Yiyang shi,YYS,2,28.5828447,112.3474467
 430901,市辖区,City area,Yiyang shixiaqu,,3,,
 430902,资阳区,Yiyang: Ziyang qu,Yiyang: Ziyang qu,,3,28.5909561,112.3244762
 430903,赫山区,Yiyang: Heshan qu,Yiyang: Heshan qu,,3,28.5793965,112.3741615
@@ -2076,7 +2076,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 430922,桃江县,Taojiang,Taojiang,,3,28.5180818,112.1558189
 430923,安化县,Anhua,Anhua,,3,28.374089,111.2128079
 430981,沅江市,Yuanjiang shi,Yuanjiang shi,,3,28.8470419,112.3559546
-431000,郴州市,Chenzhou shi,Chenzhou shi,,2,25.7952836,113.0289745
+431000,郴州市,Chenzhou shi,Chenzhou shi,CNZ,2,25.7952836,113.0289745
 431001,市辖区,City area,Chenzhou shixiaqu,,3,,
 431002,北湖区,Chenzhou: Beihu qu,Chenzhou: Beihu qu,,3,25.7840584,113.0110359
 431003,苏仙区,Chenzhou: Suxian qu,Chenzhou: Suxian qu,,3,25.8003645,113.0424392
@@ -2132,14 +2132,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 433126,古丈县,Guzhang,Guzhang,,3,28.6169348,109.950732
 433127,永顺县,Yongshun,Yongshun,,3,29.0014407,109.8512542
 433130,龙山县,Longshan,Longshan,,3,29.4576475,109.4437945
-440000,广东省,Guangdong,,,1,23.1189117,113.2614288
-440100,广州市,Guangzhou shi,Guangzhou shi,,2,23.1270407,113.341527
+440000,广东省,Guangdong,,GD,1,23.1189117,113.2614288
+440100,广州市,Guangzhou shi,Guangzhou shi,CAN,2,23.1270407,113.341527
 440101,市辖区,City area,Guangzhou shixiaqu,,3,,
 440103,荔湾区,Guangzhou: Liwan qu,Guangzhou: Liwan qu,,3,23.1348746,113.2430255
 440104,越秀区,Guangzhou: Yuexiu qu,Guangzhou: Yuexiu qu,,3,23.1307702,113.2602453
 440105,海珠区,Guangzhou: Haizhu qu,Guangzhou: Haizhu qu,,3,23.0790507,113.331635
 440106,天河区,Guangzhou: Tianhe qu,Guangzhou: Tianhe qu,,3,23.1668269,113.3840668
-440111,白云区,,,,3,23.2705232,113.3684671
+440111,白云区,Guangzhou: Baiyun qu,Guangzhou: Baiyun qu,,3,23.2705232,113.3684671
 440112,黄埔区,Guangzhou: Huangpu,Guangzhou: Huangpu,,3,23.0933025,113.483448
 440113,番禺区,,,,3,22.8135196,113.4603059
 440114,花都区,,,,3,23.4325169,113.2184994
@@ -2147,7 +2147,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 440116,萝岗区,,,,3,23.0607601,113.5275435
 440183,增城市,Zengcheng shi,Zengcheng shi,,3,23.3499589,113.7455642
 440184,从化市,Conghua shi,Conghua shi,,3,23.6510794,113.6710525
-440200,韶关市,Shaoguan shi,Shaoguan shi,,2,24.779127,113.5455787
+440200,韶关市,Shaoguan shi,Shaoguan shi,HSC,2,24.779127,113.5455787
 440201,市辖区,City area,Shaoguan shixiaqu,,3,,
 440203,武江区,Shaoguan: Wujiang qu,Shaoguan: Wujiang qu,,3,24.7929196,113.5877752
 440204,浈江区,Shaoguan: Zhenjiang qu,Shaoguan: Zhenjiang qu,,3,24.804383,113.6110997
@@ -2159,20 +2159,20 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 440233,新丰县,Xinfeng,Xinfeng,,3,24.0795663,114.1769922
 440281,乐昌市,Lechang shi,Lechang shi,,3,25.2284501,113.2173085
 440282,南雄市,,,,3,25.1834569,114.3380427
-440300,深圳市,Shenzhen shi,Shenzhen shi,,2,22.5442297,114.0577948
+440300,深圳市,Shenzhen shi,Shenzhen shi,SZX,2,22.5442297,114.0577948
 440301,市辖区,City area,Shenzhen shixiaqu,,3,,
 440303,罗湖区,Shenzhen: Luohu qu,Shenzhen: Luohu qu,,3,22.5724179,114.1438723
-440304,福田区,,,,3,22.5434469,114.0476882
-440305,南山区,,,,3,22.5530484,113.9459252
+440304,福田区,Shenzhen: Futian qu,Shenzhen: Futian qu,,3,22.5434469,114.0476882
+440305,南山区,Shenzhen: Nanshan qu,Shenzhen: Nanshan qu,,3,22.5530484,113.9459252
 440306,宝安区,Shenzhen: Bao'an qu,Shenzhen: Bao'an qu,,3,22.6961991,113.9382541
 440307,龙岗区,Shenzhen: Longgang qu,Shenzhen: Longgang qu,,3,22.6281035,114.3393302
 440308,盐田区,,,,3,22.5877034,114.2680049
-440400,珠海市,Zhuhai shi,Zhuhai shi,,2,22.1583538,113.3859122
+440400,珠海市,Zhuhai shi,Zhuhai shi,ZUH,2,22.1583538,113.3859122
 440401,市辖区,City area,Zhuhai shixiaqu,,3,,
 440402,香洲区,Zhuhai: Xiangzhou qu,Zhuhai: Xiangzhou qu,,3,22.26654,113.5434973
 440403,斗门区,,,,3,22.2093086,113.2965302
 440404,金湾区,,,,3,22.146668,113.3632743
-440500,汕头市,Shantou shi,Shantou shi,,2,23.339074,116.5809596
+440500,汕头市,Shantou shi,Shantou shi,SWA,2,23.339074,116.5809596
 440501,市辖区,City area,Shantou shixiaqu,,3,,
 440507,龙湖区,Shantou: Longhu qu,Shantou: Longhu qu,,3,23.371982,116.7164969
 440511,金平区,,,,3,23.3660235,116.7034078
@@ -2181,14 +2181,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 440514,潮南区,,,,3,23.2504449,116.4328587
 440515,澄海区,,,,3,23.4664941,116.755861
 440523,南澳县,Nan'ao,Nan'ao,,3,23.4372616,117.0490479
-440600,佛山市,Foshan shi,Foshan shi,,2,23.0305006,113.1214893
+440600,佛山市,Foshan shi,Foshan shi,FOS,2,23.0305006,113.1214893
 440601,市辖区,City area,Foshan shixiaqu,,3,,
 440604,禅城区,,,,3,23.0193329,113.0982721
 440605,南海区,,,,3,23.0539486,113.0546916
 440606,顺德区,,,,3,22.8387752,113.2045519
 440607,三水区,,,,3,23.2626578,112.9102814
 440608,高明区,,,,3,22.8291046,112.6559651
-440700,江门市,Jiangmen shi,Jiangmen shi,,2,22.4516389,113.0291462
+440700,江门市,Jiangmen shi,Jiangmen shi,JMN,2,22.4516389,113.0291462
 440701,市辖区,City area,Jiangmen shixiaqu,,3,,
 440703,蓬江区,,,,3,22.5951524,113.0784988
 440704,江海区,,,,3,22.5604695,113.111608
@@ -2197,18 +2197,18 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 440783,开平市,Kaiping shi,Kaiping shi,,3,22.311272,112.5254059
 440784,鹤山市,Heshan shi,Heshan shi,,3,22.6620565,112.7629209
 440785,恩平市,Enping shi,Enping shi,,3,22.2030508,112.2653282
-440800,湛江市,Zhanjiang shi,Zhanjiang shi,,2,21.1567186,110.3860652
+440800,湛江市,Zhanjiang shi,Zhanjiang shi,ZHA,2,21.1567186,110.3860652
 440801,市辖区,City area,Zhanjiang shixiaqu,,3,,
 440802,赤坎区,Zhanjiang: Chikan qu,Zhanjiang: Chikan qu,,3,21.2661302,110.365895
 440803,霞山区,Zhanjiang: Xiashan qu,Zhanjiang: Xiashan qu,,3,21.1917244,110.3980708
 440804,坡头区,Zhanjiang: Potou qu,Zhanjiang: Potou qu,,3,21.2443824,110.4552984
-440811,麻章区,,,,3,21.2633407,110.3342021
+440811,麻章区,Zhanjiang: Mazhang qu,Zhanjiang: Mazhang qu,,3,21.2633407,110.3342021
 440823,遂溪县,Suixi,Suixi,,3,21.2508721,110.0511432
 440825,徐闻县,Xuwen,Xuwen,,3,20.4443855,110.2060568
 440881,廉江市,Lianjiang shi,Lianjiang shi,,3,21.6591233,110.1294422
 440882,雷州市,Leizhou shi,Leizhou shi,,3,20.8012935,110.0320458
 440883,吴川市,Wuchuan shi,Wuchuan shi,,3,21.4500929,110.7264912
-440900,茂名市,Maoming shi,Maoming shi,,2,21.6539182,110.8577156
+440900,茂名市,Maoming shi,Maoming shi,MMI,2,21.6539182,110.8577156
 440901,市辖区,City area,Maoming shixiaqu,,3,,
 440902,茂南区,Maoming: Maonan qu,Maoming: Maonan qu,,3,21.6413334,110.9180224
 440903,茂港区,,,,3,21.4645915,111.0495794
@@ -2216,24 +2216,24 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 440981,高州市,Gaozhou shi,Gaozhou shi,,3,22.0080842,111.000731
 440982,化州市,Huazhou shi,Huazhou shi,,3,21.8419214,110.5454636
 440983,信宜市,,,,3,22.4465422,111.0316515
-441200,肇庆市,Zhaoqing shi,Zhaoqing shi,,2,23.0477291,112.4651957
+441200,肇庆市,Zhaoqing shi,Zhaoqing shi,ZQG,2,23.0477291,112.4651957
 441201,市辖区,City area,Zhaoqing shixiaqu,,3,,
 441202,端州区,Zhaoqing: Duanzhou qu,Zhaoqing: Duanzhou qu,,3,23.0976053,112.4671912
 441203,鼎湖区,Zhaoqing: Dinghu qu,Zhaoqing: Dinghu qu,,3,23.1954088,112.6174164
-441223,广宁县,Guangning,Guangning,,3,23.6701142,112.3968637
+441223,广宁县,,,,3,23.6701142,112.3968637
 441224,怀集县,Huaiji,Huaiji,,3,23.9326718,112.1991313
 441225,封开县,Fengkai,Fengkai,,3,23.5962197,111.7026865
 441226,德庆县,Deqing,Deqing,,3,23.2884008,111.9017708
 441283,高要市,Gaoyao shi,Gaoyao shi,,3,23.1017206,112.7555823
 441284,四会市,Sihui shi,Sihui shi,,3,23.4497231,112.6422751
-441300,惠州市,Huizhou shi,Huizhou shi,,2,23.0896114,114.4174254
+441300,惠州市,Huizhou shi,Huizhou shi,HUI,2,23.0896114,114.4174254
 441301,市辖区,City area,Huizhou shixiaqu,,3,,
 441302,惠城区,,,,3,23.1050462,114.4226825
 441303,惠阳区,,,,3,23.0375502,114.6393192
 441322,博罗县,Boluo,Boluo,,3,23.376591,114.2696357
 441323,惠东县,Huidong,Huidong,,3,22.9636192,114.9886608
 441324,龙门县,Longmen,Longmen,,3,23.6462343,114.1175008
-441400,梅州市,Meizhou shi,Meizhou shi,,2,24.2899411,116.1205423
+441400,梅州市,Meizhou shi,Meizhou shi,MXZ,2,24.2899411,116.1205423
 441401,市辖区,City area,Meizhou shixiaqu,,3,,
 441402,梅江区,Meizhou: Meijiang qu,Meizhou: Meijiang qu,,3,24.2744305,116.1007369
 441421,梅县,Mei xian,Mei xian,,3,24.357731,116.1698842
@@ -2242,14 +2242,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 441424,五华县,Wuhua,Wuhua,,3,23.7810054,115.7016456
 441426,平远县,Pingyuan,Pingyuan,,3,24.6554713,115.9386992
 441427,蕉岭县,Jiaoling,Jiaoling,,3,24.6519123,116.2097204
-441481,兴宁市,Xingning shi,Xingning shi,,3,24.2476004,115.7589376
-441500,汕尾市,Shanwei shi,Shanwei shi,,2,22.781177,115.4192519
+441481,兴宁市,,,,3,24.2476004,115.7589376
+441500,汕尾市,Shanwei shi,Shanwei shi,SWE,2,22.781177,115.4192519
 441501,市辖区,City area,Shanwei shixiaqu,,3,,
 441502,城区,Shanwei: Chengqu,Shanwei: Chengqu,,3,22.7788524,115.3649962
 441521,海丰县,Haifeng,Haifeng,,3,22.973369,115.27511
 441523,陆河县,Luhe,Luhe,,3,23.2918007,115.6238937
 441581,陆丰市,,,,3,22.9454117,115.8520639
-441600,河源市,Heyuan shi,Heyuan shi,,2,23.7432599,114.6998835
+441600,河源市,Heyuan shi,Heyuan shi,HEY,2,23.7432599,114.6998835
 441601,市辖区,City area,Heyuan shixiaqu,,3,,
 441602,源城区,Heyuan: Yuancheng qu,Heyuan: Yuancheng qu,,3,23.7341067,114.7024262
 441621,紫金县,Zijin,Zijin,,3,23.6384109,115.1821339
@@ -2257,13 +2257,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 441623,连平县,Lianping,Lianping,,3,24.3695861,114.4887078
 441624,和平县,Heping,Heping,,3,24.4421781,114.9386859
 441625,东源县,Dongyuan,Dongyuan,,3,23.7881919,114.7464573
-441700,阳江市,Yangjiang shi,Yangjiang shi,,2,21.8613394,111.9818509
+441700,阳江市,Yangjiang shi,Yangjiang shi,YJI,2,21.8613394,111.9818509
 441701,市辖区,City area,Yangjiang shixiaqu,,3,,
 441702,江城区,Yangjiang: Jiangcheng qu,Yangjiang: Jiangcheng qu,,3,21.7590214,111.9139481
 441721,阳西县,Yangxi,Yangxi,,3,21.703788,111.5990889
-441723,阳东县,Yangdong,Yangdong,,3,21.9802795,112.0405591
+441723,阳东县,,,,3,21.9802795,112.0405591
 441781,阳春市,Yangchun shi,Yangchun shi,,3,22.2525695,111.7215478
-441800,清远市,Qingyuan shi,Qingyuan shi,,2,23.6882326,113.0454648
+441800,清远市,Qingyuan shi,Qingyuan shi,QYN,2,23.6882326,113.0454648
 441801,市辖区,City area,Qingyuan shixiaqu,,3,,
 441802,清城区,Qingyuan: Qing chengqu,Qingyuan: Qing chengqu,,3,23.7104546,113.0300581
 441803,清新区,,,,3,,
@@ -2273,33 +2273,33 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 441826,连南瑶族自治县,Liannan Yaozu zizhixian,Liannan Yaozu zizhixian,,3,24.7256957,112.28773
 441881,英德市,Yingde shi,Yingde shi,,3,24.1860449,113.4150624
 441882,连州市,Lianzhou shi,Lianzhou shi,,3,24.780744,112.377423
-441900,东莞市,Dongguan shi,Dongguan shi,,2,23.0199649,113.7515724
-442000,中山市,Zhongshan shi,Zhongshan shi,,2,22.5159763,113.3927464
-445100,潮州市,Chaozhou shi,Chaozhou shi,,2,23.6547451,116.6215146
+441900,东莞市,Dongguan shi,Dongguan shi,DGG,2,23.0199649,113.7515724
+442000,中山市,Zhongshan shi,Zhongshan shi,ZSN,2,22.5159763,113.3927464
+445100,潮州市,Chaozhou shi,Chaozhou shi,CZY,2,23.6547451,116.6215146
 445101,市辖区,City area,Chaozhou shixiaqu,,3,,
 445102,湘桥区,Chaozhou: Xiangqiao qu,Chaozhou: Xiangqiao qu,,3,23.6935281,116.6674125
 445103,潮安区,,,,3,,
 445122,饶平县,Raoping,Raoping,,3,23.8692088,116.9422102
-445200,揭阳市,Jieyang shi,Jieyang shi,,2,23.5491465,116.3684106
+445200,揭阳市,Jieyang shi,Jieyang shi,JIY,2,23.5491465,116.3684106
 445201,市辖区,City area,Jieyang shixiaqu,,3,,
 445202,榕城区,Jieyang: Rongcheng qu,Jieyang: Rongcheng qu,,3,23.507507,116.3649881
 445203,揭东区,,,,3,,
 445222,揭西县,Jiexi,Jiexi,,3,23.4852998,115.9006655
 445224,惠来县,Huilai,Huilai,,3,23.0346178,116.2478077
-445281,普宁市,Puning shi,Puning shi,,3,23.3122176,116.0409987
-445300,云浮市,Yunfu shi,Yunfu shi,,2,22.9293756,112.0440245
+445281,普宁市,,,,3,23.3122176,116.0409987
+445300,云浮市,Yunfu shi,Yunfu shi,YFS,2,22.9293756,112.0440245
 445301,市辖区,City area,Yunfu shixiaqu,,3,,
 445302,云城区,Yunfu: Yuncheng qu,Yunfu: Yuncheng qu,,3,22.9299685,112.0390785
 445321,新兴县,Xinxing,Xinxing,,3,22.6956943,112.2253418
 445322,郁南县,,,,3,23.0371651,111.5992713
 445323,云安县,,,,3,23.0710162,112.003212
 445381,罗定市,,,,3,22.7683268,111.5699816
-450000,广西壮族自治区,Guangxi,,,1,22.8065434,108.3117676
-450100,南宁市,Nanning shi,Nanning shi,,2,22.6537992,108.3109045
+450000,广西壮族自治区,Guangxi,,GX,1,22.8065434,108.3117676
+450100,南宁市,,,NNG,2,22.6537992,108.3109045
 450101,市辖区,City area,Nanning shixiaqu,,3,,
-450102,兴宁区,Nanning: Xingning qu,Nanning: Xingning qu,,3,22.8158041,108.3159685
+450102,兴宁区,,,,3,22.8158041,108.3159685
 450103,青秀区,,,,3,22.8230726,108.3486485
-450105,江南区,Nanning: Jiangnan qu,Nanning: Jiangnan qu,,3,22.7951337,108.3158612
+450105,江南区,Nanning: Jiangnan qu,Nanning: Jiangnan qu,JNA,3,22.7951337,108.3158612
 450107,西乡塘区,,,,3,22.8339598,108.313576
 450108,良庆区,,,,3,22.7558712,108.3211935
 450109,邕宁区,,,,3,22.7581863,108.4878123
@@ -2309,7 +2309,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 450125,上林县,,,,3,23.4962514,108.623457
 450126,宾阳县,,,,3,23.1771637,108.897922
 450127,横县,,,,3,22.7550599,109.2071915
-450200,柳州市,Liuzhou shi,Liuzhou shi,,2,24.3992435,109.3799257
+450200,柳州市,Liuzhou shi,Liuzhou shi,LZH,2,24.3992435,109.3799257
 450201,市辖区,City area,Liuzhou shixiaqu,,3,,
 450202,城中区,Liuzhou: Chengzhong qu,Liuzhou: Chengzhong qu,,3,24.3114043,109.4139791
 450203,鱼峰区,Liuzhou: Yufeng qu,Liuzhou: Yufeng qu,,3,24.3062026,109.4475603
@@ -2321,7 +2321,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 450224,融安县,,,,3,25.163474,109.4974494
 450225,融水苗族自治县,,,,3,25.0317946,109.1724515
 450226,三江侗族自治县,,,,3,25.6357422,109.5924532
-450300,桂林市,Guilin shi,Guilin shi,,2,25.1756214,110.3516686
+450300,桂林市,Guilin shi,Guilin shi,KWL,2,25.1756214,110.3516686
 450301,市辖区,City area,Guilin shixiaqu,,3,,
 450302,秀峰区,Guilin: Xiufeng qu,Guilin: Xiufeng qu,,3,25.2824975,110.2891517
 450303,叠彩区,Guilin: Diecai qu,Guilin: Diecai qu,,3,25.3138185,110.3019512
@@ -2340,7 +2340,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 450330,平乐县,,,,3,24.6086006,110.8010781
 450331,荔浦县,,,,3,24.5477673,110.3522694
 450332,恭城瑶族自治县,,,,3,24.9590106,110.8077729
-450400,梧州市,Wuzhou shi,Wuzhou shi,,2,23.4904461,111.2959242
+450400,梧州市,Wuzhou shi,Wuzhou shi,WUZ,2,23.4904461,111.2959242
 450401,市辖区,City area,Wuzhou shixiaqu,,3,,
 450403,万秀区,Wuzhou: Wanxiu qu,Wuzhou: Wanxiu qu,,3,23.472261,111.3194311
 450405,长洲区,,,,3,23.4841682,111.2761295
@@ -2349,32 +2349,32 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 450422,藤县,,,,3,23.376207,110.7974303
 450423,蒙山县,,,,3,24.1300506,110.571599
 450481,岑溪市,,,,3,22.9297017,111.018616
-450500,北海市,Beihai shi,Beihai shi,,2,21.5337492,109.321003
+450500,北海市,Beihai shi,Beihai shi,BHY,2,21.5337492,109.321003
 450501,市辖区,City area,Beihai shixiaqu,,3,,
 450502,海城区,Beihai: Haicheng qu,Beihai: Haicheng qu,,3,21.4750151,109.1174448
 450503,银海区,Beihai: Yinghai qu,Beihai: Yinghai qu,,3,21.4783098,109.1302979
 450512,铁山港区,,,,3,21.5291284,109.4213712
 450521,合浦县,Hepu,Hepu,,3,21.660629,109.207449
-450600,防城港市,Fangchenggang shi,Fangchenggang shi,,2,21.6156617,108.3466101
+450600,防城港市,Fangchenggang shi,Fangchenggang shi,FAN,2,21.6156617,108.3466101
 450601,市辖区,City area,Fangchenggang shixiaqu,,3,,
 450602,港口区,Fangchenggang: Gangkou qu,Fangchenggang: Gangkou qu,,3,21.633744,108.4459054
 450603,防城区,Fangchenggang: Fangcheng qu,Fangchenggang: Fangcheng qu,,3,21.7418517,107.9978049
 450621,上思县,Shangsi,Shangsi,,3,22.0977681,107.9579794
 450681,东兴市,,,,3,21.6134274,108.0530369
-450700,钦州市,Qinzhou shi,Qinzhou shi,,2,21.9816823,108.6537981
+450700,钦州市,Qinzhou shi,Qinzhou shi,QZH,2,21.9816823,108.6537981
 450701,市辖区,City area,Qinzhou shixiaqu,,3,,
 450702,钦南区,Qinzhou: Qinnan qu,Qinzhou: Qinnan qu,,3,21.9078922,108.7193406
 450703,钦北区,Qinzhou: Qinbei qu,Qinzhou: Qinbei qu,,3,22.1295649,108.6351085
 450721,灵山县,Lingshan,Lingshan,,3,22.3203537,109.1248369
 450722,浦北县,,,,3,22.247813,109.4715607
-450800,贵港市,Guigang,,,2,23.1120031,109.5989442
+450800,贵港市,Guigang,,GUG,2,23.1120031,109.5989442
 450801,市辖区,City area,,,3,,
 450802,港北区,,,,3,23.1115295,109.5722401
 450803,港南区,,,,3,23.0753,109.5998132
 450804,覃塘区,,,,3,23.1298724,109.4056106
 450821,平南县,,,,3,23.5191945,110.4624867
 450881,桂平市,,,,3,23.3109367,110.0903249
-450900,玉林市,Yulin,,,2,22.6384616,110.1654696
+450900,玉林市,Yulin,,YUL,2,22.6384616,110.1654696
 450901,市辖区,City area,,,3,,
 450902,玉州区,,,,3,22.629173,110.1510179
 450903,福绵区,,,,3,,
@@ -2383,7 +2383,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 450923,博白县,,,,3,22.0821205,109.8767459
 450924,兴业县,,,,3,22.7401096,109.8804688
 450981,北流市,,,,3,22.5167593,110.4823565
-451000,百色市,Baise,,,2,23.9021997,106.6187418
+451000,百色市,Baise,,BSS,2,23.9021997,106.6187418
 451001,市辖区,City area,,,3,,
 451002,右江区,,,,3,23.9699993,106.46945
 451021,田阳县,,,,3,23.7216329,106.8435752
@@ -2397,13 +2397,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 451029,田林县,,,,3,24.3883781,106.0062647
 451030,西林县,,,,3,24.3458748,105.3138685
 451031,隆林各族自治县,,,,3,24.6812301,105.3346717
-451100,贺州市,Hezhou,,,2,24.403562,111.5666556
+451100,贺州市,Hezhou,,HZO,2,24.403562,111.5666556
 451101,市辖区,City area,,,3,,
 451102,八步区,,,,3,24.3461192,111.7168486
 451121,昭平县,,,,3,24.0959428,110.9911287
 451122,钟山县,,,,3,24.4960724,111.2440181
 451123,富川瑶族自治县,,,,3,24.874348,111.3150752
-451200,河池市,Hechi,,,2,24.6925965,108.0855668
+451200,河池市,Hechi,,HCS,2,24.6925965,108.0855668
 451201,市辖区,City area,,,3,,
 451202,金城江区,,,,3,24.6720269,107.849586
 451221,南丹县,,,,3,25.1042635,107.5097072
@@ -2416,7 +2416,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 451228,都安瑶族自治县,,,,3,24.2002843,108.1405628
 451229,大化瑶族自治县,,,,3,23.9635386,107.7064419
 451281,宜州市,,,,3,24.47465,108.586121
-451300,来宾市,Laibin,,,2,23.752354,109.219551
+451300,来宾市,Laibin,,LIB,2,23.752354,109.219551
 451301,市辖区,City area,,,3,,
 451302,兴宾区,,,,3,23.6958565,109.213028
 451321,忻城县,,,,3,24.0113663,108.7125791
@@ -2424,7 +2424,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 451323,武宣县,,,,3,23.5630297,109.7115472
 451324,金秀瑶族自治县,,,,3,24.1755866,110.2355647
 451381,合山市,,,,3,23.8241868,108.9264524
-451400,崇左市,Chongzuo,,,2,22.4026273,107.3579478
+451400,崇左市,Chongzuo,,COZ,2,22.4026273,107.3579478
 451401,市辖区,City area,,,3,,
 451402,江州区,,,,3,,
 451421,扶绥县,,,,3,22.4641419,107.8393507
@@ -2433,14 +2433,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 451424,大新县,,,,3,22.7629945,107.1120322
 451425,天等县,,,,3,23.1058554,107.0677006
 451481,凭祥市,,,,3,22.06286,106.8650395
-460000,海南省,Hainan,,,1,20.0317936,110.3465118
-460100,海口市,Haikou shi,Haikou shi,,2,20.0158451,110.3311872
+460000,海南省,Hainan,,HI,1,20.0317936,110.3465118
+460100,海口市,Haikou shi,Haikou shi,HAK,2,20.0158451,110.3311872
 460101,市辖区,City area,Haikou shixiaqu,,3,,
 460105,秀英区,,,,3,19.8708368,110.2391124
 460106,龙华区,,,,3,19.8832269,110.3345132
 460107,琼山区,,,,3,19.7720446,110.5034709
 460108,美兰区,,,,3,20.0158451,110.3311872
-460200,三亚市,Sanya shi,Sanya shi,,2,18.2526246,109.5119226
+460200,三亚市,Sanya shi,Sanya shi,SYX,2,18.2526246,109.5119226
 460201,市辖区,City area,Sanya shixiaqu,,3,,
 460300,三沙市,,,,2,,
 460321,西沙群岛,,,,3,,
@@ -2463,7 +2463,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 469028,陵水黎族自治县,,,,3,18.5167257,110.0290847
 469029,保亭黎族苗族自治县,,,,3,18.6263091,109.7003424
 469030,琼中黎族苗族自治县,,,,3,11.3185451,116.5623856
-500000,重庆市,Chongqing,,,1,29.5549144,106.548425
+500000,重庆市,Chongqing,,CQ,1,29.5549144,106.548425
 500100,市辖区,City area,,,2,,
 500101,万州区,,,,3,30.7056357,108.3138978
 500102,涪陵区,,,,3,29.6859463,107.2871053
@@ -2505,7 +2505,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 500242,酉阳土家族苗族自治县,,,,3,28.8908908,108.6583793
 500243,彭水苗族土家族自治县,,,,3,29.3308562,108.246038
 510000,四川省,Sichuan,,SC,1,30.6610565,104.0817566
-510100,成都市,Chengdu shi,Chengdu shi,,2,30.7105892,104.0886676
+510100,成都市,Chengdu shi,Chengdu shi,CTU,2,30.7105892,104.0886676
 510101,市辖区,City area,Chengdu shixiaqu,,3,,
 510104,锦江区,Chengdu: Jinjiang qu,Chengdu: Jinjiang qu,,3,30.6548682,104.0817904
 510105,青羊区,Chengdu: Qingyang qu,Chengdu: Qingyang qu,,3,30.6684346,104.0633154
@@ -2526,7 +2526,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 510182,彭州市,,,,3,31.162523,103.9251173
 510183,邛崃市,,,,3,30.3788824,103.4201539
 510184,崇州市,,,,3,30.7062445,103.6132514
-510300,自贡市,Zigong shi,Zigong shi,,2,29.2999945,104.8091197
+510300,自贡市,Zigong shi,Zigong shi,ZGS,2,29.2999945,104.8091197
 510301,市辖区,City area,Zigong shixiaqu,,3,,
 510302,自流井区,Zigong: Ziliujing qu,Zigong: Ziliujing qu,,3,29.3374595,104.7771907
 510303,贡井区,Zigong: Gongjing qu,Zigong: Gongjing qu,,3,29.3455494,104.7151136
@@ -2534,14 +2534,14 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 510311,沿滩区,Zigong: Yantan qu,Zigong: Yantan qu,,3,29.2725769,104.8740721
 510321,荣县,Rong xian,Rong xian,,3,29.3927106,104.3655038
 510322,富顺县,Fushun,Fushun,,3,29.2041037,104.9796546
-510400,攀枝花市,Panzhihua,,PZH,2,26.5837779,101.7189145
+510400,攀枝花市,Panzhihua,Panzhihua shi,PZH,2,26.5837779,101.7189145
 510401,市辖区,City area,Panzhihua shixiaqu,,3,,
-510402,东区,Dukou: Dongqu,Dukou: Dongqu,,3,26.5464873,101.7041087
-510403,西区,Dukou: Xi qu,Dukou: Xi qu,,3,26.5977852,101.6306162
-510411,仁和区,Dukou: Renhe qu,Dukou: Renhe qu,,3,26.4977685,101.7385268
+510402,东区,Panzhihua: Dong qu,Panzhihua: Dong qu,,3,26.5464873,101.7041087
+510403,西区,Panzhihua: Xi qu,Panzhihua: Xi qu,,3,26.5977852,101.6306162
+510411,仁和区,Panzhihua: Renhe qu,Panzhihua: Renhe qu,,3,26.4977685,101.7385268
 510421,米易县,Miyi,Miyi,,3,26.8906888,102.1103346
 510422,盐边县,Yanbian,Yanbian,,3,26.6832114,101.8550742
-510500,泸州市,Luzhou shi,Luzhou shi,,2,28.7635962,105.4086256
+510500,泸州市,Luzhou shi,Luzhou shi,LUZ,2,28.7635962,105.4086256
 510501,市辖区,City area,Luzhou shixiaqu,,3,,
 510502,江阳区,,,,3,28.8889933,105.4534721
 510503,纳溪区,,,,3,28.7733582,105.371182
@@ -2550,7 +2550,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 510522,合江县,Hejiang,Hejiang,,3,28.7592228,105.7871819
 510524,叙永县,Xuyong,Xuyong,,3,28.0880251,105.4675484
 510525,古蔺县,Gulin,Gulin,,3,27.9210991,105.9564614
-510600,德阳市,Deyang shi,Deyang shi,,2,31.127538,104.3978083
+510600,德阳市,Deyang shi,Deyang shi,DEY,2,31.127538,104.3978083
 510601,市辖区,City area,Deyang shixiaqu,,3,,
 510603,旌阳区,,,,3,31.1309085,104.4034195
 510623,中江县,Zhongjiang,Zhongjiang,,3,31.0330603,104.6787
@@ -2558,7 +2558,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 510681,广汉市,Guanghan shi,Guanghan shi,,3,30.9761833,104.2824304
 510682,什邡市,,,,3,31.1268584,104.1672564
 510683,绵竹市,,,,3,31.343274,104.1980481
-510700,绵阳市,Mianyang shi,Mianyang shi,,2,31.4614774,104.7430837
+510700,绵阳市,Mianyang shi,Mianyang shi,MYG,2,31.4614774,104.7430837
 510701,市辖区,City area,Mianyang shixiaqu,,3,,
 510703,涪城区,Mianyang: Fucheng qu,Mianyang: Fucheng qu,,3,31.4379365,104.6605897
 510704,游仙区,Mianyang: Youxian qu,Mianyang: Youxian qu,,3,31.534881,104.9299908
@@ -2569,7 +2569,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 510726,北川羌族自治县,Beichuan,Beichuan,,3,31.8938917,104.4368398
 510727,平武县,Pingwu,Pingwu,,3,32.4458447,104.5536447
 510781,江油市,Jiangyou shi,Jiangyou shi,,3,31.8929352,104.9064088
-510800,广元市,Guangyuan shi,Guangyuan shi,,2,32.4354319,105.843358
+510800,广元市,Guangyuan shi,Guangyuan shi,GYC,2,32.4354319,105.843358
 510801,市辖区,City area,Guangyuan shixiaqu,,3,,
 510802,利州区,,,,3,,
 510811,元坝区,Guangyuan: Yuanba qu,Guangyuan: Yuanba qu,,3,32.3232602,105.9628129
@@ -2578,21 +2578,21 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 510822,青川县,Qingchuan,Qingchuan,,3,32.5842561,105.2381873
 510823,剑阁县,Jiange,Jiange,,3,32.2877222,105.5247653
 510824,苍溪县,Cangxi,Cangxi,,3,31.7324286,105.9347999
-510900,遂宁市,Suining shi,Suining shi,,2,30.4275926,105.5369318
+510900,遂宁市,,,,2,30.4275926,105.5369318
 510901,市辖区,City area,Suining shixiaqu,,3,,
 510903,船山区,,,,3,30.4997896,105.5809736
 510904,安居区,,,,3,30.3501297,105.46242
 510921,蓬溪县,Pengxi,Pengxi,,3,30.7635584,105.705117
 510922,射洪县,Shehong,Shehong,,3,30.8711316,105.388391
 510923,大英县,,,,3,30.5941835,105.2370071
-511000,内江市,Neijiang shi,Neijiang shi,,2,29.6340538,105.1274228
+511000,内江市,Neijiang shi,Neijiang shi,NJS,2,29.6340538,105.1274228
 511001,市辖区,City area,Neijiang shixiaqu,,3,,
 511002,市中区,Neijiang: Shizhong qu,Neijiang: Shizhong qu,,3,29.5870983,105.06791
 511011,东兴区,Neijiang: Dongxing qu,Neijiang: Dongxing qu,,3,29.5927893,105.0755382
 511024,威远县,Weiyuan,Weiyuan,,3,29.5776747,104.5690084
 511025,资中县,Zizhong,Zizhong,,3,29.8003208,104.7869325
 511028,隆昌县,Longchang,Longchang,,3,29.3625502,105.2423716
-511100,乐山市,Leshan shi,Leshan shi,,2,29.4703703,103.7012172
+511100,乐山市,Leshan shi,Leshan shi,LES,2,29.4703703,103.7012172
 511101,市辖区,City area,Leshan shixiaqu,,3,,
 511102,市中区,Leshan: Shizhong qu,Leshan: Shizhong qu,,3,29.5554371,103.7615883
 511111,沙湾区,Leshan: Shawan qu,Leshan: Shawan qu,,3,29.4130867,103.5499942
@@ -2605,7 +2605,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 511132,峨边彝族自治县,Ebian Yizu zizhixian,Ebian Yizu zizhixian,,3,29.1603689,103.1486392
 511133,马边彝族自治县,Mabian Yizu zizhixian,Mabian Yizu zizhixian,,3,28.6854488,103.6762512
 511181,峨眉山市,Emeishan shi,Emeishan shi,,3,29.4961191,103.3985889
-511300,南充市,Nanchong shi,Nanchong shi,,2,30.7912579,106.0829973
+511300,南充市,Nanchong shi,Nanchong shi,NCO,2,30.7912579,106.0829973
 511301,市辖区,City area,Nanchong shixiaqu,,3,,
 511302,顺庆区,Nanchong: Shunqing qu,Nanchong: Shunqing qu,,3,30.7965204,106.0924602
 511303,高坪区,Nanchong: Gaoping qu,Nanchong: Gaoping qu,,3,30.781617,106.1189497
@@ -2616,7 +2616,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 511324,仪陇县,Yilong,Yilong,,3,31.2715727,106.3030994
 511325,西充县,Xichong,Xichong,,3,30.9952595,105.9008217
 511381,阆中市,Langzhong shi,Langzhong shi,,3,31.577722,105.9773612
-511400,眉山市,Meishan,,,2,30.1014839,103.8442969
+511400,眉山市,Meishan,,MSS,2,30.1014839,103.8442969
 511401,市辖区,City area,,,3,,
 511402,东坡区,,,,3,30.0823706,103.7398732
 511421,仁寿县,,,,3,29.9837376,104.2106545
@@ -2624,7 +2624,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 511423,洪雅县,,,,3,29.7379703,103.2318842
 511424,丹棱县,,,,3,30.0002313,103.4121072
 511425,青神县,,,,3,29.8174778,103.839705
-511500,宜宾市,Yibin,,,2,28.7705275,104.6212792
+511500,宜宾市,Yibin,,YBS,2,28.7705275,104.6212792
 511501,市辖区,City area,,,3,,
 511502,翠屏区,,,,3,28.7931991,104.6674347
 511503,南溪区,,,,3,,
@@ -2636,7 +2636,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 511527,筠连县,,,,3,28.1147516,104.580735
 511528,兴文县,,,,3,28.2701047,105.1095593
 511529,屏山县,,,,3,28.6727323,104.0108836
-511600,广安市,Guang'an,,,2,30.4559247,106.6332042
+511600,广安市,Guang'an,,GAC,2,30.4559247,106.6332042
 511601,市辖区,City area,,,3,,
 511602,广安区,,,,3,30.4739298,106.6416264
 511603,前锋区,,,,3,,
@@ -2644,7 +2644,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 511622,武胜县,,,,3,30.3480836,106.2955034
 511623,邻水县,,,,3,30.3345927,106.9305325
 511681,华蓥市,,,,3,30.3904051,106.7831933
-511700,达州市,Dazhou,,,2,31.2171048,107.5009739
+511700,达州市,Dazhou,,DAZ,2,31.2171048,107.5009739
 511701,市辖区,City area,,,3,,
 511702,通川区,,,,3,31.2171048,107.5009739
 511703,达川区,,,,3,,
@@ -2653,7 +2653,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 511724,大竹县,,,,3,30.7362659,107.2045469
 511725,渠县,,,,3,30.8364173,106.9733727
 511781,万源市,,,,3,32.0681379,108.0416
-511800,雅安市,Ya'an,,,2,29.9805129,103.0131662
+511800,雅安市,Ya'an,,YAS,2,29.9805129,103.0131662
 511801,市辖区,City area,,,3,,
 511802,雨城区,,,,3,30.0053879,103.0331111
 511803,名山区,,,,3,,
@@ -2663,7 +2663,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 511825,天全县,,,,3,30.0667077,102.7583134
 511826,芦山县,,,,3,30.1441252,102.9283762
 511827,宝兴县,,,,3,30.3681173,102.8146398
-511900,巴中市,Bazhong,,,2,31.8652392,106.7447305
+511900,巴中市,Bazhong,,BZS,2,31.8652392,106.7447305
 511901,市辖区,City area,,,3,,
 511902,巴州区,,,,3,31.8514791,106.7688811
 511903,恩阳区,,,,3,,
@@ -2676,7 +2676,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 512021,安岳县,,,,3,29.9870366,105.3507221
 512022,乐至县,,,,3,30.3378059,105.0274301
 512081,简阳市,,,,3,30.3662937,104.5382488
-513200,阿坝藏族羌族自治州,,,,2,31.8991657,102.222451
+513200,阿坝藏族羌族自治州,Aba Zangzu Qiangzu zizhizhou,Aba Zangzu Qiangzu zizhizhou,ABA,2,31.8991657,102.222451
 513221,汶川县,Wenchuan,Wenchuan,,3,31.084,103.267
 513222,理县,Li xian,Li xian,,3,30.911944,102.546111
 513223,茂县,Mao xian,Mao xian,,3,31.6811501,103.8534808
@@ -2709,27 +2709,27 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 513336,乡城县,Xiangcheng,Xiangcheng,,3,28.9320733,99.7992897
 513337,稻城县,Daocheng,Daocheng,,3,29.0370076,100.2984059
 513338,得荣县,Derong,Derong,,3,28.7130413,99.2863333
-513400,凉山彝族自治州,Liangshan Yizu zizhizhou,Liangshan Yizu zizhizhou,,2,27.9095234,102.2422886
+513400,凉山彝族自治州,Liangshan Yizu zizhizhou,Liangshan Yizu zizhizhou,LSY,2,27.9095234,102.2422886
 513401,西昌市,Xichang shi,Xichang shi,,3,27.8972454,102.2652664
 513422,木里藏族自治县,Muli Zangzu zizhixian,Muli Zangzu zizhixian,,3,27.9286069,101.2794185
 513423,盐源县,Yanyuan,Yanyuan,,3,27.4226428,101.5091872
 513424,德昌县,Dechang,Dechang,,3,27.4029088,102.1753299
 513425,会理县,Huili,Huili,,3,26.6553216,102.2446167
 513426,会东县,Huidong,Huidong,,3,26.6345029,102.5779617
-513427,宁南县,Ningnan,Ningnan,,3,27.0663774,102.7598047
+513427,宁南县,,,,3,27.0663774,102.7598047
 513428,普格县,Puge,Puge,,3,27.376188,102.5399387
 513429,布拖县,Butuo,Butuo,,3,27.711428,102.8073013
 513430,金阳县,Jinyang,Jinyang,,3,27.6968567,103.2487714
 513431,昭觉县,Zhaojue,Zhaojue,,3,28.0141613,102.8426743
 513432,喜德县,Xide,Xide,,3,28.3067233,102.412523
-513433,冕宁县,Mianning,Mianning,,3,28.5498086,102.1770787
+513433,冕宁县,,,,3,28.5498086,102.1770787
 513434,越西县,Yuexi,Yuexi,,3,28.6397997,102.5076771
 513435,甘洛县,Ganluo,Ganluo,,3,28.9660682,102.7717459
 513436,美姑县,Meigu,Meigu,,3,28.3286355,103.1321812
 513437,雷波县,Leibo,Leibo,,3,28.2627152,103.5717416
 520000,贵州省,Guizhou,,GZ,1,26.5768738,106.7113724
-520100,贵阳市,Guiyang shi,Guiyang shi,,2,26.5434927,106.7611027
-520101,市辖区,City area,,,3,,
+520100,贵阳市,Guiyang shi,Guiyang shi,KWE,2,26.5434927,106.7611027
+520101,市辖区,City area,Guiyang shixiaqu,,3,,
 520102,南明区,Guiyang: Nanming qu,Guiyang: Nanming qu,,3,26.5679266,106.7141533
 520103,云岩区,Guiyang: Yunyan qu,Guiyang: Yunyan qu,,3,26.6048457,106.7248499
 520111,花溪区,Guiyang: Huaxi qu,Guiyang: Huaxi qu,,3,26.4294123,106.6722357
@@ -2769,7 +2769,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 520423,镇宁布依族苗族自治县,,,,3,26.0573612,105.770402
 520424,关岭布依族苗族自治县,,,,3,25.8758668,105.6215608
 520425,紫云苗族布依族自治县,,,,3,25.7496518,106.0888016
-520500,毕节市,Bijie,,,2,,
+520500,毕节市,Bijie,,BJD,2,,
 520501,市辖区,,,,3,,
 520502,七星关区,,,,3,,
 520521,大方县,,,,3,,
@@ -2779,7 +2779,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 520525,纳雍县,,,,3,,
 520526,威宁彝族回族苗族自治县,,,,3,,
 520527,赫章县,,,,3,,
-520600,铜仁市,Tongren,,,2,,
+520600,铜仁市,Tongren,,TRD,2,,
 520601,市辖区,,,,3,,
 520602,碧江区,,,,3,,
 520603,万山区,,,,3,,
@@ -2831,7 +2831,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 522731,惠水县,Huishui,Huishui,,3,25.9654915,106.735847
 522732,三都水族自治县,Sandu Shuizu zizhixian,Sandu Shuizu zizhixian,,3,25.8487383,107.9551363
 530000,云南省,Yunnan,,YN,1,25.0438442,102.704567
-530100,昆明市,Kunming shi,Kunming shi,,2,25.0125259,102.7000129
+530100,昆明市,Kunming shi,Kunming shi,KMG,2,25.0125259,102.7000129
 530101,市辖区,City area,Kunming shixiaqu,,3,,
 530102,五华区,Kunming: Wuhua qu,Kunming: Wuhua qu,,3,25.0562214,102.6962578
 530103,盘龙区,Kunming: Panlong qu,Kunming: Panlong qu,,3,25.0654834,102.7359009
@@ -2839,12 +2839,12 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 530112,西山区,Kunming: Xishan qu,Kunming: Xishan qu,,3,25.0158704,102.6904321
 530113,东川区,,,,3,26.088547,103.176727
 530114,呈贡区,,,,3,,
-530122,晋宁县,Jinning,Jinning,,3,24.598241,102.532053
+530122,晋宁县,,,,3,24.598241,102.532053
 530124,富民县,Fumin,Fumin,,3,25.3710367,102.5796998
 530125,宜良县,Yiliang,Yiliang,,3,24.8967818,103.2272387
 530126,石林彝族自治县,,,,3,24.8088531,103.4003484
 530127,嵩明县,Songming,Songming,,3,25.275367,103.0039716
-530128,禄劝彝族苗族自治县,Luquan,Luquan,,3,25.8696114,102.5934649
+530128,禄劝彝族苗族自治县,Luquan Yizu Miaozu zizhixian,Luquan Yizu Miaozu zizhixian,,3,25.8696114,102.5934649
 530129,寻甸回族彝族自治县,,,,3,25.6787974,103.106271
 530181,安宁市,,,,3,24.8140827,102.3969877
 530300,曲靖市,Qujing,,QJS,2,25.4960156,103.8014781
@@ -2918,7 +2918,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 530925,双江拉祜族佤族布朗族傣族自治县,,,,3,23.473501,99.8276997
 530926,耿马傣族佤族自治县,,,,3,23.5310778,99.4118607
 530927,沧源佤族自治县,,,,3,23.1468514,99.2460465
-532300,楚雄彝族自治州,Chuxiong Yizu zizhizhou,Chuxiong Yizu zizhizhou,,2,25.0549287,101.5447211
+532300,楚雄彝族自治州,Chuxiong Yizu zizhizhou,Chuxiong Yizu zizhizhou,CXD,2,25.0549287,101.5447211
 532301,楚雄市,Chuxiong shi,Chuxiong shi,,3,25.0329028,101.5461588
 532322,双柏县,Shuangbai,Shuangbai,,3,24.6888728,101.6419351
 532323,牟定县,Mouding,Mouding,,3,25.3131202,101.5465665
@@ -2929,7 +2929,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 532328,元谋县,Yuanmou,Yuanmou,,3,25.7045534,101.8744719
 532329,武定县,Wuding,Wuding,,3,25.532528,102.404938
 532331,禄丰县,Lufeng,Lufeng,,3,25.1501988,102.0790172
-532500,红河哈尼族彝族自治州,Honghe Ha'nizu Yizu zizhizhou,Honghe Ha'nizu Yizu zizhizhou,,2,23.4301346,103.1800318
+532500,红河哈尼族彝族自治州,Honghe Ha'nizu Yizu zizhizhou,Honghe Ha'nizu Yizu zizhizhou,HHZ,2,23.4301346,103.1800318
 532501,个旧市,Gejiu shi,Gejiu shi,,3,23.3591192,103.1600332
 532502,开远市,Kaiyuan shi,Kaiyuan shi,,3,23.7142856,103.267858
 532503,蒙自市,,,,3,,
@@ -2940,10 +2940,10 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 532527,泸西县,Luxi,Luxi,,3,24.5320248,103.766191
 532528,元阳县,Yuanyang,Yuanyang,,3,23.2199422,102.8352177
 532529,红河县,Honghe,Honghe,,3,23.3691653,102.4206018
-532530,金平苗族瑶族傣族自治县,Jinping,Jinping,,3,22.7921862,103.0865729
+532530,金平苗族瑶族傣族自治县,Jinping Miaozu Yaozu Daizu zizhixian,Jinping Miaozu Yaozu Daizu zizhixian,,3,22.7921862,103.0865729
 532531,绿春县,Luchun,Luchun,,3,22.9941703,102.3923528
 532532,河口瑶族自治县,Hekou Yaozu zizhixian,Hekou Yaozu zizhixian,,3,22.5294645,103.9392793
-532600,文山壮族苗族自治州,Wenshan Zhuangzu Miaozu zizhizhou,Wenshan Zhuangzu Miaozu zizhizhou,,2,23.3802939,104.254632
+532600,文山壮族苗族自治州,Wenshan Zhuangzu Miaozu zizhizhou,Wenshan Zhuangzu Miaozu zizhizhou,WSZ,2,23.3802939,104.254632
 532601,文山市,,,,3,,
 532622,砚山县,Yanshan,Yanshan,,3,23.6057267,104.3371689
 532623,西畴县,Xichou,Xichou,,3,23.4374683,104.6722519
@@ -2951,12 +2951,12 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 532625,马关县,Maguan,Maguan,,3,23.0129143,104.3941605
 532626,丘北县,Qiubei,Qiubei,,3,24.0419178,104.1958165
 532627,广南县,Guangnan,Guangnan,,3,24.0464836,105.0552607
-532628,富宁县,Funing,Funing,,3,23.6253186,105.6309056
-532800,西双版纳傣族自治州,Xishuangbanna Daizu zizhizhou,Xishuangbanna Daizu zizhizhou,,2,22.0108892,100.7992601
+532628,富宁县,,,,3,23.6253186,105.6309056
+532800,西双版纳傣族自治州,Xishuangbanna Daizu zizhizhou,Xishuangbanna Daizu zizhizhou,XSB,2,22.0108892,100.7992601
 532801,景洪市,Jinghong shi,Jinghong shi,,3,22.0107102,100.7997751
 532822,勐海县,,,,3,21.9573552,100.4525471
 532823,勐腊县,,,,3,21.4758338,101.5675199
-532900,大理白族自治州,Dali Baizu zizhizhou,Dali Baizu zizhizhou,,2,25.5842336,100.2221239
+532900,大理白族自治州,Dali Baizu zizhizhou,Dali Baizu zizhizhou,DLZ,2,25.5842336,100.2221239
 532901,大理市,Dali shi,Dali shi,,3,25.5842336,100.2221239
 532922,漾濞彝族自治县,Yangbi Yizu zizhixian,Yangbi Yizu zizhixian,,3,25.6701528,99.9580121
 532923,祥云县,Xiangyun,Xiangyun,,3,25.4744861,100.5562091
@@ -2969,7 +2969,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 532930,洱源县,Eryuan,Eryuan,,3,26.1111595,99.9510491
 532931,剑川县,Jianchuan,Jianchuan,,3,26.5370427,99.9055481
 532932,鹤庆县,Heqing,Heqing,,3,26.5602304,100.1764297
-533100,德宏傣族景颇族自治州,Dehong Daizu Jingpozu zizhizhou,Dehong dai Jinpozu zizhizhou,,2,24.4484388,98.5669327
+533100,德宏傣族景颇族自治州,Dehong Daizu Jingpozu zizhizhou,Dehong dai Jinpozu zizhizhou,DHG,2,24.4484388,98.5669327
 533102,瑞丽市,Ruili shi,Ruili shi,,3,24.012775,97.8518879
 533103,芒市,,,,3,,
 533122,梁河县,Lianghe,Lianghe,,3,24.8070125,98.2948923
@@ -2979,13 +2979,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 533321,泸水县,Lushui,Lushui,,3,25.841921,98.857727
 533323,福贡县,Fugong,Fugong,,3,26.9017306,98.8692069
 533324,贡山独龙族怒族自治县,Gongshan Derungzu Nuzu zizhixia,Gongshan Dulongzu Nu zizhixian,,3,27.7407357,98.6658204
-533325,兰坪白族普米族自治县,Lanping,Lanping,,3,26.4536014,99.4166887
+533325,兰坪白族普米族自治县,Lanping Baizu Primizu zizhixian,Lanping Baizu Primizu zizhixian,,3,26.4536014,99.4166887
 533400,迪庆藏族自治州,Diqing,Diqing Zangzu zizhizhou,DEZ,2,27.8590162,99.7090173
 533421,香格里拉县,,,,3,27.8230796,99.7060132
 533422,德钦县,Deqen,Deqen,,3,28.4861098,98.9115429
 533423,维西傈僳族自治县,,,,3,27.1771659,99.2871702
 540000,西藏自治区,Tibet,,XZ,1,29.657589,91.1320496
-540100,拉萨市,Lhasa shi,Lasa shi,,2,29.6568428,91.1251009
+540100,拉萨市,Lhasa shi,Lasa shi,LXA,2,29.6568428,91.1251009
 540101,市辖区,City area,Lasa shixiaqu,,3,,
 540102,城关区,Lhasa: Chengguan qu,Lasa: Chengguan qu,,3,29.6457567,91.1408186
 540121,林周县,Lhunzhub,Linzhou,,3,29.8936945,91.2649083
@@ -2995,7 +2995,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 540125,堆龙德庆县,Doilungdeqen,Duilongdeqing,,3,29.6447683,91.010195
 540126,达孜县,Dagze,Dazi,,3,29.6702303,91.3498592
 540127,墨竹工卡县,Maizhokunggar,Mozhugongka,,3,29.8348924,91.7309582
-542100,昌都地区,Qamdu,Changdu diqu,,2,31.1815618,97.150265
+542100,昌都地区,Qamdu,Changdu diqu,QAD,2,31.1815618,97.150265
 542121,昌都县,Qamdo,Changdu,,3,31.1385032,97.1804345
 542122,江达县,Jomda,Jiangda,,3,31.4992018,98.2184279
 542123,贡觉县,Gonjo,Gongjue,,3,30.8600988,98.270967
@@ -3007,7 +3007,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 542129,芒康县,Markam,Mangkang,,3,29.6799063,98.593111
 542132,洛隆县,Lhorong,Luolong,,3,30.7415222,95.8245993
 542133,边坝县,Banbar,Bianba,,3,30.9336482,94.7078025
-542200,山南地区,Lhokha,Shannan diqu,,2,29.2406678,91.804955
+542200,山南地区,Loka diqu,Shannan diqu,SND,2,29.2406678,91.804955
 542221,乃东县,Nedong,Naidong,,3,29.2273808,91.7765961
 542222,扎囊县,Za'nang,Za'nang,,3,29.2451145,91.3372529
 542223,贡嘎县,Nedong,Gongga,,3,29.1822688,90.9438468
@@ -3020,7 +3020,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 542231,隆子县,Lhunze,Longzi,,3,28.5498574,92.8577105
 542232,错那县,Cona,Cuona,,3,27.9910951,91.957165
 542233,浪卡子县,Nagarze,Langkazi,,3,28.8589326,90.4502368
-542300,日喀则地区,Xigaze diqu,Rikaze diqu,,2,29.2717159,88.8883853
+542300,日喀则地区,Xigaze diqu,Rikaze diqu,XID,2,29.2717159,88.8883853
 542301,日喀则市,Xigaze shi,Rikaze shi,,3,29.2717159,88.8883853
 542322,南木林县,Namling,Namling,,3,29.6823391,89.0992391
 542323,江孜县,Gyangze,Jiangzi,,3,28.9116578,89.6055758
@@ -3039,7 +3039,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 542336,聂拉木县,Nyalam,Nielamu,,3,28.1551127,85.9822333
 542337,萨嘎县,Saga,Saga,,3,29.3284804,85.2333176
 542338,岗巴县,Gamba,Gangba,,3,28.2746024,88.5200322
-542400,那曲地区,Nagqu,Naqu diqu,,2,31.452426,92.0592928
+542400,那曲地区,Nagqu,Naqu diqu,NAD,2,31.452426,92.0592928
 542421,那曲县,Nagqu,Naqu,,3,31.4696402,92.0534992
 542422,嘉黎县,Lhari,Jiali,,3,30.6408106,93.2325232
 542423,比如县,Biru,Biru,,3,31.4802454,93.6796367
@@ -3051,7 +3051,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 542429,巴青县,Baqen,Baqing,,3,31.9185649,94.0534616
 542430,尼玛县,Nyima,Nima,,3,31.7847002,87.2367668
 542431,双湖县,,,,3,,
-542500,阿里地区,Ngari,Ali diqu,,2,32.5516967,80.1027453
+542500,阿里地区,Ngari,Ali diqu,NGD,2,32.5516967,80.1027453
 542521,普兰县,Burang,Pulan,,3,30.2944055,81.1762404
 542522,札达县,Zanda,Zhada,,3,31.4792115,79.8027027
 542523,噶尔县,Gar,Ge'er,,3,32.4914837,80.0964153
@@ -3059,7 +3059,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 542525,革吉县,Ge'gyai,Geji,,3,32.3872369,81.145438
 542526,改则县,Gerze,Gaize,,3,32.3027135,84.062587
 542527,措勤县,Coqen,Cuoqin,,3,31.0167685,85.1594925
-542600,林芝地区,Nyingchi diqu,Linzhi diqu,,2,29.6352102,94.4083178
+542600,林芝地区,Nyingchi diqu,Linzhi diqu,NYD,2,29.6352102,94.4083178
 542621,林芝县,Nyingchi,Linzhi,,3,29.6365717,94.3610895
 542622,工布江达县,Gongbo'gyamda,Gongbujiangda,,3,29.8852764,93.2460737
 542623,米林县,Mainling,Milin,,3,29.215697,94.2134607
@@ -3083,13 +3083,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 610124,周至县,Zhouzhi,Zhouzhi,,3,33.9810276,108.2014704
 610125,户县,Hu xian,Hu xian,,3,34.0133605,108.5701561
 610126,高陵县,Gaoling,Gaoling,,3,34.5080066,109.0656674
-610200,铜川市,Tongchuan shi,Tongchuan shi,,2,34.9089154,108.9805126
+610200,铜川市,Tongchuan shi,Tongchuan shi,TCN,2,34.9089154,108.9805126
 610201,市辖区,City area,Tongchuan shixiaqu,,3,,
 610202,王益区,,,,3,35.0689676,109.0756452
 610203,印台区,,,,3,35.1144938,109.1002142
 610204,耀州区,,,,3,34.9089154,108.9805126
 610222,宜君县,Yijun,Yijun,,3,35.3985744,109.1169298
-610300,宝鸡市,Baoji shi,Baoji shi,,2,34.4267353,106.9516039
+610300,宝鸡市,Baoji shi,Baoji shi,BJI,2,34.4267353,106.9516039
 610301,市辖区,City area,Baoji shixiaqu,,3,,
 610302,渭滨区,Baoji: Weibin qu,Baoji: Weibin qu,,3,34.3711585,107.1499157
 610303,金台区,Baoji: Jintai qu,Baoji: Jintai qu,,3,34.3761264,107.1469116
@@ -3103,7 +3103,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 610329,麟游县,Linyou,Linyou,,3,34.7630067,107.7060771
 610330,凤县,Feng xian,Feng xian,,3,33.9783941,106.77122
 610331,太白县,Taibai,Taibai,,3,33.9762055,107.249372
-610400,咸阳市,Xianyang shi,Xianyang shi,,2,34.3663144,108.7650347
+610400,咸阳市,Xianyang shi,Xianyang shi,XYS,2,34.3663144,108.7650347
 610401,市辖区,City area,Xianyang shixiaqu,,3,,
 610402,秦都区,Xianyang: Qindu qu,Xianyang: Qindu qu,,3,34.3380499,108.714931
 610403,杨陵区,Xianyang: Yangling qu,Xianyang: Yangling qu,,3,,
@@ -3119,7 +3119,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 610430,淳化县,Chunhua,Chunhua,,3,34.7988187,108.5806704
 610431,武功县,Wugong,Wugong,,3,34.3192401,108.1744981
 610481,兴平市,Xingping shi,Xingping shi,,3,34.2995219,108.4905052
-610500,渭南市,Weinan shi,Weinan shi,,2,34.4999962,109.5097876
+610500,渭南市,Weinan shi,Weinan shi,WNA,2,34.4999962,109.5097876
 610501,市辖区,City area,Weinan shixiaqu,,3,,
 610502,临渭区,Weinan: Linwei qu,Weinan: Linwei qu,,3,34.4982189,109.4929647
 610521,华县,Hua xian,Hua xian,,3,34.5127099,109.7720003
@@ -3196,30 +3196,30 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 611025,镇安县,,,,3,33.423311,109.1526568
 611026,柞水县,,,,3,33.6862373,109.1140866
 620000,甘肃省,Gansu,,GS,1,36.0680389,103.7500534
-620100,兰州市,Lanzhou shi,Lanzhou shi,,2,36.0758983,103.7572432
+620100,兰州市,Lanzhou shi,Lanzhou shi,LHW,2,36.0758983,103.7572432
 620101,市辖区,City area,Lanzhou shixiaqu,,3,,
 620102,城关区,Lanzhou: Chengguan qu,Lanzhou: Chengguan qu,,3,36.057287,103.825436
 620103,七里河区,Lanzhou: Qilihe qu,Lanzhou: Qilihe qu,,3,36.0659862,103.7857926
 620104,西固区,Lanzhou: Xigu qu,Lanzhou: Xigu qu,,3,36.0884536,103.6279714
-620105,安宁区,Lanzhou: Anning qu,Lanzhou: Anning qu,,3,36.1041968,103.7172246
+620105,安宁区,,,,3,36.1041968,103.7172246
 620111,红古区,Lanzhou: Honggu qu,Lanzhou: Honggu qu,,3,36.3313069,102.9244065
 620121,永登县,Yongdeng,Yongdeng,,3,36.7361844,103.2608843
 620122,皋兰县,Gaolan,Gaolan,,3,36.3321107,103.9475298
 620123,榆中县,Yuzhong,Yuzhong,,3,35.8430908,104.1125822
-620200,嘉峪关市,Jiayuguan shi,Jiayuguan shi,,2,39.783559,98.2778871
-620201,市辖区,City area,,,3,,
-620300,金昌市,Jinchang shi,Jinchang shi,,2,38.5210159,102.1937621
+620200,嘉峪关市,Jiayuguan shi,Jiayuguan shi,JYG,2,39.783559,98.2778871
+620201,市辖区,City area,Jiayuguan shixiaqu,,3,,
+620300,金昌市,Jinchang shi,Jinchang shi,JCS,2,38.5210159,102.1937621
 620301,市辖区,City area,Jinchang shixiaqu,,3,,
 620302,金川区,Jinchang: Jinchuan qu,Jinchang: Jinchuan qu,,3,38.5210159,102.1937621
 620321,永昌县,Yongchang,Yongchang,,3,38.2482412,101.9690573
-620400,白银市,Baiyin shi,Baiyin shi,,2,36.54763,104.1416359
+620400,白银市,Baiyin shi,Baiyin shi,BYS,2,36.54763,104.1416359
 620401,市辖区,City area,Baiyin shixiaqu,,3,,
 620402,白银区,Baiyin: Baiyin qu,Baiyin: Baiyin qu,,3,36.5441134,104.1735542
 620403,平川区,Baiyin: Pingchuan qu,Baiyin: Pingchuan qu,,3,36.7281276,104.8251486
 620421,靖远县,Jingyuan,Jingyuan,,3,36.565168,104.6870255
-620422,会宁县,Huining,Huining,,3,35.6931166,105.0530827
+620422,会宁县,,,,3,35.6931166,105.0530827
 620423,景泰县,Jingtai,Jingtai,,3,37.1865017,104.060837
-620500,天水市,Tianshui shi,Tianshui shi,,2,34.568696,105.7260275
+620500,天水市,Tianshui shi,Tianshui shi,TSU,2,34.568696,105.7260275
 620501,市辖区,City area,Tianshui shixiaqu,,3,,
 620502,秦州区,,,,3,34.5808869,105.7242143
 620503,麦积区,,,,3,34.4062104,106.0005033
@@ -3290,7 +3290,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 621226,礼县,,,,3,34.1889971,105.1785994
 621227,徽县,,,,3,33.7688022,106.0877073
 621228,两当县,,,,3,33.9088545,106.3049769
-622900,临夏回族自治州,Linxia Huizu zizhizhou,Linxia Huizu zizhizhou,,2,35.5913832,103.2010818
+622900,临夏回族自治州,Linxia Huizu zizhizhou,Linxia Huizu zizhizhou,LXH,2,35.5913832,103.2010818
 622901,临夏市,Linxia shi,Linxia shi,,3,35.4916168,102.9955602
 622921,临夏县,Linxia,Linxia,,3,35.4916168,102.9955602
 622922,康乐县,Kangle,Kangle,,3,35.3698402,103.7087274
@@ -3299,7 +3299,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 622925,和政县,Hezheng,Hezheng,,3,35.4246056,103.3509958
 622926,东乡族自治县,Dongxiangzu zizhixian,Dongxiangzu zizhixian,,3,35.6637556,103.3893406
 622927,积石山保安族东乡族撒拉族自治县,Jishishan Bon'anzu Dongxiangzu Salarzu zizhixian,Jishishan Bon'anzu Dongxianzu salazu  gezu zizhixian,,3,35.7176587,102.8758478
-623000,甘南藏族自治州,Gannan Zangzu zizhizhou,Gannan Zang zhizhou,,2,34.9854426,102.8992152
+623000,甘南藏族自治州,Gannan Zangzu zizhizhou,Gannan Zang zhizhou,GNZ,2,34.9854426,102.8992152
 623001,合作市,,,,3,35.0004899,102.9108131
 623021,临潭县,Lintan,Lintan,,3,34.6926592,103.3531308
 623022,卓尼县,Jone,Zhuoni,,3,34.5895873,103.5071111
@@ -3309,73 +3309,73 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 623026,碌曲县,Luqu,Luqu,,3,34.5904175,102.4889231
 623027,夏河县,Xiahe,Xiahe,,3,35.2025595,102.5217319
 630000,青海省,Qinghai,,QH,1,36.6094475,101.7874527
-630100,西宁市,Xining shi,Xining shi,,2,36.6306136,101.784693
+630100,西宁市,Xining,,XNN,2,36.6306136,101.784693
 630101,市辖区,City area,Xining shixiaqu,,3,,
 630102,城东区,Xining: Chengdong qu,Xining: Chengdong qu,,3,36.5997066,101.8039513
 630103,城中区,Xining: Chengzhong qu,Xining: Chengzhong qu,,3,36.6234154,101.787107
 630104,城西区,Xining: Chengxi qu,Xining: Chengxi qu,,3,36.6282889,101.7658854
 630105,城北区,Xining: Chengbei qu,Xining: Chengbei qu,,3,36.6504654,101.7660248
-630121,大通回族土族自治县,Datong,Datong,,3,36.9269698,101.6856229
+630121,大通回族土族自治县,Datong Huizu Tuzu zizhixian,Datong Huizu Tuzu zizhixian,,3,36.9269698,101.6856229
 630122,湟中县,,,,3,36.4716179,101.6157773
 630123,湟源县,,,,3,36.6390671,101.207047
-630200,海东市,Haidong,,,2,,
+630200,海东市,Haidong,,HDD,2,,
 630202,乐都区,,,,3,,
 630221,平安县,,,,3,,
 630222,民和回族土族自治县,,,,3,,
 630223,互助土族自治县,,,,3,,
 630224,化隆回族自治县,,,,3,,
 630225,循化撒拉族自治县,,,,3,,
-632200,海北藏族自治州,Haibei Zangzu zizhizhou,Haibei Zangzu zizhizhou,,2,36.9433152,100.9729171
+632200,海北藏族自治州,Haibei Zangzu zizhizhou,Haibei Zangzu zizhizhou,HBZ,2,36.9433152,100.9729171
 632221,门源回族自治县,Menyuan Huizu zizhixia,Menyuan Huizu zizhixian,,3,37.503189,101.760864
 632222,祁连县,Qilian,Qilian,,3,38.2597161,99.6284544
 632223,海晏县,Haiyan,Haiyan,,3,36.8969542,100.9949327
 632224,刚察县,Gangca,Gangcha,,3,37.3215658,100.1467001
-632300,黄南藏族自治州,Huangnan Zangzu zizhizhou,Huangnan Zangzu zizhizhou,,2,35.5399353,102.0273364
+632300,黄南藏族自治州,Huangnan Zangzu zizhizhou,Huangnan Zangzu zizhizhou,HNZ,2,35.5399353,102.0273364
 632321,同仁县,Tongren,Tongren,,3,35.3916564,102.0602632
 632322,尖扎县,Jainca,Jianzha,,3,35.8740115,101.7862487
 632323,泽库县,Zekog,Zeku,,3,35.1684322,101.388799
 632324,河南蒙古族自治县,Henan Mongolzu zizhixian,He'nan Mengguzu zizhixian,,3,34.5667966,101.5159893
-632500,海南藏族自治州,Hainan Zangzu zizhizhou,Hainan Zangzu zizhizhou,,2,36.3243834,100.6377268
+632500,海南藏族自治州,Hainan Zangzu zizhizhou,Hainan Zangzu zizhizhou,HNN,2,36.3243834,100.6377268
 632521,共和县,Gonghe,Gonghe,,3,36.4072781,99.9567997
 632522,同德县,Tongde,Tongde,,3,35.1492929,100.618093
 632523,贵德县,Guide,Guide,,3,35.9343659,101.4771831
 632524,兴海县,Xinghai,Xinghai,,3,35.5586594,99.5635879
 632525,贵南县,Guinan,Guinan,,3,35.5914879,101.0426652
-632600,果洛藏族自治州,Golog Zangzu zizhizho,Guoluo Zangzu zizhizhou,,2,34.4774993,100.2954233
+632600,果洛藏族自治州,Golog Zangzu zizhizho,Guoluo Zangzu zizhizhou,GOL,2,34.4774993,100.2954233
 632621,玛沁县,Maqe^n,Maqin,,3,34.5688551,99.6734834
 632622,班玛县,Baima,Banma,,3,32.8929573,100.5401909
 632623,甘德县,Gade,Gande,,3,34.1541653,100.1406598
 632624,达日县,Darlag,Dari,,3,33.4516833,99.4474804
 632625,久治县,Jigzhi,Jiuzhi,,3,33.4254511,101.1348045
 632626,玛多县,Madoi,Maduo,,3,34.81124,98.3043122
-632700,玉树藏族自治州,Yushu Zangzu zizhizhou,Yushu Zangzu zizhizhou,,2,33.0183078,97.0129681
+632700,玉树藏族自治州,Yushu Zangzu zizhizhou,Yushu Zangzu zizhizhou,YSZ,2,33.0183078,97.0129681
 632701,玉树市,,,,3,,
 632722,杂多县,Zadoi,Zaduo,,3,32.9548356,94.3776119
 632723,称多县,Chindu,Chenduo,,3,34.0554505,96.9991386
 632724,治多县,Zhidoi,Zhiduo,,3,34.7868273,92.8896296
 632725,囊谦县,Nangqe^n,Nangqian,,3,32.2723111,96.2246239
 632726,曲麻莱县,Qumarle^b,Qumalai,,3,34.8246283,95.6305897
-632800,海西蒙古族藏族自治州,Haixi,,HXZ,2,38.1313666,93.2945359
+632800,海西蒙古族藏族自治州,Haixi,Haixi Mengguzu Zangzu Hasake zizhizhou,HXZ,2,38.1313666,93.2945359
 632801,格尔木市,Golmud shi,Ge'ermu shi,,3,36.4016221,94.9037325
-632802,德令哈市,,,,3,37.3694324,97.36099
+632802,德令哈市,Delingha shi,Delingha shi,,3,37.3694324,97.36099
 632821,乌兰县,Ulan,Wulan,,3,36.9297486,98.48019
 632822,都兰县,Dulan,Dulan,,3,36.29779,98.087182
 632823,天峻县,Tianjun,Tianjun,,3,37.3012141,99.022876
-640000,宁夏回族自治区,Ningxia,,,1,38.4680099,106.2719421
-640100,银川市,Yinchuan shi,Yinchuan shi,,2,38.4751111,106.273241
+640000,宁夏回族自治区,Ningxia,,NX,1,38.4680099,106.2719421
+640100,银川市,Yinchuan shi,Yinchuan shi,INC,2,38.4751111,106.273241
 640101,市辖区,City area,Yinchuan shixiaqu,,3,,
 640104,兴庆区,,,,3,38.4736412,106.2886155
 640105,西夏区,,,,3,38.4911353,106.1503744
 640106,金凤区,,,,3,38.4733136,106.2422025
-640121,永宁县,Yongning,Yongning,,3,38.2773041,106.2531245
+640121,永宁县,,,,3,38.2773041,106.2531245
 640122,贺兰县,Helan,Helan,,3,38.5432566,106.3259089
 640181,灵武市,,,,3,37.8788696,106.6291304
-640200,石嘴山市,Shizuishan shi,Shizuishan shi,,2,39.0188419,106.3682878
+640200,石嘴山市,Shizuishan shi,Shizuishan shi,SZS,2,39.0188419,106.3682878
 640201,市辖区,City area,Shizuishan shixiaqu,,3,,
 640202,大武口区,Shizuishan: Dawukou qu,Shizuishan: Dawukou qu,,3,39.0122565,106.3771713
 640205,惠农区,,,,3,39.1859571,106.6541469
 640221,平罗县,Pingluo,Pingluo,,3,38.9060625,106.5471911
-640300,吴忠市,Wuzhong,,,2,37.9980819,106.2003386
+640300,吴忠市,Wuzhong,,WZS,2,37.9980819,106.2003386
 640301,市辖区,City area,,,3,,
 640302,利通区,,,,3,37.9851198,106.2031174
 640303,红寺堡区,,,,3,,
@@ -3389,13 +3389,13 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 640423,隆德县,,,,3,35.5558139,106.0461223
 640424,泾源县,,,,3,35.444318,106.3679123
 640425,彭阳县,,,,3,35.9511301,106.6822886
-640500,中卫市,Zhongwei,,,2,37.5169425,105.1738358
+640500,中卫市,Zhongwei,,ZWS,2,37.5169425,105.1738358
 640501,市辖区,City area,,,3,,
 640502,沙坡头区,,,,3,37.3466544,104.9312568
 640521,中宁县,,,,3,37.4915108,105.6852686
 640522,海原县,,,,3,36.6763091,105.6881788
-650000,新疆维吾尔自治区,Xinjiang,,,1,43.7909393,87.6061172
-650100,乌鲁木齐市,Urumqi shi,Wulumuqi shi,,2,43.8103137,87.6051629
+650000,新疆维吾尔自治区,Xinjiang,,XJ,1,43.7909393,87.6061172
+650100,乌鲁木齐市,Urumqi shi,Wulumuqi shi,URC,2,43.8103137,87.6051629
 650101,市辖区,City area,Wulumuqi shixiaqu,,3,,
 650102,天山区,Urumqi: Tianshan qu,Wulumuqi: Tianshan qu,,3,43.7944012,87.6316738
 650103,沙依巴克区,Urumqi: Saybag qu,Wulumuqi: Saybag qu,,3,43.8011849,87.5978887
@@ -3405,8 +3405,8 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 650107,达坂城区,,,,3,43.3586204,88.306936
 650109,米东区,,,,3,43.9452102,87.6804578
 650121,乌鲁木齐县,Urumqi,Wulumuqi,,3,43.4440861,87.4473417
-650200,克拉玛依市,Karamay shi,Kelamayi shi,,2,45.5804213,84.8904026
-650201,市辖区,City area,,,3,,
+650200,克拉玛依市,Karamay shi,Kelamayi shi,KAR,2,45.5804213,84.8904026
+650201,市辖区,City area,Kelamayi shixiaqu,,3,,
 650202,独山子区,Karamay: Dushanzi qu,Kelamayi: Dushanzi qu,,3,44.3280924,84.8869693
 650203,克拉玛依区,Karamay: Karamay qu,Kelamayi: Kelamayi qu,,3,45.5827716,84.8865294
 650204,白碱滩区,,,,3,45.6878575,85.1316941
@@ -3415,7 +3415,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 652101,吐鲁番市,Turpan shi,Tulufan Shi,,3,42.9423263,89.1859281
 652122,鄯善县,Shanshan,Shanshan,,3,42.8566904,90.2157032
 652123,托克逊县,Toksun,Tuokexun,,3,42.7994234,88.6482954
-652200,哈密地区,Hami diqu,Hami diqu,,2,42.899146,93.550204
+652200,哈密地区,Hami diqu,Hami diqu,HMD,2,42.899146,93.550204
 652201,哈密市,Hami shi,Hami shi,,3,42.8270013,93.5145307
 652222,巴里坤哈萨克自治县,Barkol Kazak zizhixian,Balikun Hasake zizhixian,,3,44.2121873,93.0333316
 652223,伊吾县,Yiwu,Yiwu,,3,43.2548225,94.6972561
@@ -3457,7 +3457,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 653022,阿克陶县,Akto,Aketao,,3,39.1480928,75.9470379
 653023,阿合奇县,Akqi,Aheqi,,3,40.9369399,78.4460735
 653024,乌恰县,Wuqia,Wuqia,,3,39.7193188,75.2590513
-653100,喀什地区,Kashi,Kashi diqu,,2,39.4657023,75.9993732
+653100,喀什地区,Kaxgar diqu,Kashi diqu,KSI,2,39.4657023,75.9993732
 653101,喀什市,Kaxgar shi,Kashi shi,,3,39.4676901,75.9937942
 653121,疏附县,Shufu,Shufu,,3,39.3750055,75.8629239
 653122,疏勒县,Shule,Shule,,3,39.4013821,76.0481358
