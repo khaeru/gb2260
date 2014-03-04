@@ -915,7 +915,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 320324,睢宁县,,,,3,33.9440453,117.852037
 320381,新沂市,,,,3,34.36929,118.3543932
 320382,邳州市,,,,3,34.3912494,117.8877747
-320400,常州市,,,CZX,2,31.7558405,119.939214
+320400,常州市,Changzhou,,CZX,2,31.7558405,119.939214
 320401,市辖区,City area,Changzhou shixiaqu,,3,,
 320402,天宁区,,,,3,31.7525015,119.9514663
 320404,钟楼区,,,,3,31.7823108,119.9482799
@@ -1130,7 +1130,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 340122,肥东县,Feidong,Feidong,,3,31.9207413,117.6032138
 340123,肥西县,Feixi,Feixi,,3,31.7553387,117.0665145
 340124,庐江县,,,,3,,
-340181,巢湖市,Chaohu,,http://en.wikipedia.org/wiki/Chaohu,3,,
+340181,巢湖市,Chaohu,,,3,,
 340200,芜湖市,Wuhu shi,Wuhu shi,WHI,2,31.4067806,118.3732438
 340201,市辖区,City area,Wuhu shixiaqu,,3,,
 340202,镜湖区,Wuhu: Jinghu qu,Wuhu: Jinghu qu,,3,31.3403876,118.3852494
@@ -1933,7 +1933,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 420981,应城市,Yingcheng shi,Yingcheng shi,,3,30.9283657,113.5727119
 420982,安陆市,Anlu shi,Anlu shi,,3,31.255597,113.6890233
 420984,汉川市,,,,3,30.6612455,113.8391519
-421000,荆州市,,,JGZ,2,30.3907198,112.221694
+421000,荆州市,Jingzhou,,JGZ,2,30.3907198,112.221694
 421001,市辖区,City area,Jingsha shixiaqu,,3,,
 421002,沙市区,Jingsha: Shashi qu,Jingsha: Shashi qu,,3,30.3110326,112.2556508
 421003,荆州区,Jingsha: Jingzhou qu,Jingsha: Jingzhou qu,JZQ,3,30.3528332,112.1901834
@@ -2295,7 +2295,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 445323,云安县,,,,3,23.0710162,112.003212
 445381,罗定市,,,,3,22.7683268,111.5699816
 450000,广西壮族自治区,Guangxi,,GX,1,22.8065434,108.3117676
-450100,南宁市,,,NNG,2,22.6537992,108.3109045
+450100,南宁市,Nanning,,NNG,2,22.6537992,108.3109045
 450101,市辖区,City area,Nanning shixiaqu,,3,,
 450102,兴宁区,,,,3,22.8158041,108.3159685
 450103,青秀区,,,,3,22.8230726,108.3486485

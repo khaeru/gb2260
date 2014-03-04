@@ -156,7 +156,7 @@ code,name_zh,name_en,alpha
 320201,市辖区,City area
 320300,,Xuzhou,XUZ
 320301,市辖区,City area
-320400,,,CZX
+320400,,Changzhou,CZX
 320401,市辖区,City area
 320405,,,QSY
 320501,市辖区,City area
@@ -362,7 +362,7 @@ code,name_zh,name_en,alpha
 420801,市辖区,City area
 420900,,,XGE
 420901,市辖区,City area
-421000,,,JGZ
+421000,,Jingzhou,JGZ
 421001,市辖区,City area
 421003,,,JZQ
 421100,,Huanggang,HGE
@@ -443,7 +443,7 @@ code,name_zh,name_en,alpha
 445300,,,YFS
 445301,市辖区,City area
 450000,,Guangxi,GX
-450100,,,NNG
+450100,,Nanning,NNG
 450101,市辖区,City area
 450105,,,JNA
 450200,,,LZH
