@@ -17,6 +17,7 @@ import jianfan
 
 
 __all__ = [
+    'all_at',
     'alpha',
     'AmbiguousKeyError',
     'codes',
@@ -37,6 +38,11 @@ codes = {}
 class AmbiguousKeyError(IndexError):
     """Exception for lookup()"""
     pass
+
+
+def all_at(code_level):
+    """Return a sorted list of codes at level *code_level*."""
+    return sorted([code for code in codes.keys() if level(code) == code_level])
 
 
 def data_fn(base, ext='csv'):
