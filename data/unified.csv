@@ -3068,7 +3068,7 @@ code,name_zh,name_en,name_pinyin,alpha,level,latitude,longitude
 542626,察隅县,Zayu,Chayu,,3,28.6612758,97.4669158
 542627,朗县,Nang xian,Lang xian,,3,29.0463405,93.074702
 610000,陕西省,Shaanxi,,SN,1,34.2616844,108.949028
-610100,西安市,Xi'an shi,Xi'an shi,,2,34.2648777,108.9442599
+610100,西安市,Xi'an shi,Xi'an shi,SIA,2,34.2648777,108.9442599
 610101,市辖区,City area,Xi'an shixiaqu,,3,,
 610102,新城区,Xi'an: Xincheng qu,Xi'an: Xincheng qu,,3,34.2657555,109.0108216
 610103,碑林区,Xi'an: Beilin qu,Xi'an: Beilin qu,,3,34.2489514,108.9531755
