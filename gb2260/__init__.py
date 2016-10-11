@@ -180,6 +180,7 @@ def match_names(official, other):
 
 def parent(code, parent_level=None):
     """Return a valid GB/T 2260 code that is the parent of *code*."""
+    code = int(code)
     l = level(code)
     if parent_level is not None:
         assert l - parent_level > 0, ("Code {} is at level {}, no parent at "
@@ -189,7 +190,8 @@ def parent(code, parent_level=None):
         l = level(code) - 1
         assert l > 0, "No parent of top-level code {}.".format(code)
     result = code - (code % 10 ** (6 - 2 * l))
-    assert code in codes
+    assert result in codes, "Parent code {} for {} is invalid".format(result,
+                                                                      code)
     return result
 
 
