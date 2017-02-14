@@ -8,7 +8,7 @@ setup(name='gb2260',
       author_email='mail@paul.kishimoto.name',
       description='GB/T 2260-2007 codes',
       install_requires=[
-        'beautfulsoup4',
+        'beautifulsoup4',
         ],
       tests_require=['pytest'],
       url='https://github.com/khaeru/gb2260',
