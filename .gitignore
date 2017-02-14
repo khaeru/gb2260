@@ -1,5 +1,4 @@
 *.egg-info/
 __pycache__/
 doc/_build
-jianfan/
 cached.html
