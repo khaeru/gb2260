@@ -1,4 +1,20 @@
-# Generate an up-to-date list of China administrative divisons
+"""The entire database is contained in the dictionary :data:`codes`.
+
+>>> from gb2260 import *
+>>> codes.get(542621) == {
+...   'alpha': '',
+...   'latitude': 29.6365717,
+...   'level': 3,
+...   'longitude': 94.3610895,
+...   'name_en': 'Nyingchi',
+...   'name_pinyin': 'Linzhi',
+...   'name_zh': '林芝县',
+...   }
+True
+>>> codes.get(632726)['level']
+3
+
+"""
 import csv
 from os import linesep
 import os.path
@@ -19,6 +35,7 @@ __all__ = [
     'codes',
     'level',
     'lookup',
+    'lookup_name',
     'parent',
     'split',
     'within',
@@ -34,13 +51,18 @@ codes = {}
 
 
 class AmbiguousKeyError(IndexError):
-    """Exception for lookup()"""
+    """Exception for :meth:`lookup()`."""
     pass
 
 
-def all_at(code_level):
-    """Return a sorted list of codes at level *code_level*."""
-    return sorted([code for code in codes.keys() if level(code) == code_level])
+def all_at(adm_level):
+    """Return a sorted list of codes at the given administrative *adm_level*.
+
+    >>> all_at(3)
+    [110101, 110102, 110105, 110106, 110107, 110108, 110109, 110111, ...
+
+    """
+    return sorted([code for code in codes.keys() if level(code) == adm_level])
 
 
 def data_fn(base, ext='csv'):
@@ -51,11 +73,15 @@ def data_fn(base, ext='csv'):
 def alpha(code, prefix='CN-'):
     """Return an 'ISO 3166-2-like' alpha code for *code*.
 
-    ISO 3166-2:CN defines codes like "CN-11" for Beijing, where "11" are the
-    first two digits of the GB/T 2260 code, 110000. An 'ISO 3166-2-like' alpha
-    code uses the official GB/T 2260 two-letter alpha codes for province-level
-    divisions (e.g. 'BJ'), and three-letter alpha codes for lower divisions,
-    separated by hyphens.
+    `ISO 3166-2:CN <https://en.wikipedia.org/wiki/ISO_3166-2:CN>`_ defines
+    codes like "CN-11" for Beijing, where "11" are the first two digits of the
+    GB/T 2260 code, 110000. An 'ISO 3166-2-like' alpha code uses the official
+    GB/T 2260 two-letter alpha codes for province-level divisions (e.g. 'BJ'),
+    and three-letter alpha codes for lower divisions, separated by hyphens.
+
+    >>> alpha(130100)
+    'CN-HE-SJW'
+
     """
     result = prefix
     for parent_level in range(1, level(code)):
@@ -112,16 +138,75 @@ def load_file(f, key, filter=None):
             continue
         code = int(row[key])
         del row[key]
+        row['level'] = int(row['level'])
+        lat = row.pop('latitude')
+        row['latitude'] = lat if lat == '' else float(lat)
+        lon = row.pop('longitude')
+        row['longitude'] = lon if lon == '' else float(lon)
         result[code] = row
     return result
 
 
 def level(code):
-    """Return the administrative level of *code*."""
+    """Return the administrative level of *code*.
+
+    >>> level(110108)
+    3
+
+    :meth:`level` does *not* raise an exception if *code* does not describe an
+    entry in the database. To raise an exception on an invalid code, access
+    :data:`codes`:
+
+    >>> level(990000)
+    1
+    >>> codes[990000]['level']
+    Traceback (most recent call last):
+     ...
+    KeyError: 990000
+
+    """
     return 3 - sum([1 if c == 0 else 0 for c in split(code)])
 
 
-def lookup(name, lang='en', parent=None, highest=True):
+def lookup(field=None, **kwargs):
+    """Lookup information from the database.
+
+    Returns *field* from the database for the requested entry, which can be
+    specified using a keyword argument. For instance:
+
+    - ``lookup('name_zh', code=110108)``: lookup the Chinese name (`name_zh`)
+      for code `110108`.
+    - ``lookup('code', name='Beijing')``: lookup the code for which the
+      English name is 'Beijing'.
+
+    """
+    if 'name' in kwargs:
+        name = kwargs.pop('name')
+        if kwargs.pop('field', 'code') != 'code':
+            raise NotImplementedError("can't lookup '%s' for name")
+        return lookup_name(name, **kwargs)
+    elif 'code' in kwargs:
+        code = kwargs.pop('code')
+        if field is None:
+            field = kwargs.pop('field', 'name_en')
+
+        while code not in codes:
+            try:
+                code = parent(code)
+            except AssertionError:
+                code = parent(code, parent_level=1)
+            post = ' (for parent %d)' % code
+
+        retval = codes[code][field]
+        if kwargs.get('postfix', False):
+            retval += post
+
+        return retval
+    else:
+        raise ValueError('cannot look up on any of %s', list(kwargs.keys()))
+
+
+def lookup_name(name, lang='en', parent=None, highest=True):
     """Lookup a code for the given *name*.
 
     The *name* is given in language *lang* (either 'en' or 'zh').
@@ -205,7 +290,7 @@ def parse_raw(f):
         &nbsp; &nbsp;&nbsp;东城区</p>
 
     Spaces after the code and before the name are not always present; sometimes
-    there are stray spaces. There a either 3, 5 or 7 &nbsp; characters,
+    there are stray spaces. There are either 3, 5 or 7 &nbsp; characters,
     indicating the administrative level.
     """
     soup = BeautifulSoup(f)
@@ -312,7 +397,19 @@ def update(f, verbose=False):
 
 
 def within(a, b):
-    """Return True if division *a* is within (or the same as) division *b*."""
+    """Return True if division *a* is within (or the same as) division *b*.
+
+    Like :meth:`level`, :meth:`within` does *not* check that *a* or *b* are
+    valid codes that exist in the database.
+
+    >>> within(331024, 330000)
+    True
+    >>> within(331024, 990000)
+    False
+    >>> within(331024, 110000)
+    True
+
+    """
     a_ = split(a)
     b_ = split(b)
     if b_[2] == 0:
@@ -320,13 +417,13 @@ def within(a, b):
             return a_[0] == b_[0]
         return a_[:2] == b_[:2]
     else:
-        return False
+        return a == b
 
 
 if __name__ == '__main__':
     # Read the NBS website
     update(parse_raw(urllib.request.urlopen(URL)))
-#    # commented: Use a cached copy of the website
-#    update(open(data_fn('cached', 'html'), 'r'), verbose=True)
+    # # commented: Use a cached copy of the website
+    # update(open(data_fn('cached', 'html'), 'r'), verbose=True)
 else:
     codes = load_file(open(data_fn('unified'), 'r'), 'code')
