@@ -24,6 +24,8 @@ __all__ = [
     'within',
     ]
 
+__version__ = '0.1-dev'
+
 DATA_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..',
                         'data')
 URL = "http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201401/t20140116_501070.html"
