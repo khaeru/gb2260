@@ -1,6 +1,5 @@
 # Generate an up-to-date list of China administrative divisons
 import csv
-from math import ceil, log10
 from os import linesep
 import os.path
 import re
@@ -224,7 +223,8 @@ def parse_raw(f):
     return result
 
 
-split = lambda code: (int(code / 1e4), int(code % 1e4 / 100), code % 100)
+def split(code):
+    return (int(code / 1e4), int(code % 1e4 / 100), code % 100)
 
 
 def update(f, verbose=False):
