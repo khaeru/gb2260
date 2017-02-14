@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
 # Generate an up-to-date list of China administrative divisons
-#
-# TODO lots of documentation
 import csv
 from math import ceil, log10
 from os import linesep

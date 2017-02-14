@@ -45,8 +45,8 @@ Dependencies
 Copyright and License
 =====================
 
-`gb2260.py` are © 2014 Paul Natsuo Kishimoto <<mail@paul.kishimoto.name>> and
-distributed under the [GNU GPLv3][4].
+`gb2260.py` are © 2014–2017 Paul Natsuo Kishimoto <<mail@paul.kishimoto.name>>
+and distributed under the [GNU GPLv3][4].
 
 The NBS website, which is scraped as the main and authoritative source of data,
 provides [this copyright statement][5].
