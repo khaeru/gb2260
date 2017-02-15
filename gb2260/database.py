@@ -1,0 +1,316 @@
+import csv
+from os import linesep
+import os.path
+import re
+import sqlite3
+
+# https://code.google.com/p/python-jianfan/ or
+# https://code.google.com/r/stryderjzw-python-jianfan/source/browse
+import jianfan
+
+
+COLUMNS = [
+    'code',
+    'name_zh',
+    'level',
+    'name_pinyin',
+    'name_en',
+    'alpha',
+    'latitude',
+    'longitude',
+    ]
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+
+URLS = {
+    '2015-09-30': '201608/t20160809_1386477.html',
+    '2014-10-31': '201504/t20150415_712722.html',
+    '2013-08-31': '201401/t20140116_501070.html',
+    '2012-10-31': '201301/t20130118_38316.html',
+    }
+
+for k in URLS.keys():
+    URLS[k] = 'http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/' + URLS[k]
+
+
+def data_fn(base, ext='csv'):
+    """Construct the path to a filename in the package's data directory."""
+    return os.path.normpath(os.path.join(DATA_DIR, '%s.%s' % (base, ext)))
+
+
+def dict_update(a, b, conflict='raise'):
+    """Like dict.update(), but with conflict checking.
+
+    dict *a* is updated with the items of *b*. Where the same key exists in
+    both dicts, but the corresponding values differ, the result is defined by
+    the value of *conflict*:
+
+    - 'raise' (default): a ValueError is raised.
+    - 'squash': the entry in *a* is replaced with the entry in *b*.
+    - 'discard': the entry in *a* is retained.
+    - any callable object: *conflict* is called with arguments (a[k], b[k], k),
+      where k is the conflicting key. Then, depending on the returned value:
+      - True: the entry in *a* is replaced with the entry in *b* (squash)
+      - False: the entry in *a* is retained (discard)
+
+    On any other value for *conflict*, a ValueError is raised.
+    """
+    for k, v in b.items():
+        if k in a and a[k] != v:  # Conflict
+            if conflict == 'raise':
+                raise ValueError('Value %s for key %s would conflict with '
+                                 'existing value %s ', v, k, a[k])
+            elif conflict == 'squash':
+                pass
+            elif conflict == 'discard':
+                continue
+            elif callable(conflict):
+                if not conflict(a[k], v, k):
+                    continue
+            else:
+                raise ValueError('Cannot handle conflict with %s', conflict)
+        a[k] = v
+
+
+def load_csv(db, key='code', filter=None):
+    fn = data_fn(db)
+    result = {}
+    for row in csv.DictReader(open(fn)):
+        if callable(filter) and not filter(row):
+            continue
+
+        code = int(row.pop(key))
+
+        for field, type in [('level', int),
+                            ('latitude', float),
+                            ('longitude', float)]:
+            try:
+                value = row.pop(field)
+                row[field] = type(value)
+            except KeyError:
+                pass
+            except ValueError as e:
+                assert value == ''
+                row[field] = None
+
+        result[code] = row
+    return result
+
+
+def match_names(official, other):
+    if official == other:
+        return 'exact'
+    elif official in other or other in official:
+        return 'substring'
+    tr = jianfan.ftoj(other)  # Avoid repeated calls
+    if official == tr:
+        return 'translated'
+    elif official in tr or tr in official:
+        return 'translated substring'
+    else:
+        return False
+
+
+def open_sqlite(db):
+    return sqlite3.connect(data_fn(db, 'db'))
+
+
+def parse_html(f):
+    """Parse the webpage with the code list, from *f*.
+
+    *f* can be any file-like object supported by BeautifulSoup(). Returns a
+    dict where keys are .
+
+    In the 2014 edition, the entries look like:
+
+        <p align="justify" class="MsoNormal">110101&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp; &nbsp;&nbsp;东城区</p>
+
+    Spaces after the code and before the name are not always present; sometimes
+    there are stray spaces. There are either 3, 5 or 7 &nbsp; characters,
+    indicating the administrative level.
+    """
+    from collections import OrderedDict, defaultdict
+    import bs4
+
+    exp = re.compile('(?P<code>\d{6})(?P<level>(\xa0){1,7})(?P<name_zh>.*)')
+    result = OrderedDict()
+
+    for p in bs4.BeautifulSoup(f, 'lxml').select('div.TRS_Editor p.MsoNormal'):
+        match = exp.match(p.text.replace(' ', ''))  # Remove stray spaces
+        if match is None:
+            continue
+        d = match.groupdict()
+        assert len(d['level']) % 2 == 1  # 3, 5 or 6 &nbsp; characters
+        result[int(d['code'])] = defaultdict(
+            lambda: None,
+            code=int(d['code']),
+            name_zh=d['name_zh'],
+            level=int(len(d['level']) / 2),
+            )
+    return result
+
+
+def refresh_cache():
+    from urllib.request import urlopen
+
+    log = _configure_log()
+
+    for date, url in URLS.items():
+        with urlopen(url) as f_in:
+            log.info('saving %s', url)
+
+            cache_fn = data_fn(os.path.join('cache', date), 'html')
+
+            with open(cache_fn, 'wb') as f_out:
+                log.info('  to %s', cache_fn)
+                f_out.write(f_in.read())
+
+        log.info('  done')
+
+
+def _configure_log(verbose=False):
+    import logging
+
+    logging.basicConfig(format='%(name)s: %(message)s',
+                        level=logging.DEBUG if verbose else logging.INFO)
+
+    return logging.getLogger('gb2260')
+
+
+def update(version='2015-09-30', use_cache=False, verbose=False):
+    log = _configure_log(verbose)
+
+    if use_cache:
+        try:
+            fn = data_fn(os.path.join('cache', version), 'html')
+            log.info('reading from cached %s', fn)
+            f = open(fn, 'r')
+        except FileNotFoundError:
+            log.info('  missing.')
+            use_cache = False
+
+    if not use_cache:
+        from urllib.request import urlopen
+        log.info('retrieving codes from %s', URLS[version])
+        f = urlopen(URLS[version])
+
+    # Parse the codes from HTML
+    log.info('  parsing...')
+    codes = parse_html(f)
+    log.info('  done.')
+
+    # Save the latest table
+    fn = data_fn('latest')
+    with open(fn, 'w') as f1:
+        w = csv.writer(f1, lineterminator=linesep)
+        w.writerow(['code', 'name_zh', 'level'])
+        for code in sorted(codes.keys()):
+            w.writerow([code, codes[code]['name_zh'], codes[code]['level']])
+    log.info('wrote %s', fn)
+
+    # Load the CITAS table
+    d1 = load_csv('citas', 'C-gbcode',
+                  filter=lambda row: row['todate'] == '19941231')
+    log.info('read CITAS data')
+
+    # Load the GB/T 2260-2007 tables, from two files
+    d2 = load_csv('gbt_2260-2007')
+    d3 = load_csv('gbt_2260-2007_sup')
+    log.info('loaded GB/T 2260-2007 entries')
+    for code, d in d3.items():  # Merge the two GB/T 2260-2007 files
+        if code in d2:  # Code appears in both files
+            # Don't overwrite name_zh in gbt_2260-2007.csv with an empty
+            # name_zh from gbt_2260-2007_sup.csv
+            dict_update(d2[code], d, conflict=lambda a, b, k: not(k ==
+                        'name_zh' or b is None))
+        else:  # Code only appears in gbt_2260-2007_sup.csv
+            d2[code] = d
+
+    # Load extra data pertaining to the latest table
+    d4 = load_csv('extra')
+    log.info('loaded extra data')
+
+    # Merge using codes
+    log.info('merging codes')
+    for code in sorted(codes.keys()):
+        # Store debug information to be printed (or not) later
+        message = ['%s\t%s' % (code, codes[code]['name_zh'])]
+
+        # Merge CITAS entry for this code
+        if code not in d1:
+            message.append('  does not appear in CITAS data set')
+        else:
+            d = dict(d1[code])  # Make a copy
+            name_zh = d.pop('N-hanzi')
+            if not match_names(codes[code]['name_zh'], name_zh):
+                message.append('  CITAS name %s (%s) does not match' %
+                               (name_zh, jianfan.ftoj(name_zh)))
+            else:
+                d['name_en'] = d.pop('N-local').replace("`", "'")
+                d['name_pinyin'] = d.pop('N-pinyin').replace("`", "'")
+                dict_update(codes[code], d)
+
+        # Merge GB/T 2260-2007 entry for this code
+        if code not in d2:
+            message.append('  does not appear in GB/T 2260-2007')
+        else:
+            d = dict(d2[code])
+            if (len(d['name_zh']) and not codes[code]['name_zh'] ==
+                    d['name_zh']):
+                message.append('  GB/T 2260-2007 name %s does not match' %
+                               d['name_zh'])
+            else:
+                # Don't overwrite name_en from CITAS with empty name_en from
+                # GB/T 2260-2007
+                dict_update(codes[code], d, conflict=lambda a, b, k: not(
+                            'name_' in k and b is ''))
+
+        # Merge extra data
+        if code in d4:
+            dict_update(codes[code], d4[code], conflict='squash')
+
+        if len(message) > 1 and 'does not appear in CITAS' not in message[1]:
+            log.info('\n'.join(message))
+        else:
+            log.debug('\n'.join(message))
+    log.info('merge complete')
+
+    # TODO merge on names
+
+    # Write the unified data set to CSV
+    fn = data_fn('unified')
+    with open(fn, 'w') as f:
+        w = csv.DictWriter(f, ('code', 'name_zh', 'name_en', 'name_pinyin',
+                               'alpha', 'level', 'latitude', 'longitude'),
+                           extrasaction='ignore', lineterminator=linesep)
+        w.writeheader()
+        for k in sorted(codes.keys()):
+            w.writerow(codes[k])
+    log.info('wrote %s', fn)
+
+    conn = open_sqlite('unified')
+    write_sqlite(conn, codes)
+    conn.close()
+
+
+def write_sqlite(conn, data):
+    cur = conn.cursor()
+    cur.execute('DROP TABLE IF EXISTS codes')
+    cur.execute("""CREATE TABLE codes (
+        code        int   PRIMARY KEY,
+        name_zh     text  NOT NULL,
+        level       int   NOT NULL,
+        name_pinyin text,
+        name_en     text,
+        alpha       text,
+        latitude    real,
+        longitude   real)
+        """)
+
+    insert_query = 'INSERT INTO codes (' + ', '.join(COLUMNS) + ') VALUES (:'
+    insert_query += ', :'.join(COLUMNS) + ')'
+
+    cur.executemany(insert_query, data.values())
+    cur.close()
+    conn.commit()

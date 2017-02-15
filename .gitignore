@@ -1,5 +1,6 @@
 *.egg-info/
 .cache
 __pycache__/
+data/*.db
+data/cache/*.html
 doc/_build
-cached.html
