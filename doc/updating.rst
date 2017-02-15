@@ -18,11 +18,11 @@ The script produces two outputs:
 2. ``unified.csv`` includes information from sources #2 and #3.
 
 
-.. py:currentmodule:: gb2260
+.. py:currentmodule:: gb2260.database
 
 .. autofunction:: update
-.. autofunction:: parse_raw
+.. autofunction:: parse_html
 .. autofunction:: data_fn
-.. autofunction:: load_file
+.. autofunction:: load_csv
 .. autofunction:: match_names
 .. autofunction:: dict_update

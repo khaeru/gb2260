@@ -50,6 +50,8 @@ def all_at(adm_level):
     >>> all_at(3)
     [110101, 110102, 110105, 110106, 110107, 110108, 110109, 110111, ...
 
+    >>> len(all_at(3))
+    3136
     """
     return _query('SELECT code FROM codes WHERE level=? ORDER BY code',
                   (adm_level,), list)
@@ -64,8 +66,15 @@ def alpha(code, prefix='CN-'):
     GB/T 2260 two-letter alpha codes for province-level divisions (e.g. 'BJ'),
     and three-letter alpha codes for lower divisions, separated by hyphens.
 
+    No official alpha codes are provided for divisions below level 2.
+
     >>> alpha(130100)
     'CN-HE-SJW'
+
+    >>> alpha(542621)
+    Traceback (most recent call last):
+     ...
+    ValueError: 542621
 
     """
 
@@ -83,26 +92,25 @@ def _join(levels):
 
 
 def level(code):
+    """Return the administrative level of *code*.
+
+    >>> level(110108)
+    3
+
+    >>> level(990000)
+    Traceback (most recent call last):
+     ...
+    LookupError: 990000
+
+    """
     return _query('SELECT level FROM codes WHERE code = ?', (code,))
 
 
 def _level(code):
     """Return the administrative level of *code*.
 
-    >>> level(110108)
-    3
-
-    :meth:`level` does *not* raise an exception if *code* does not describe an
-    entry in the database. To raise an exception on an invalid code, access
-    :data:`codes`:
-
-    >>> level(990000)
-    1
-    >>> codes[990000]['level']
-    Traceback (most recent call last):
-     ...
-    KeyError: 990000
-
+    Unlike :meth:`level`, does *not* raise an exception if *code* does not
+    describe an entry in the database.
     """
     return 3 - sum([1 if c == 0 else 0 for c in split(code)])
 
@@ -110,13 +118,39 @@ def _level(code):
 def lookup(fields='code', **kwargs):
     """Lookup information from the database.
 
-    Returns *fields* from the database for the requested entry, which can be
-    specified using a keyword argument. For instance:
+    *fields* is either a :py:class:`str` specifying a single field, or an
+    iterable of field names (default: 'code').
 
-    - ``lookup('name_zh', code=110108)``: lookup the Chinese name for code
-      `110108`.
-    - ``lookup('code', name_en='Beijing')``: lookup the code for which the
-      English name is 'Beijing'.
+    Aside from optional *kwargs* (below), only one other keyword argument must
+    be given. Its name is a database field; the value is the value to look up:
+
+    >>> lookup(name_zh='海淀区')
+    110108
+
+    Lookup on a nonexistent field raises :py:class:`ValueError`:
+
+    >>> lookup('name_zh', foo=110108)
+     ...
+    ValueError
+    >>> lookup(['name_zh', 'foo'], code=110000)
+     ...
+    ValueError
+
+    Optional *kwargs* are:
+
+    - *within*: a code. If specified, only entries that are within this
+      division are returned. This is useful for lookups that would return more
+      than one entry, normally a :py:class:`LookupError`:
+
+      >>> lookup('code', name_zh='市辖区')
+      Traceback (most recent call last):
+       ...
+      LookupError
+
+      >>> lookup('code', name_zh='市辖区', within=110000)
+      110100
+
+    Further examples:
 
     """
     if isinstance(fields, str):

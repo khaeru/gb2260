@@ -6,7 +6,7 @@
 中华人民共和国行政区划代码: Codes for the administrative divisions of the People's Republic of China
 ====================================================================================================
 
-The GB/T 2260 standard defines six-digit numerical codes for the administrative divisions of China, at the county level and above. For instance, the Haidian district of Beijing has the code **``110108``**.
+The GB/T 2260 standard defines six-digit numerical codes for the administrative divisions of China, at the county level and above. For instance, the Haidian district of Beijing has the code **110108**.
 
 The most recent version of the official standard, designated "GB/T 2260-2007", was published in 2008. However, codes are routinely revised, and the National Bureau of Statistics (NBS) `publishes an updated list online annually <http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/>`_.
 

@@ -6,4 +6,4 @@ API reference
 
    .. data:: codes
 
-      :py:class:`dict` of containing the database.
+      :py:class:`dict` containing the database.
