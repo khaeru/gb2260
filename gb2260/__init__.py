@@ -16,10 +16,12 @@ True
 
 """
 import csv
+from itertools import chain
 from os import linesep
 import os.path
 import re
-import urllib.request
+import sqlite3
+
 
 from bs4 import BeautifulSoup
 
@@ -47,12 +49,66 @@ DATA_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..',
                         'data')
 URL = "http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201401/t20140116_501070.html"
 
-codes = {}
+COLUMNS = [
+    'code',
+    'name_zh',
+    'level',
+    'name_pinyin',
+    'name_en',
+    'alpha',
+    'latitude',
+    'longitude',
+    ]
 
 
 class AmbiguousKeyError(IndexError):
     """Exception for :meth:`lookup()`."""
     pass
+
+
+class InvalidCodeError(ValueError):
+    pass
+
+
+def _create_db(conn, data):
+    cur = conn.cursor()
+    cur.execute('DROP TABLE IF EXISTS codes')
+    cur.execute("""CREATE TABLE codes (
+        code        int   PRIMARY KEY,
+        name_zh     text  NOT NULL,
+        level       int   NOT NULL,
+        name_pinyin text,
+        name_en     text,
+        alpha       text,
+        latitude    real,
+        longitude   real)
+        """)
+
+    insert_query = 'INSERT INTO codes (' + ', '.join(COLUMNS) + ') VALUES (:'
+    insert_query += ', :'.join(COLUMNS) + ')'
+
+    cur.executemany(insert_query, data.values())
+    cur.close()
+    conn.commit()
+
+
+def _query(sql, args, type=None, columns=1, results=-1):
+    cur = _conn.execute(sql, args)
+    rows = cur.fetchall()
+
+    if results > 0 and len(rows) != results:
+        raise LookupError('%d results; expected %d', len(rows), results)
+
+    if type is None:
+        if results == -1 or results == 1:
+            result = rows[0]
+            if columns == 1:
+                result = result[0]
+        return result
+    elif type is list and columns == 1:
+        return list(chain(*rows))
+    else:
+        raise ValueError
 
 
 def all_at(adm_level):
@@ -62,7 +118,8 @@ def all_at(adm_level):
     [110101, 110102, 110105, 110106, 110107, 110108, 110109, 110111, ...
 
     """
-    return sorted([code for code in codes.keys() if level(code) == adm_level])
+    return _query('SELECT code FROM codes WHERE level=? ORDER BY code',
+                  (adm_level,), list)
 
 
 def data_fn(base, ext='csv'):
@@ -83,17 +140,14 @@ def alpha(code, prefix='CN-'):
     'CN-HE-SJW'
 
     """
-    result = prefix
-    for parent_level in range(1, level(code)):
-        parent_code = codes[parent(code, parent_level)]['alpha']
-        if len(parent_code) == 0:
-            raise ValueError('No alpha code for parent division {}.'.format(
-                             parent(code)))
-        result += parent_code + '-'
-    alpha_ = codes[code]['alpha']
-    if len(alpha_) == 0:
-        raise ValueError('No alpha code for {}.'.format(code))
-    return result + alpha_
+
+    query = 'SELECT alpha FROM codes WHERE code in (?, ?, ?) ORDER BY code'
+    parts = _query(query, _parents(code), list)
+
+    if None in parts:
+        raise ValueError('no alpha code for %d', code)
+
+    return prefix + '-'.join(parts)
 
 
 def dict_update(a, b, conflict='raise'):
@@ -148,6 +202,10 @@ def load_file(f, key, filter=None):
 
 
 def level(code):
+    return _query('SELECT level FROM codes WHERE code = ?', (code,))
+
+
+def _level(code):
     """Return the administrative level of *code*.
 
     >>> level(110108)
@@ -168,83 +226,56 @@ def level(code):
     return 3 - sum([1 if c == 0 else 0 for c in split(code)])
 
 
-def lookup(field=None, **kwargs):
+def lookup(fields='code', **kwargs):
     """Lookup information from the database.
 
-    Returns *field* from the database for the requested entry, which can be
+    Returns *fields* from the database for the requested entry, which can be
     specified using a keyword argument. For instance:
 
-    - ``lookup('name_zh', code=110108)``: lookup the Chinese name (`name_zh`)
-      for code `110108`.
-    - ``lookup('code', name='Beijing')``: lookup the code for which the
+    - ``lookup('name_zh', code=110108)``: lookup the Chinese name for code
+      `110108`.
+    - ``lookup('code', name_en='Beijing')``: lookup the code for which the
       English name is 'Beijing'.
 
     """
-    if 'name' in kwargs:
-        name = kwargs.pop('name')
-        if kwargs.pop('field', 'code') != 'code':
-            raise NotImplementedError("can't lookup '%s' for name")
-        return lookup_name(name, **kwargs)
-    elif 'code' in kwargs:
-        code = kwargs.pop('code')
-        if field is None:
-            field = kwargs.pop('field', 'name_en')
+    if isinstance(fields, str):
+        fields = (fields,)
+    if not all([f in COLUMNS for f in fields]):
+        raise ValueError('one of %s is not a database field', fields)
 
-        while code not in codes:
-            try:
-                code = parent(code)
-            except AssertionError:
-                code = parent(code, parent_level=1)
-            post = ' (for parent %d)' % code
+    # String of additional query expressions
+    conditions = ''
 
-        retval = codes[code][field]
-        if kwargs.get('postfix', False):
-            retval += post
+    # Limit search to divisions under the parent *within*
+    within = kwargs.pop('within', None)
 
-        return retval
-    else:
-        raise ValueError('cannot look up on any of %s', list(kwargs.keys()))
+    if within is not None:
+        # Split the code to parts, increment the one at the relevant level,
+        # and rejoin
+        parts = list(split(within))
+        parts[_level(within) - 1] += 1
+        high = _join(parts)
 
+        # Add to the query expressions
+        conditions += 'AND code BETWEEN %d AND %d' % (within, high)
 
-def lookup_name(name, lang='en', parent=None, highest=True):
-    """Lookup a code for the given *name*.
+    # The only remaining argument's name is the column to query on; its value
+    # is the value to look up.
+    key, value = kwargs.popitem()
+    if len(kwargs):
+        raise ValueError('unexpected arguments: %s', kwargs.keys())
+    elif key not in COLUMNS:
+        raise ValueError('%s is not a database field', key)
 
-    The *name* is given in language *lang* (either 'en' or 'zh').
+    # Assemble the query string
+    query = 'SELECT %s FROM codes WHERE %s = ? %s' % \
+            (', '.join(fields), key, conditions)
 
-    The *parent* and *highest* arguments determine how to resolve ambiguities
-    (cases where more than one name_en or name_zh match *name*). If a GB/T 2260
-    code *parent* is given, only codes for children of the parent region will
-    be returned. For instance, with parent=350000, only codes from 350000 to
-    360000 (exclusive) will be returned. If *highest* is True (the default),
-    then of two regions with matching names, the one at a higher administrative
-    level will be returned.
-    """
-    name_key = 'name_{}'.format(lang)
-    if parent is not None:
-        min_ = parent
-        max_ = parent + 10 ** (6 - 2 * level(parent))
-        parent = lambda x: x > min_ and x < max_
-    matches = set()
-    for code in filter(parent, sorted(codes.keys())):
-        if name in codes[code].get(name_key, ''):
-            matches.add(code)
-    if len(matches) == 1:
-        return matches.pop()
-    elif len(matches) > 1:
-        if highest:
-            best = codes[min(matches, key=lambda x:
-                         codes[x]['level'])]['level']
-            matches = list(filter(lambda x: codes[x]['level'] == best,
-                           matches))
-            if len(matches) == 1:
-                return matches[0]
-        # No luck…
-        message = ["{} name '{}' is ambiguous:".format(lang.upper(), name)]
-        for code in matches:
-            message.append('  {} {}'.format(code, codes[code][name_key]))
-        raise AmbiguousKeyError('\n'.join(message), name)
-    else:
-        raise KeyError("name '{}' not found".format(name))
+    # Return exactly one result
+    result = _query(query, (value,), columns=len(fields), results=1)
+    # commented: debugging
+    # print(result)
+    return result
 
 
 def match_names(official, other):
@@ -261,21 +292,42 @@ def match_names(official, other):
         return False
 
 
+def _join(levels):
+    return levels[0] * 10000 + levels[1] * 100 + levels[2]
+
+
 def parent(code, parent_level=None):
     """Return a valid GB/T 2260 code that is the parent of *code*."""
-    code = int(code)
-    l = level(code)
-    if parent_level is not None:
-        assert l - parent_level > 0, ("Code {} is at level {}, no parent at "
-                                      "level {}").format(code, l, parent_level)
-        l = parent_level
+    l = _level(code)
+    parents_guess = _parents(code)
+
+    query = 'SELECT code FROM codes WHERE code IN (?, ?, ?) ORDER BY code'
+    try:
+        parents_db = _query(query, parents_guess, list)
+    except LookupError:
+        raise InvalidCodeError('%d and its parents %s', code,
+                               parents_guess[:2])
+
+    if code not in parents_db:
+        raise InvalidCodeError(code)
+
+    if parent_level is None:
+        parent_level = l - 1
+
+    if parent_level not in (1, 2, 3):
+        raise ValueError('level = %d', parent_level)
+
+    guess = parents_guess[parent_level - 1]
+    if guess not in parents_db:
+        raise ValueError('Code %d is at level %d, no parent at level %d',
+                         code, l, parent_level)
     else:
-        l = level(code) - 1
-        assert l > 0, "No parent of top-level code {}.".format(code)
-    result = code - (code % 10 ** (6 - 2 * l))
-    assert result in codes, "Parent code {} for {} is invalid".format(result,
-                                                                      code)
-    return result
+        return guess
+
+
+def _parents(code):
+    """Return a tuple of parents of *code* at levels 1, 2 and 3."""
+    return (code - code % 10000, code - code % 100, code)
 
 
 def parse_raw(f):
@@ -311,7 +363,8 @@ def parse_raw(f):
 
 
 def split(code):
-    return (int(code / 1e4), int(code % 1e4 / 100), code % 100)
+    """Return a tuple containing the three parts of *code*."""
+    return (code // 10000, (code % 10000) // 100, code % 100)
 
 
 def update(f, verbose=False):
@@ -420,10 +473,5 @@ def within(a, b):
         return a == b
 
 
-if __name__ == '__main__':
-    # Read the NBS website
-    update(parse_raw(urllib.request.urlopen(URL)))
-    # # commented: Use a cached copy of the website
-    # update(open(data_fn('cached', 'html'), 'r'), verbose=True)
-else:
-    codes = load_file(open(data_fn('unified'), 'r'), 'code')
+codes = load_file(open(data_fn('unified'), 'r'), 'code')
+_conn = sqlite3.connect(data_fn('unified', 'db'))
