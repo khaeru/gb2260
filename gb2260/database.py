@@ -72,14 +72,21 @@ def dict_update(a, b, conflict='raise'):
         a[k] = v
 
 
-def load_csv(db, key='code', filter=None):
+def load_csv(db, key='code', keep_key=False, filter=None):
     fn = data_fn(db)
     result = {}
+
     for row in csv.DictReader(open(fn)):
         if callable(filter) and not filter(row):
             continue
 
         code = int(row.pop(key))
+
+        if keep_key:
+            row[key] = code
+
+        alpha = row['alpha']
+        row['alpha'] = None if alpha == '' else alpha
 
         for field, type in [('level', int),
                             ('latitude', float),
@@ -94,6 +101,7 @@ def load_csv(db, key='code', filter=None):
                 row[field] = None
 
         result[code] = row
+
     return result
 
 
@@ -112,7 +120,12 @@ def match_names(official, other):
 
 
 def open_sqlite(db):
-    return sqlite3.connect(data_fn(db, 'db'))
+    db_fn = data_fn(db, 'db')
+
+    if not os.path.exists(db_fn):
+        write_sqlite(db, load_csv(db, keep_key=True))
+
+    return sqlite3.connect(db_fn)
 
 
 def parse_html(f):
@@ -276,8 +289,6 @@ def update(version='2015-09-30', use_cache=False, verbose=False):
             log.debug('\n'.join(message))
     log.info('merge complete')
 
-    # TODO merge on names
-
     # Write the unified data set to CSV
     fn = data_fn('unified')
     with open(fn, 'w') as f:
@@ -289,12 +300,12 @@ def update(version='2015-09-30', use_cache=False, verbose=False):
             w.writerow(codes[k])
     log.info('wrote %s', fn)
 
-    conn = open_sqlite('unified')
-    write_sqlite(conn, codes)
-    conn.close()
+    write_sqlite('unified', codes)
+    log.info('wrote sqlite3 database')
 
 
-def write_sqlite(conn, data):
+def write_sqlite(db, data):
+    conn = sqlite3.connect(data_fn(db, 'db'))
     cur = conn.cursor()
     cur.execute('DROP TABLE IF EXISTS codes')
     cur.execute("""CREATE TABLE codes (
@@ -312,5 +323,7 @@ def write_sqlite(conn, data):
     insert_query += ', :'.join(COLUMNS) + ')'
 
     cur.executemany(insert_query, data.values())
+
     cur.close()
     conn.commit()
+    conn.close()
