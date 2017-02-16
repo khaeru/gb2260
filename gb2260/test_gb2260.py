@@ -58,10 +58,18 @@ def test_lookup():
 
     # Ambiguous
     with pytest.raises(LookupError):
-        assert lookup('code', name_zh='市辖区') == 110100
+        lookup(name_zh='市辖区')
 
     # Using the within parameter
-    assert lookup('code', name_zh='市辖区', within=110000) == 110100
+    assert lookup(name_zh='市辖区', within=110000) == 110100
+
+    # Ambiguous
+    with pytest.raises(LookupError):
+        lookup(name_en='Hainan')
+
+    # Using the level parameter
+    lookup(name_en='Hainan', level=1) == 460000
+    lookup(name_en='Hainan', level=3) == 150303  # a district in Wuhai, NM
 
     # A nonexistent field
     with pytest.raises(ValueError):

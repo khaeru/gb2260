@@ -112,7 +112,8 @@ def lookup(fields='code', **kwargs):
     >>> lookup(name_zh='海淀区')
     110108
 
-    Lookup on (a) nonexistent field(s) raises :py:class:`ValueError`. Optional *kwargs* are:
+    Lookup on (a) nonexistent field(s) raises :py:class:`ValueError`. Optional
+    *kwargs* are:
 
     - *within*: a code. If specified, only entries that are within this
       division are returned. This is useful for lookups that would return more
@@ -125,10 +126,18 @@ def lookup(fields='code', **kwargs):
         >>> lookup('code', name_zh='市辖区', within=110000)
         110100
 
+    - *level*: an administrative level. If specified, only entries at this
+      level are returned.
+
+        >>> lookup(name_en='Hainan', level=1)  # the province
+        460000
+        >>> lookup(name_en='Hainan', level=3)  # a district in Wuhai, NM
+        150303
+
     Further examples:
 
     >>> lookup(['name_zh', 'name_en'], code=110108)
-    ('海淀区', 'Beijing: Haidian qu')
+    ('海淀区', 'Haidian')
     """
     if isinstance(fields, str):
         fields = (fields,)
@@ -152,6 +161,12 @@ def lookup(fields='code', **kwargs):
 
         # Add to the query expressions
         conditions += 'AND code BETWEEN %d AND %d' % (within, high)
+
+    # Limit search to administrative level *level*
+    level = kwargs.pop('level', None)
+
+    if level is not None:
+        conditions += 'AND level == %d' % level
 
     # The only remaining argument's name is the column to query on; its value
     # is the value to look up.
