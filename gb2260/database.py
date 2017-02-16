@@ -31,6 +31,16 @@ for k in URLS.keys():
     # Common prefix for all URLs
     URLS[k] = 'http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/' + URLS[k]
 
+SUFFIXES = [
+    'kuangqu',    # 矿区, mining area
+    'qi',         # 旗, banner
+    'qu',         # 区, area
+    'shi',        # 市, city
+    'xian',       # 县, county
+    'zizhixian',  # 自治县, autonomous county
+    'zizhizhou',  # 自治州, autonomous state
+    ]
+
 
 def data_fn(base, ext='csv'):
     """Construct the path to a filename in the package's ``data`` directory.
@@ -98,8 +108,11 @@ def load_csv(db, key='code', keep_key=False, filter=None):
         if keep_key:
             row[key] = code
 
-        alpha = row['alpha']
-        row['alpha'] = None if alpha == '' else alpha
+        try:
+            alpha = row.pop('alpha')
+            row['alpha'] = None if alpha == '' else alpha
+        except KeyError:
+            pass
 
         for field, type in [('level', int),
                             ('latitude', float),
@@ -212,6 +225,11 @@ def _configure_log(verbose=False):
     return logging.getLogger('gb2260')
 
 
+def _parents(code):
+    """Return a tuple of parents of *code* at levels 1, 2 and 3."""
+    return (code - code % 10000, code - code % 100, code)
+
+
 def update(version='2015-09-30', use_cache=False, verbose=False):
     """Update the database.
 
@@ -266,6 +284,7 @@ def update(version='2015-09-30', use_cache=False, verbose=False):
     # Parse the codes from HTML
     log.info('  parsing...')
     codes = parse_html(f)
+    assert sorted(codes.keys()) == list(codes.keys())
     log.info('  done.')
 
     # Save the latest table
@@ -303,44 +322,61 @@ def update(version='2015-09-30', use_cache=False, verbose=False):
     d4 = load_csv('extra')
     log.info('loaded extra data')
 
+    # Regular expression for English names from the CITAS database:
+    # In a name like 'Beijing: Dongcheng qu' the prefix 'Beijing: ' is a
+    # repetition of the name of the parent division, and the suffix ' qu' is
+    # the type, not the name, of the area.
+    name_re = re.compile('(?:[^:]*: )?(.*?)(?: (%s))?$' % '|'.join(SUFFIXES))
+
     # Merge using codes
     log.info('merging codes')
-    for code in sorted(codes.keys()):
+    for code, entry in codes.items():
         # Store debug information to be printed (or not) later
-        message = ['%s\t%s' % (code, codes[code]['name_zh'])]
+        message = ['%s\t%s' % (code, entry['name_zh'])]
 
-        # Merge CITAS entry for this code
-        if code not in d1:
-            message.append('  does not appear in CITAS data set')
-        else:
-            d = dict(d1[code])  # Make a copy
+        if code in d1:
+            # Merge CITAS entry for this code
+            # Make a copy
+            d = dict(d1[code])
             name_zh = d.pop('N-hanzi')
-            if not match_names(codes[code]['name_zh'], name_zh):
+            if not match_names(entry['name_zh'], name_zh):
                 message.append('  CITAS name %s (%s) does not match' %
                                (name_zh, jianfan.ftoj(name_zh)))
             else:
                 d['name_en'] = d.pop('N-local').replace("`", "'")
                 d['name_pinyin'] = d.pop('N-pinyin').replace("`", "'")
-                dict_update(codes[code], d)
-
-        # Merge GB/T 2260-2007 entry for this code
-        if code not in d2:
-            message.append('  does not appear in GB/T 2260-2007')
+                dict_update(entry, d)
         else:
+            message.append('  does not appear in CITAS data set')
+
+        if code in d2:
+            # Merge GB/T 2260-2007 entry for this code
             d = dict(d2[code])
-            if (len(d['name_zh']) and not codes[code]['name_zh'] ==
-                    d['name_zh']):
+            if len(d['name_zh']) and entry['name_zh'] != d['name_zh']:
                 message.append('  GB/T 2260-2007 name %s does not match' %
                                d['name_zh'])
             else:
                 # Don't overwrite name_en from CITAS with empty name_en from
                 # GB/T 2260-2007
-                dict_update(codes[code], d, conflict=lambda a, b, k: not(
+                dict_update(entry, d, conflict=lambda a, b, k: not(
                             'name_' in k and b is ''))
+        else:
+            message.append('  does not appear in GB/T 2260-2007')
 
         # Merge extra data
         if code in d4:
-            dict_update(codes[code], d4[code], conflict='squash')
+            dict_update(entry, d4[code], conflict='squash')
+
+        # Clean up English names (in most cases, the CITAS romanized name)
+        if entry['name_en'] is not None:
+            # Replace ' shixiaqu' with ' city area', but do not discard
+            name_en = entry['name_en'].replace(' shixiaqu', ' city area')
+            # Use regex to discard prefixes and suffixes on names
+            entry['name_en'] = name_re.match(name_en).group(1)
+        elif entry['name_zh'] == '市辖区':
+            # Fill in blank with 'CITYNAME city area', where possible
+            pname = codes[_parents(code)[1]]['name_en']
+            entry['name_en'] = None if pname is None else pname + ' city area'
 
         if len(message) > 1 and 'does not appear in CITAS' not in message[1]:
             log.info('\n'.join(message))
