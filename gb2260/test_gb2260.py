@@ -1,7 +1,7 @@
 import pytest
 
 from gb2260 import \
-    codes, all_at, alpha, level, lookup, parent, within, \
+    codes, all_at, alpha, level, lookup, parent, split, within, \
     InvalidCodeError
 
 
@@ -14,6 +14,12 @@ def test_all_at():
     assert len(all_at(2)) == 345
     assert len(all_at(3)) == 3136
 
+    # Invalid levels
+    with pytest.raises(LookupError):
+        all_at(4)
+    with pytest.raises(LookupError):
+        all_at(0)
+
 
 def test_alpha():
     assert alpha(130100) == 'CN-HE-SJW'
@@ -24,10 +30,8 @@ def test_alpha():
 
 def test_level():
     assert level(110108) == 3
-    with pytest.raises(LookupError):
+    with pytest.raises(InvalidCodeError):
         level(990000)
-    with pytest.raises(KeyError):
-        codes[990000]['level']
 
 
 def test_lookup():
@@ -73,13 +77,22 @@ def test_lookup():
 def test_parent():
     assert parent(110108) == 110100
     assert parent(110100) == 110000
+    assert parent(110108, 1) == 110000
     with pytest.raises(ValueError):
         parent(110000)
+    with pytest.raises(ValueError):
+        parent(110108, 0)
     with pytest.raises(InvalidCodeError):
         parent(990101)
+
+
+def test_split():
+    assert split(331024) == (33, 10, 24)
 
 
 def test_within():
     assert within(331024, 330000)
     assert not within(331024, 110000)
     assert within(331024, 331024)
+    assert not within(331024, 990000)
+    assert within(990101, 990000)

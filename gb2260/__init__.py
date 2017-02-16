@@ -2,7 +2,7 @@
 
 >>> from gb2260 import *
 >>> codes.get(542621) == {
-...   'alpha': '',
+...   'alpha': None,
 ...   'latitude': 29.6365717,
 ...   'level': 3,
 ...   'longitude': 94.3610895,
@@ -23,7 +23,6 @@ from .database import COLUMNS, load_csv, open_sqlite
 __all__ = [
     'all_at',
     'alpha',
-    'AmbiguousKeyError',
     'codes',
     'level',
     'lookup',
@@ -35,12 +34,8 @@ __all__ = [
 __version__ = '0.1-dev'
 
 
-class AmbiguousKeyError(IndexError):
-    """Exception for :meth:`lookup()`."""
-    pass
-
-
 class InvalidCodeError(ValueError):
+    """Exception for an invalid code."""
     pass
 
 
@@ -49,7 +44,6 @@ def all_at(adm_level):
 
     >>> all_at(3)
     [110101, 110102, 110105, 110106, 110107, 110108, 110109, 110111, ...
-
     >>> len(all_at(3))
     3136
     """
@@ -64,20 +58,14 @@ def alpha(code, prefix='CN-'):
     codes like "CN-11" for Beijing, where "11" are the first two digits of the
     GB/T 2260 code, 110000. An 'ISO 3166-2-like' alpha code uses the official
     GB/T 2260 two-letter alpha codes for province-level divisions (e.g. 'BJ'),
-    and three-letter alpha codes for lower divisions, separated by hyphens.
-
-    No official alpha codes are provided for divisions below level 2.
+    and three-letter alpha codes for lower divisions, separated by hyphens:
 
     >>> alpha(130100)
     'CN-HE-SJW'
 
-    >>> alpha(542621)
-    Traceback (most recent call last):
-     ...
-    ValueError: 542621
-
+    For divisions below level 2, no official alpha codes are provided, so
+    :meth:`alpha` raises :py:class:`ValueError`.
     """
-
     query = 'SELECT alpha FROM codes WHERE code in (?, ?, ?) ORDER BY code'
     parts = _query(query, _parents(code), list)
 
@@ -97,13 +85,12 @@ def level(code):
     >>> level(110108)
     3
 
-    >>> level(990000)
-    Traceback (most recent call last):
-     ...
-    LookupError: 990000
-
+    For codes not in the database, raises :class:`InvalidCodeError`.
     """
-    return _query('SELECT level FROM codes WHERE code = ?', (code,))
+    try:
+        return _query('SELECT level FROM codes WHERE code = ?', (code,))
+    except LookupError:
+        raise InvalidCodeError(code)
 
 
 def _level(code):
@@ -119,7 +106,7 @@ def lookup(fields='code', **kwargs):
     """Lookup information from the database.
 
     *fields* is either a :py:class:`str` specifying a single field, or an
-    iterable of field names (default: 'code').
+    iterable of field names.
 
     Aside from optional *kwargs* (below), only one other keyword argument must
     be given. Its name is a database field; the value is the value to look up:
@@ -127,36 +114,30 @@ def lookup(fields='code', **kwargs):
     >>> lookup(name_zh='海淀区')
     110108
 
-    Lookup on a nonexistent field raises :py:class:`ValueError`:
-
-    >>> lookup('name_zh', foo=110108)
-     ...
-    ValueError
-    >>> lookup(['name_zh', 'foo'], code=110000)
-     ...
-    ValueError
-
-    Optional *kwargs* are:
+    Lookup on (a) nonexistent field(s) raises :py:class:`ValueError`. Optional *kwargs* are:
 
     - *within*: a code. If specified, only entries that are within this
       division are returned. This is useful for lookups that would return more
       than one entry, normally a :py:class:`LookupError`:
 
-      >>> lookup('code', name_zh='市辖区')
-      Traceback (most recent call last):
-       ...
-      LookupError
-
-      >>> lookup('code', name_zh='市辖区', within=110000)
-      110100
+        >>> lookup('code', name_zh='市辖区')
+        Traceback (most recent call last):
+          ...
+        LookupError: 285 results, expected 1
+        >>> lookup('code', name_zh='市辖区', within=110000)
+        110100
 
     Further examples:
 
+    >>> lookup(['name_zh', 'name_en'], code=110108)
+    ('海淀区', 'Beijing: Haidian qu')
     """
     if isinstance(fields, str):
         fields = (fields,)
-    if not all([f in COLUMNS for f in fields]):
-        raise ValueError('one of %s is not a database field', fields)
+    bad_fields = list(filter(lambda s: s not in COLUMNS, fields))
+    if len(bad_fields):
+        raise ValueError('invalid field name%s: %s' %
+                         ('s' if len(bad_fields) > 1 else '', bad_fields))
 
     # String of additional query expressions
     conditions = ''
@@ -178,9 +159,9 @@ def lookup(fields='code', **kwargs):
     # is the value to look up.
     key, value = kwargs.popitem()
     if len(kwargs):
-        raise ValueError('unexpected arguments: %s', kwargs.keys())
+        raise ValueError('unexpected arguments: %s' % kwargs.keys())
     elif key not in COLUMNS:
-        raise ValueError('%s is not a database field', key)
+        raise ValueError('invalid field name: %s' % key)
 
     # Assemble the query string
     query = 'SELECT %s FROM codes WHERE %s = ? %s' % \
@@ -194,7 +175,19 @@ def lookup(fields='code', **kwargs):
 
 
 def parent(code, parent_level=None):
-    """Return a valid GB/T 2260 code that is the parent of *code*."""
+    """Return a valid code that is the parent of *code*.
+
+    >>> parent(110108)
+    110100
+    >>> parent(110100)
+    110000
+
+    If *parent_level* is supplied, the parent at the desired level is returned:
+
+    >>> parent(110108, 1)
+    110000
+
+    """
     l = _level(code)
     parents_guess = _parents(code)
 
@@ -202,8 +195,8 @@ def parent(code, parent_level=None):
     try:
         parents_db = _query(query, parents_guess, list)
     except LookupError:
-        raise InvalidCodeError('%d and its parents %s', code,
-                               parents_guess[:2])
+        raise InvalidCodeError('%d and its parents %s' %
+                               (code, parents_guess[:2]))
 
     if code not in parents_db:
         raise InvalidCodeError(code)
@@ -212,12 +205,12 @@ def parent(code, parent_level=None):
         parent_level = l - 1
 
     if parent_level not in (1, 2, 3):
-        raise ValueError('level = %d', parent_level)
+        raise ValueError('level = %d' % parent_level)
 
     guess = parents_guess[parent_level - 1]
     if guess not in parents_db:
-        raise ValueError('Code %d is at level %d, no parent at level %d',
-                         code, l, parent_level)
+        raise ValueError('code %d is at level %d, no parent at level %d' %
+                         (code, l, parent_level))
     else:
         return guess
 
@@ -231,8 +224,9 @@ def _query(sql, args, type=None, columns=1, results=-1):
     cur = _db_conn.execute(sql, args)
     rows = cur.fetchall()
 
-    if results > 0 and len(rows) != results:
-        raise LookupError('%d results; expected %d', len(rows), results)
+    if len(rows) == 0 or (results > 0 and len(rows) != results):
+        expected = '1 or more' if results < -1 else results
+        raise LookupError('%d results; expected %d' % (len(rows), expected))
 
     if type is None:
         if results == -1 or results == 1:
@@ -247,21 +241,30 @@ def _query(sql, args, type=None, columns=1, results=-1):
 
 
 def split(code):
-    """Return a tuple containing the three parts of *code*."""
+    """Return a tuple containing the three parts of *code*.
+
+    >>> split(331024)
+    (33, 10, 24)
+    """
     return (code // 10000, (code % 10000) // 100, code % 100)
 
 
 def within(a, b):
     """Return True if division *a* is within (or the same as) division *b*.
 
-    Like :meth:`level`, :meth:`within` does *not* check that *a* or *b* are
-    valid codes that exist in the database.
-
     >>> within(331024, 330000)
     True
+    >>> within(331024, 110000)
+    False
+    >>> within(331024, 331024)
+    True
+
+    :meth:`within` does *not* check that *a* or *b* are valid codes that exist
+    in the database.
+
     >>> within(331024, 990000)
     False
-    >>> within(331024, 110000)
+    >>> within(990101, 990000)
     True
 
     """
