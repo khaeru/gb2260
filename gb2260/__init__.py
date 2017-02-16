@@ -16,7 +16,7 @@ True
 """
 from itertools import chain
 
-from .database import COLUMNS, load_csv, open_sqlite
+from .database import COLUMNS, _parents, load_csv, open_sqlite
 
 __all__ = [
     'all_at',
@@ -211,11 +211,6 @@ def parent(code, parent_level=None):
                          (code, l, parent_level))
     else:
         return guess
-
-
-def _parents(code):
-    """Return a tuple of parents of *code* at levels 1, 2 and 3."""
-    return (code - code % 10000, code - code % 100, code)
 
 
 def _query(sql, args, type=None, columns=1, results=-1):

@@ -1,553 +1,300 @@
 code,name_zh,name_en,alpha
 110000,,Beijing,BJ
-110100,市辖区,City area
 110200,县,County
 120000,,Tianjin,TJ
-120100,市辖区,City area
 120200,县,County
 130000,,Hebei,HE
 130100,,,SJW
-130101,市辖区,City area
 130200,,,TGS
-130201,市辖区,City area
 130300,,,SHP
-130301,市辖区,City area
 130400,,,HDS
-130401,市辖区,City area
 130500,,,XTS
-130501,市辖区,City area
 130600,,,BDS
-130601,市辖区,City area
 130700,,,ZJK
-130701,市辖区,City area
 130800,,,CDS
-130801,市辖区,City area
 130900,,,CGZ
-130901,市辖区,City area
 131000,,,LFS
-131010,市辖区,City area
 131100,,Hengshui,HGS
-131101,市辖区,City area
 140000,,Shanxi,SX
 140100,,,TYN
-140101,市辖区,City area
 140200,,,DTG
-140201,市辖区,City area
 140300,,,YQS
-140301,市辖区,City area
 140400,,,CZS
-140401,市辖区,City area
 140500,,,JCG
-140501,市辖区,City area
 140600,,,SZJ
-140601,市辖区,City area
 140700,,Jinzhong,JZN
-140701,市辖区,City area
 140800,,Yuncheng,YCE
-140801,市辖区,City area
 140900,,Xinzhou,XZS
-140901,市辖区,City area
 141000,,Linfen,LFN
-141010,市辖区,City area
 141100,,Luliang,LLH
-141101,市辖区,City area
 150000,,Inner Mongolia,NM
 150100,,,HET
-150101,市辖区,City area
 150200,,,BTS
-150201,市辖区,City area
 150300,,,WHM
-150301,市辖区,City area
 150400,,,CFS
-150401,市辖区,City area
 150500,,Tongliao,TLO
-150501,市辖区,City area
 150600,,Ordos,ODS
-150601,市辖区,City area
 150700,,Hulunbei'er,HBR
-150701,市辖区,City area
 150800,,Bayannao'er,BYR
-150801,市辖区,City area
 150900,,Wulanchabu,ULS
-150901,市辖区,City area
 152200,,Xing'an,HIN
 152500,,Xilingol,XGO
 152900,,,ALM
 210000,,Liaoning,LN
 210100,,Shenyang,SHE
-210101,市辖区,City area
 210200,,,DLC
-210201,市辖区,City area
 210300,,,ASN
-210301,市辖区,City area
 210400,,,FSN
-210401,市辖区,City area
 210500,,,BXS
-210501,市辖区,City area
 210600,,,DDG
-210601,市辖区,City area
 210700,,,JNZ
-210701,市辖区,City area
 210800,,,YIK
-210801,市辖区,City area
 210900,,,FXS
-210901,市辖区,City area
 211000,,,LYL
-211001,市辖区,City area
 211100,,,PJS
-211101,市辖区,City area
 211200,,,TLS
-211201,市辖区,City area
 211300,,,CYS
-211301,市辖区,City area
 211400,,Huludao,HLD
-211401,市辖区,City area
 220000,,Jilin,JL
 220100,,,CGQ
-220101,市辖区,City area
 220200,,,JLS
-220201,市辖区,City area
 220300,,,SPS
-220301,市辖区,City area
 220400,,,LYH
-220401,市辖区,City area
 220500,,,THS
-220501,市辖区,City area
 220600,,Baishan,BSN
-220601,市辖区,City area
 220700,,Songyuan,SYU
-220701,市辖区,City area
 220800,,Baicheng,BCS
-220801,市辖区,City area
 222400,,,YBZ
 230000,,Heilongjiang,HL
 230100,,Harbin,HRB
-230101,市辖区,City area
 230200,,,NDG
-230201,市辖区,City area
 230300,,,JXI
-230301,市辖区,City area
 230400,,,HEG
-230401,市辖区,City area
 230500,,,SYS
-230501,市辖区,City area
 230600,,,DQG
-230601,市辖区,City area
 230700,,,YCH
-230701,市辖区,City area
 230800,,,JMU
-230801,市辖区,City area
 230900,,,QTH
-230901,市辖区,City area
 231000,,,MDG
-231001,市辖区,City area
 231100,,,HEK
-231101,市辖区,City area
 231200,,Suihua,SUH
-231201,市辖区,City area
 232700,,Daxing'anling,DHL
 310000,,Shanghai,SH
-310100,市辖区,City area
 310200,县,County
 320000,,Jiangsu,JS
 320100,,,NKG
-320101,市辖区,City area
 320200,,,WUX
-320201,市辖区,City area
 320300,,Xuzhou,XUZ
-320301,市辖区,City area
 320400,,Changzhou,CZX
-320401,市辖区,City area
 320405,,,QSY
-320501,市辖区,City area
 320600,,,NTG
-320601,市辖区,City area
 320700,,,LYG
-320701,市辖区,City area
 320800,,Huai'an,HAS
-320801,市辖区,City area
 320900,,,YCK
-320901,市辖区,City area
 321000,,,YZH
-321001,市辖区,City area
 321100,,,ZHE
-321101,市辖区,City area
 321200,,Taizhou,TZS
-321201,市辖区,City area
 321300,,Suqian,SUQ
-321301,市辖区,City area
 330000,,Zhejiang,ZJ
 330100,,,HGH
-330101,市辖区,City area
 330200,,Ningbo,NGB
-330201,市辖区,City area
 330300,,,WNZ
-330301,市辖区,City area
 330400,,,JIX
-330401,市辖区,City area
 330500,,,HZH
-330501,市辖区,City area
 330600,,,SXG
-330601,市辖区,City area
 330700,,,JHA
-330701,市辖区,City area
 330800,,,QUZ
-330801,市辖区,City area
 330900,,,ZOS
-330901,市辖区,City area
 331000,,,TZZ
-331001,市辖区,City area
 331100,,Lishui,LSS
-331101,市辖区,City area
 340000,,Anhui,AH
 340100,,,HFE
-340101,市辖区,City area
 340200,,,WHI
-340201,市辖区,City area
 340300,,,BBU
-340301,市辖区,City area
 340400,,,HNS
-340401,市辖区,City area
 340500,,,MAA
-340501,市辖区,City area
 340600,,,HBE
-340601,市辖区,City area
 340700,,,TOL
-340701,市辖区,City area
 340800,,,AQG
-340801,市辖区,City area
 341000,,,HSN
-341001,市辖区,City area
 341100,,,CUZ
-341101,市辖区,City area
 341200,,Fuyang,FYS
-341201,市辖区,City area
 341300,,Suzhou,SUZ
-341301,市辖区,City area
 341500,,Lu'an,LAW
-341501,市辖区,City area
 341600,,Bozhou,BOZ
-341601,市辖区,City area
 341700,,Chizhou,CIZ
-341701,市辖区,City area
 341800,,Xuancheng,XCI
-341801,市辖区,City area
 350000,,Fujian,FJ
 350100,,,FOC
-350101,市辖区,City area
 350200,,,XMN
-350201,市辖区,City area
 350300,,,PUT
-350301,市辖区,City area
 350400,,,SMS
-350401,市辖区,City area
 350500,,,QZJ
-350501,市辖区,City area
 350600,,,ZZU
-350601,市辖区,City area
 350700,,,NPS
-350701,市辖区,City area
 350800,,Longyan,LYF
-350801,市辖区,City area
 350900,,Ningde,NDS
-350901,市辖区,City area
 360000,,Jiangxi,JX
 360100,,,KHN
-360101,市辖区,City area
 360200,,,JDZ
-360201,市辖区,City area
 360300,,,PXS
-360301,市辖区,City area
 360400,,,JIU
-360401,市辖区,City area
 360500,,,XYU
-360501,市辖区,City area
 360600,,,YTS
-360601,市辖区,City area
 360700,,Ganzhou,GZH
-360701,市辖区,City area
 360800,,Ji'an,JAS
-360801,市辖区,City area
 360900,,Yichun,YCN
-360901,市辖区,City area
 361000,,Fuzhou,FUZ
-361001,市辖区,City area
 361100,,Shangrao,SRS
-361101,市辖区,City area
 370000,,Shandong,SD
 370100,,Jinan,TNA
-370101,市辖区,City area
 370200,,,TAO
-370201,市辖区,City area
 370300,,,ZBO
-370301,市辖区,City area
 370400,,,ZZG
-370401,市辖区,City area
 370500,,,DYG
-370501,市辖区,City area
 370600,,,YNT
-370601,市辖区,City area
 370700,,,WEF
-370701,市辖区,City area
 370800,,Jining,JNG
-370801,市辖区,City area
 370900,,Tai'an,TAI
-370901,市辖区,City area
 371000,,,WEH
-371001,市辖区,City area
 371100,,,RZH
-371101,市辖区,City area
 371200,,,LWS
-371201,市辖区,City area
 371300,,Linyi,LYI
-371301,市辖区,City area
 371400,,Dezhou,DZS
-371401,市辖区,City area
 371500,,Liaocheng,LCH
-371501,市辖区,City area
 371600,,Binzhou,BZH
-371601,市辖区,City area
 371700,,Heze,HZS
-371701,市辖区,City area
 410000,,Henan,HA
 410100,,,CGO
-410101,市辖区,City area
 410200,,,KFS
-410201,市辖区,City area
 410300,,,LYA
-410301,市辖区,City area
 410400,,,PDS
-410401,市辖区,City area
 410500,,,AYS
-410501,市辖区,City area
 410600,,,HBS
-410601,市辖区,City area
 410700,,,XXS
-410701,市辖区,City area
 410800,,,JZY
-410801,市辖区,City area
 410900,,,PYS
-410901,市辖区,City area
 411000,,,XCS
-411001,市辖区,City area
 411100,,,LHS
-411101,市辖区,City area
 411200,,,SMX
-411201,市辖区,City area
 411300,,,NYS
-411301,市辖区,City area
 411400,,Shangqiu,SQS
-411401,市辖区,City area
 411500,,Xinyang,XYG
-411501,市辖区,City area
 411600,,Zhoukou,ZKS
-411601,市辖区,City area
 411700,,Zhumadian,ZMD
-411701,市辖区,City area
-411801,市辖区,City area
 411901,省直辖县级行政区划,Directly under the provincial level administrative divisions
 420000,,Hubei,HB
 420100,,,WUH
-420101,市辖区,City area
 420200,,,HSI
-420201,市辖区,City area
 420300,,,SYE
-420301,市辖区,City area
 420500,,,YCO
-420501,市辖区,City area
-420601,市辖区,City area
 420700,,,EZS
-420701,市辖区,City area
 420800,,,JMS
-420801,市辖区,City area
 420900,,,XGE
-420901,市辖区,City area
 421000,,Jingzhou,JGZ
-421001,市辖区,City area
 421003,,,JZQ
 421100,,Huanggang,HGE
-421101,市辖区,City area
 421200,,Xianning,XNS
-421201,市辖区,City area
 421300,,Suizhou,SZR
-421301,市辖区,City area
 422800,,,ESH
 429000,省直辖县级行政区划,Directly under the provincial level administrative divisions
 430000,,Hunan,HN
 430100,,,CSX
-430101,市辖区,City area
 430200,,,ZZS
-430201,市辖区,City area
 430300,,Xiangtan,XGT
-430301,市辖区,City area
 430400,,Hengyang,HNY
-430401,市辖区,City area
 430500,,,SYR
-430501,市辖区,City area
 430600,,,YYG
-430601,市辖区,City area
 430700,,,CDE
-430701,市辖区,City area
 430800,,,ZJJ
-430801,市辖区,City area
 430900,,,YYS
-430901,市辖区,City area
 431000,,,CNZ
-431001,市辖区,City area
 431100,,Yongzhou,YZS
-431101,市辖区,City area
 431200,,Huaihua,HHS
-431201,市辖区,City area
 431300,,Loudi,LDI
-431301,市辖区,City area
 433100,,West Hunan,ZZX
 440000,,Guangdong,GD
 440100,,,CAN
-440101,市辖区,City area
 440200,,,HSC
-440201,市辖区,City area
 440300,,,SZX
-440301,市辖区,City area
 440400,,,ZUH
-440401,市辖区,City area
 440500,,,SWA
-440501,市辖区,City area
 440600,,,FOS
-440601,市辖区,City area
 440700,,,JMN
-440701,市辖区,City area
 440800,,,ZHA
-440801,市辖区,City area
 440900,,,MMI
-440901,市辖区,City area
 441200,,,ZQG
-441201,市辖区,City area
 441300,,,HUI
-441301,市辖区,City area
 441400,,,MXZ
-441401,市辖区,City area
 441500,,,SWE
-441501,市辖区,City area
 441600,,,HEY
-441601,市辖区,City area
 441700,,,YJI
-441701,市辖区,City area
 441800,,,QYN
-441801,市辖区,City area
 441900,,,DGG
 442000,,,ZSN
 445100,,,CZY
-445101,市辖区,City area
 445200,,,JIY
-445201,市辖区,City area
 445300,,,YFS
-445301,市辖区,City area
 450000,,Guangxi,GX
 450100,,Nanning,NNG
-450101,市辖区,City area
 450105,,,JNA
 450200,,,LZH
-450201,市辖区,City area
 450300,,,KWL
-450301,市辖区,City area
 450400,,,WUZ
-450401,市辖区,City area
 450500,,,BHY
-450501,市辖区,City area
 450600,,,FAN
-450601,市辖区,City area
 450700,,,QZH
-450701,市辖区,City area
 450800,,Guigang,GUG
-450801,市辖区,City area
 450900,,Yulin,YUL
-450901,市辖区,City area
 451000,,Baise,BSS
-451001,市辖区,City area
 451100,,Hezhou,HZO
-451101,市辖区,City area
 451200,,Hechi,HCS
-451201,市辖区,City area
 451300,,Laibin,LIB
-451301,市辖区,City area
 451400,,Chongzuo,COZ
-451401,市辖区,City area
 460000,,Hainan,HI
 460100,,,HAK
-460101,市辖区,City area
 460200,,,SYX
-460201,市辖区,City area
 469000,省直辖县级行政区划,Directly under the provincial level administrative divisions
 500000,,Chongqing,CQ
-500100,市辖区,City area
 500200,县,County
 510000,,Sichuan,SC
 510100,,,CTU
-510101,市辖区,City area
 510300,,,ZGS
-510301,市辖区,City area
 510400,,Panzhihua,PZH
-510401,市辖区,City area
 510500,,,LUZ
-510501,市辖区,City area
 510600,,,DEY
-510601,市辖区,City area
 510700,,,MYG
-510701,市辖区,City area
 510800,,,GYC
-510801,市辖区,City area
-510901,市辖区,City area
 511000,,,NJS
-511001,市辖区,City area
 511100,,,LES
-511101,市辖区,City area
 511300,,,NCO
-511301,市辖区,City area
 511400,,Meishan,MSS
-511401,市辖区,City area
 511500,,Yibin,YBS
-511501,市辖区,City area
 511600,,Guang'an,GAC
-511601,市辖区,City area
 511700,,Dazhou,DAZ
-511701,市辖区,City area
 511800,,Ya'an,YAS
-511801,市辖区,City area
 511900,,Bazhong,BZS
-511901,市辖区,City area
 512000,,Ziyang,ZYS
-512001,市辖区,City area
 513200,,,ABA
 513300,,Ganzi,GAZ
 513400,,,LSY
 520000,,Guizhou,GZ
 520100,,,KWE
-520101,市辖区,City area
 520200,,Liupanshui,LPS
 520300,,Zunyi,ZNY
-520301,市辖区,City area
 520400,,Anshun,ASS
-520401,市辖区,City area
 522300,,Southwest Guizhou,QXZ
 522600,,Southeast Guizhou,QND
 522700,,South Guizhou,QNZ
 530000,,Yunnan,YN
 530100,,,KMG
-530101,市辖区,City area
 530300,,Qujing,QJS
-530301,市辖区,City area
 530400,,Yuxi,YXS
-530401,市辖区,City area
 530500,,Baoshan,BOS
-530501,市辖区,City area
 530600,,Zhaotong,ZTS
-530601,市辖区,City area
 530700,,Lijiang,LJH
-530701,市辖区,City area
 530800,,Pu'er,PRS
-530801,市辖区,City area
 530900,,Lincang,LIH
-530901,市辖区,City area
 532300,,,CXD
 532500,,,HHZ
 532600,,,WSZ
@@ -558,7 +305,6 @@ code,name_zh,name_en,alpha
 533400,,Diqing,DEZ
 540000,,Tibet,XZ
 540100,,,LXA
-540101,市辖区,City area
 542100,,Qamdu,QAD
 542200,,Lhokha
 542200,,,SND
@@ -568,55 +314,32 @@ code,name_zh,name_en,alpha
 542600,,,NYD
 610000,,Shaanxi,SN
 610100,,,SIA
-610101,市辖区,City area
 610200,,,TCN
-610201,市辖区,City area
 610300,,,BJI
-610301,市辖区,City area
 610400,,,XYS
-610401,市辖区,City area
 610500,,,WNA
-610501,市辖区,City area
 610600,,Yan'an,YNA
-610601,市辖区,City area
 610700,,Hanzhong,HZJ
-610701,市辖区,City area
 610800,,Yulin,YLN
-610801,市辖区,City area
 610900,,Ankang,ANK
-610901,市辖区,City area
 611000,,Shangluo,SLH
-611001,市辖区,City area
 620000,,Gansu,GS
 620100,,,LHW
-620101,市辖区,City area
 620200,,,JYG
-620201,市辖区,City area
 620300,,,JCS
-620301,市辖区,City area
 620400,,,BYS
-620401,市辖区,City area
 620500,,,TSU
-620501,市辖区,City area
 620600,,Wuwei,WWS
-620601,市辖区,City area
 620700,,Zhangye,ZYE
-620701,市辖区,City area
 620800,,Pingliang,PLS
-620801,市辖区,City area
 620900,,Jiuquan,JQG
-620901,市辖区,City area
 621000,,Qingyang,QYI
-621001,市辖区,City area
 621100,,Dingxi,DNX
-621101,市辖区,City area
 621200,,Longnan,LGN,
-621201,市辖区,City area
 622900,,,LXH
 623000,,,GNZ
 630000,,Qinghai,QH
 630100,,Xining,XNN
-630101,市辖区,City area
 632200,,,HBZ
 632300,,,HNZ
 632500,,,HNN
@@ -625,20 +348,13 @@ code,name_zh,name_en,alpha
 632800,,Haixi,HXZ
 640000,,Ningxia,NX
 640100,,,INC
-640101,市辖区,City area
 640200,,,SZS
-640201,市辖区,City area
 640300,,Wuzhong,WZS
-640301,市辖区,City area
 640400,,Guyuan,GYN
-640401,市辖区,City area
 640500,,Zhongwei,ZWS
-640501,市辖区,City area
 650000,,Xinjiang,XJ
 650100,,,URC
-650101,市辖区,City area
 650200,,,KAR
-650201,市辖区,City area
 652200,,,HMD
 653100,,Kashi
 653100,,,KSI

@@ -1,7 +1,7 @@
 import pytest
 
 from gb2260 import \
-    codes, all_at, alpha, level, lookup, parent, split, within, \
+    all_at, alpha, level, lookup, parent, split, within, \
     InvalidCodeError
 
 
@@ -39,7 +39,8 @@ def test_lookup():
     assert lookup(name_zh='海淀区') == 110108
 
     # Single fields
-    assert lookup('name_en', code=110108) == 'Beijing: Haidian qu'
+    assert lookup('name_en', code=110108) == 'Haidian'
+    assert lookup('name_pinyin', code=110108) == 'Beijing: Haidian qu'
     assert lookup('name_zh', code=110108) == '海淀区'
 
     # Example of a division whose name_en & name_pinyin differ
@@ -53,7 +54,7 @@ def test_lookup():
 
     # Multiple fields
     assert lookup(['name_zh', 'name_en'], code=110108) == \
-        ('海淀区', 'Beijing: Haidian qu')
+        ('海淀区', 'Haidian')
 
     # Ambiguous
     with pytest.raises(LookupError):
