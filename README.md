@@ -4,6 +4,8 @@
 
 [![Documentation Status](https://readthedocs.org/projects/gb2260/badge/?version=latest)](http://gb2260.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://travis-ci.org/khaeru/gb2260.svg?branch=master)](https://travis-ci.org/khaeru/gb2260)
+[![DOI](https://zenodo.org/badge/16270674.svg)](https://zenodo.org/badge/latestdoi/16270674)
+
 
 The GB/T 2260 standard defines six-digit numerical codes for the administrative divisions of China, at the county level and above. For instance, the Haidian district of Beijing has the code **110108**.
 
