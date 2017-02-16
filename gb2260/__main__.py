@@ -1,12 +1,11 @@
-"""Update the database."""
 import argparse
 
 from .database import URLS, refresh_cache, update
 
-parser = argparse.ArgumentParser(epilog=__doc__)
+parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('action', metavar='ACTION',
                     choices=['update', 'refresh-cache'],
-                    help='action to perform')
+                    help='action to perform: either update or refresh-cache')
 parser.add_argument('--version', choices=URLS.keys(),
                     help='version to update the database with')
 parser.add_argument('--cached', action='store_true',

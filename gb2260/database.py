@@ -4,8 +4,10 @@ import os.path
 import re
 import sqlite3
 
-# https://code.google.com/p/python-jianfan/ or
-# https://code.google.com/r/stryderjzw-python-jianfan/source/browse
+# TODO replace this old code from
+# - https://code.google.com/p/python-jianfan/ or
+# - https://code.google.com/r/stryderjzw-python-jianfan/source/browse
+# with e.g. https://github.com/hermanschaaf/mafan
 import jianfan
 
 
@@ -30,11 +32,16 @@ URLS = {
     }
 
 for k in URLS.keys():
+    # Common prefix for all URLs
     URLS[k] = 'http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/' + URLS[k]
 
 
 def data_fn(base, ext='csv'):
-    """Construct the path to a filename in the package's data directory."""
+    """Construct the path to a filename in the package's ``data`` directory.
+
+    Use *base* (may contain path separators) as the file basename, and *ext* as
+    the extension.
+    """
     return os.path.normpath(os.path.join(DATA_DIR, '%s.%s' % (base, ext)))
 
 
@@ -73,6 +80,16 @@ def dict_update(a, b, conflict='raise'):
 
 
 def load_csv(db, key='code', keep_key=False, filter=None):
+    """Load database from a CSV file data/*db*.csv.
+
+    A :py:class:`dict` is returned with keys from an index on column *code*,
+    and values that are :py:class:`dict`s of database entries.
+
+    If *keep_key* is :py:data:`True`, then the entries include *key*.
+
+    If *filter* is a callable function, only CSV rows for which
+    ``filter(row) == True`` are returned.
+    """
     fn = data_fn(db)
     result = {}
 
@@ -106,6 +123,7 @@ def load_csv(db, key='code', keep_key=False, filter=None):
 
 
 def match_names(official, other):
+    """Return a string describing the match between *official* and *other*."""
     if official == other:
         return 'exact'
     elif official in other or other in official:
@@ -120,6 +138,7 @@ def match_names(official, other):
 
 
 def open_sqlite(db):
+    """Connect to the sqlite3 database in data/*db*.db."""
     db_fn = data_fn(db, 'db')
 
     if not os.path.exists(db_fn):
@@ -129,18 +148,18 @@ def open_sqlite(db):
 
 
 def parse_html(f):
-    """Parse the webpage with the code list, from *f*.
+    """Parse the HTML with the code list, from *f*.
 
     *f* can be any file-like object supported by BeautifulSoup(). Returns a
     dict where keys are .
 
-    In the 2014 edition, the entries look like:
+    In the 2014 edition, the entries look like::
 
-        <p align="justify" class="MsoNormal">110101&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp; &nbsp;&nbsp;东城区</p>
+      <p align="justify" class="MsoNormal">110101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;东城区</p>
 
     Spaces after the code and before the name are not always present; sometimes
-    there are stray spaces. There are either 3, 5 or 7 &nbsp; characters,
+    there are stray spaces. There are either 3, 5 or 7 ``&nbsp;`` characters,
     indicating the administrative level.
     """
     from collections import OrderedDict, defaultdict
@@ -165,6 +184,11 @@ def parse_html(f):
 
 
 def refresh_cache():
+    """Refresh the cache.
+
+    For each URL in the :data:`URLS` variable, download the indicated HTML file
+    and save it in the directory ``data/``.
+    """
     from urllib.request import urlopen
 
     log = _configure_log()
@@ -183,6 +207,7 @@ def refresh_cache():
 
 
 def _configure_log(verbose=False):
+    """Return a logger, at the :py:data:`logging.DEBUG` level if *verbose*."""
     import logging
 
     logging.basicConfig(format='%(name)s: %(message)s',
@@ -192,6 +217,40 @@ def _configure_log(verbose=False):
 
 
 def update(version='2015-09-30', use_cache=False, verbose=False):
+    """Update the database.
+
+    :meth:`update` relies on four sources, in the following order of authority:
+
+    1. Error corrections from ``extra.csv``.
+    2. The latest list of codes from the NBS website indicated by *version*
+       (see :meth:`parse_html`). For instance, *version* ‘2013-08-31’ was
+       published on 2014-01-17. If *use_cache* is :py:data:`True`, then a
+       cached HTML list is used from the the directory ``data/cache/`` (see
+       :meth:`refresh_cache`). Otherwise, or if the cache is missing, the file
+       is downloaded from the website.
+    3. The data set `GuoBiao (GB) Codes for the Administrative Divisions of the
+       People's Republic of China, v1 (1982 – 1992)
+       <http://sedac.ciesin.columbia.edu/data/set/
+       cddc-china-guobiao-codes-admin-divisions>`_ (``citas.csv``), produced by
+       the NASA Socioeconomic Data and Applications Center (SEDAC), the
+       University of Washington Chinese Academy of Surveying and Mapping
+       (CASM), the Columbia University Center for International Earth Science
+       Information Network (CIESIN) as part of the China in Time and Space
+       (*CITAS*) project. This data set contains Pinyin transcriptions.
+    4. The information in ``gbt_2260-2007.csv`` (provided by `@qiaolun
+       <https://github.com/qiaolun>`_) and ``gbt_2260-2007_sup.csv``
+       (supplement) transcribed from the published GB/T 2260-2007 standard.
+
+    If *verbose* is :py:data:`True`, verbose output is given.
+
+    The following files are updated:
+
+    - ``latest.csv`` with information from source #1 only: codes, Chinese names
+      (``name_zh``), and ``level``.
+    - ``unified.csv`` with all database fields and information from sources #2,
+      #3 and #4.
+    - ``unified.db``, the same information in a :py:mod:`sqlite3` database.
+    """
     log = _configure_log(verbose)
 
     if use_cache:
@@ -231,13 +290,17 @@ def update(version='2015-09-30', use_cache=False, verbose=False):
     d2 = load_csv('gbt_2260-2007')
     d3 = load_csv('gbt_2260-2007_sup')
     log.info('loaded GB/T 2260-2007 entries')
-    for code, d in d3.items():  # Merge the two GB/T 2260-2007 files
-        if code in d2:  # Code appears in both files
-            # Don't overwrite name_zh in gbt_2260-2007.csv with an empty
-            # name_zh from gbt_2260-2007_sup.csv
+
+    # Merge the two GB/T 2260-2007 files
+    for code, d in d3.items():
+        if code in d2:
+            # Code appears in both files. Don't overwrite name_zh in
+            # gbt_2260-2007.csv with an empty name_zh from
+            # gbt_2260-2007_sup.csv.
             dict_update(d2[code], d, conflict=lambda a, b, k: not(k ==
                         'name_zh' or b is None))
-        else:  # Code only appears in gbt_2260-2007_sup.csv
+        else:
+            # Code only appears in gbt_2260-2007_sup.csv
             d2[code] = d
 
     # Load extra data pertaining to the latest table
@@ -305,8 +368,13 @@ def update(version='2015-09-30', use_cache=False, verbose=False):
 
 
 def write_sqlite(db, data):
+    """Write *data* to a table codes in data/*db*.db."""
+
+    # Connect to database
     conn = sqlite3.connect(data_fn(db, 'db'))
     cur = conn.cursor()
+
+    # Create the table
     cur.execute('DROP TABLE IF EXISTS codes')
     cur.execute("""CREATE TABLE codes (
         code        int   PRIMARY KEY,
@@ -319,11 +387,14 @@ def write_sqlite(db, data):
         longitude   real)
         """)
 
+    # Query string
     insert_query = 'INSERT INTO codes (' + ', '.join(COLUMNS) + ') VALUES (:'
     insert_query += ', :'.join(COLUMNS) + ')'
 
+    # Insert data
     cur.executemany(insert_query, data.values())
 
+    # Commit & close
     cur.close()
     conn.commit()
     conn.close()
