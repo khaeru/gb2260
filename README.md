@@ -12,12 +12,12 @@ The most recent version of the official standard, designated "GB/T 2260-2007", w
 `gb2260` produces and exposes an up-to-date list of the GB/T 2260 codes, with extra information including English names, Pinyin transcriptions, administrative levels, etc.
 
 Requirements
-============
+------------
 
 - [BeautifulSoup 4](http://www.crummy.com/software/BeautifulSoup/)
 
 License
-=======
+-------
 
 Copyright 2014–2017 Paul Natsuo Kishimoto <<mail@paul.kishimoto.name>>
 
