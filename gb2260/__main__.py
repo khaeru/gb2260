@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('action', metavar='ACTION',
                     choices=['update', 'refresh-cache'],
                     help='action to perform: either update or refresh-cache')
-parser.add_argument('--version', choices=URLS.keys(),
+parser.add_argument('--version', choices=sorted(URLS.keys()),
                     help='version to update the database with')
 parser.add_argument('--cached', action='store_true',
                     help='read the data from cached HTML, instead of the NBS '

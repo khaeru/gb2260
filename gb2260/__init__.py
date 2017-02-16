@@ -31,7 +31,7 @@ __all__ = [
     'within',
     ]
 
-__version__ = '0.1-dev'
+__version__ = '0.1'
 
 
 class InvalidCodeError(ValueError):
