@@ -4,10 +4,6 @@ import os.path
 import re
 import sqlite3
 
-# TODO replace this old code from
-# - https://code.google.com/p/python-jianfan/ or
-# - https://code.google.com/r/stryderjzw-python-jianfan/source/browse
-# with e.g. https://github.com/hermanschaaf/mafan
 import jianfan
 
 

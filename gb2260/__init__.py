@@ -13,9 +13,7 @@
 True
 >>> codes.get(632726)['level']
 3
-
 """
-# TODO add fuzzy matching of names using SQLite 'LIKE'
 from itertools import chain
 
 from .database import COLUMNS, load_csv, open_sqlite
