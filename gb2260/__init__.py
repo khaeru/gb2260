@@ -160,13 +160,13 @@ def lookup(fields='code', **kwargs):
         high = _join(parts)
 
         # Add to the query expressions
-        conditions += 'AND code BETWEEN %d AND %d' % (within, high)
+        conditions += ' AND code BETWEEN %d AND %d' % (within, high)
 
     # Limit search to administrative level *level*
     level = kwargs.pop('level', None)
 
     if level is not None:
-        conditions += 'AND level == %d' % level
+        conditions += ' AND level == %d' % level
 
     # The only remaining argument's name is the column to query on; its value
     # is the value to look up.
@@ -177,7 +177,7 @@ def lookup(fields='code', **kwargs):
         raise ValueError('invalid field name: %s' % key)
 
     # Assemble the query string
-    query = 'SELECT %s FROM codes WHERE %s = ? %s' % \
+    query = 'SELECT %s FROM codes WHERE %s = ?%s' % \
             (', '.join(fields), key, conditions)
 
     # Return exactly one result
