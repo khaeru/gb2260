@@ -1,4 +1,5 @@
 import csv
+import logging
 from os import linesep
 import os.path
 import re
@@ -6,6 +7,7 @@ import sqlite3
 
 import jianfan
 
+log = logging.getLogger(__name__)
 
 COLUMNS = [
     'code',
@@ -156,38 +158,106 @@ def open_sqlite(db):
     return sqlite3.connect(db_fn)
 
 
-def parse_html(f):
-    """Parse the HTML with the code list, from *f*.
+def parse_html(f, year, method=2):
+    """Parse the HTML code list for *year* from *f*.
 
     *f* can be any file-like object supported by BeautifulSoup(). Returns a
-    dict where keys are .
+    dict where keys are codes, and entries are collections.defaultdict(None),
+    with the keys code, level and name_zh populated.
 
-    In the 2014 edition, the entries look like::
-
-      <p align="justify" class="MsoNormal">110101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;东城区</p>
-
-    Spaces after the code and before the name are not always present; sometimes
-    there are stray spaces. There are either 3, 5 or 7 ``&nbsp;`` characters,
-    indicating the administrative level.
+    *year* is a hint to help different methods of extracting the data. In some
+    years, the indentation level indicates the administrative level of a
+    division. In other years, the level is inferred.
     """
     from collections import OrderedDict, defaultdict
     import bs4
 
-    exp = re.compile('(?P<code>\d{6})(?P<level>(\xa0){1,7})(?P<name_zh>.*)')
+    year = int(year)
+
     result = OrderedDict()
 
-    for p in bs4.BeautifulSoup(f, 'lxml').select('div.TRS_Editor p.MsoNormal'):
-        match = exp.match(p.text.replace(' ', ''))  # Remove stray spaces
-        if match is None:
+    # Same as gb2260._level and gb2260.split
+    def _level(code):
+        code_parts = (code // 10000, (code % 10000) // 100, code % 100)
+        return 3 - sum([1 if c == 0 else 0 for c in code_parts])
+
+    def _from_bare_text(text):
+        # Split on whitespace
+        splits = text.split()
+
+        # Code at the beginning, name at the end
+        code = int(splits[0])
+        name_zh = splits[-1]
+
+        # Same as gb2260._level()
+        level = _level(code)
+
+        return code, name_zh, level
+
+    if year == 2012:
+        # 2012 entries are in table rows
+        top_selector = 'div.TRS_Editor table.MsoNormalTable tr'
+    else:
+        # Other years are in paragraphs
+        top_selector = 'div.TRS_Editor p.MsoNormal'
+
+    log.info(year)
+
+    # Iterate over matching HTML elements
+    for elem in bs4.BeautifulSoup(f, 'lxml').select(top_selector):
+        if len(elem.text.strip()) == 0:
             continue
-        d = match.groupdict()
-        assert len(d['level']) % 2 == 1  # 3, 5 or 6 &nbsp; characters
-        result[int(d['code'])] = defaultdict(
+
+        if year == 2012:
+            # Split on strings
+            code, name_zh, level = _from_bare_text(elem.text)
+        elif year == 2013:
+            # The entries contain 3, 5 or 7 &nbsp; (\xa0) characters
+
+            # Remove stray spaces and split on &nbsp;, so *parts* will
+            # have 4, 6, or 8 entries
+            parts = elem.text.replace(' ', '').split('\xa0')
+
+            # Administrative level indicated by the indent
+            assert len(parts) in (4, 6, 8)
+            level = (len(parts) - 2) / 2
+
+            # First part is the code, last part is the name
+            code = int(parts[0])
+            name_zh = parts[-1]
+        else:
+            # 2014, 2015
+            try:
+                # First <span> contains the code, last contains the name
+                spans = elem.select('span')
+                code = int(spans[0].text)
+                name_zh = spans[-1].text.strip()
+
+                # Name is preceded by 1–3 '\u3000' characters
+                level = spans[-1].text.count('\u3000')
+
+                if level not in (1, 2, 3):
+                    old_level = level
+                    level = _level(code)
+                    log.debug(('Infer level %d for %d (wrong number %d of '
+                               'spaces)') % (level, code, old_level))
+            except ValueError:
+                # int() didn't like the contents, maybe something else, e.g. a
+                # 2014 line like:
+                #
+                # <p>
+                #   <span>130111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                #   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                #   <span>栾城区</span>
+                # </p>
+                log.debug('Fallback to plain text "%s"', elem.text)
+                code, name_zh, level = _from_bare_text(elem.text)
+
+        result[code] = defaultdict(
             lambda: None,
-            code=int(d['code']),
-            name_zh=d['name_zh'],
-            level=int(len(d['level']) / 2),
+            code=code,
+            name_zh=name_zh,
+            level=level,
             )
     return result
 

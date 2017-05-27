@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 setup(name='gb2260',
-      version='0.1',
+      version='0.2-dev',
       author='Paul Natsuo Kishimoto',
       author_email='mail@paul.kishimoto.name',
       description='GB/T 2260-2007 codes',
