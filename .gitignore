@@ -2,6 +2,7 @@
 .cache
 .coverage
 __pycache__/
-data/*.db
-data/cache/*.html
+build/
 doc/_build
+gb2260/data/*.db
+gb2260/data/cache/*.html

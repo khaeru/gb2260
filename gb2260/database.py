@@ -6,6 +6,7 @@ import re
 import sqlite3
 
 import jianfan
+from pkg_resources import resource_filename
 
 log = logging.getLogger(__name__)
 
@@ -20,7 +21,7 @@ COLUMNS = [
     'longitude',
     ]
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+DATA_DIR = resource_filename(__name__, 'data')
 
 URLS = {
     '2015-09-30': '201608/t20160809_1386477.html',
