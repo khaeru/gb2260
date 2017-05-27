@@ -13,4 +13,5 @@ setup(name='gb2260',
       tests_require=['pytest'],
       url='https://github.com/khaeru/gb2260',
       packages=find_packages(),
+      package_data={'gb2260': ['data/unified.csv']},
       )

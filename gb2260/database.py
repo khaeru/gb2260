@@ -220,7 +220,7 @@ def parse_html(f, year, method=2):
 
             # Administrative level indicated by the indent
             assert len(parts) in (4, 6, 8)
-            level = (len(parts) - 2) / 2
+            level = (len(parts) - 2) // 2
 
             # First part is the code, last part is the name
             code = int(parts[0])
@@ -270,7 +270,7 @@ def refresh_cache():
     """
     from urllib.request import urlopen
 
-    log = _configure_log()
+    _configure_log()
 
     for date, url in URLS.items():
         with urlopen(url) as f_in:
@@ -287,12 +287,8 @@ def refresh_cache():
 
 def _configure_log(verbose=False):
     """Return a logger, at the :py:data:`logging.DEBUG` level if *verbose*."""
-    import logging
-
     logging.basicConfig(format='%(name)s: %(message)s',
                         level=logging.DEBUG if verbose else logging.INFO)
-
-    return logging.getLogger('gb2260')
 
 
 def _parents(code):
@@ -335,7 +331,7 @@ def update(version='2015-09-30', use_cache=False, verbose=False):
       #3 and #4.
     - ``unified.db``, the same information in a :py:mod:`sqlite3` database.
     """
-    log = _configure_log(verbose)
+    _configure_log(verbose)
 
     if use_cache:
         try:
@@ -353,7 +349,7 @@ def update(version='2015-09-30', use_cache=False, verbose=False):
 
     # Parse the codes from HTML
     log.info('  parsing...')
-    codes = parse_html(f)
+    codes = parse_html(f, version.split('-')[0])
     assert sorted(codes.keys()) == list(codes.keys())
     log.info('  done.')
 
