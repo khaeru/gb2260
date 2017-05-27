@@ -2,7 +2,7 @@ import pytest
 
 from gb2260 import \
     all_at, alpha, level, lookup, parent, split, within, \
-    InvalidCodeError
+    AmbiguousRegionError, InvalidCodeError
 
 
 def test_import():
@@ -15,9 +15,9 @@ def test_all_at():
     assert len(all_at(3)) == 3136
 
     # Invalid levels
-    with pytest.raises(LookupError):
+    with pytest.raises(KeyError):
         all_at(4)
-    with pytest.raises(LookupError):
+    with pytest.raises(KeyError):
         all_at(0)
 
 
@@ -57,19 +57,22 @@ def test_lookup():
         ('海淀区', 'Haidian')
 
     # Ambiguous
-    with pytest.raises(LookupError):
+    with pytest.raises(AmbiguousRegionError):
         lookup(name_zh='市辖区')
 
-    # Using the within parameter
+    # Disambiguate using the within parameter
     assert lookup(name_zh='市辖区', within=110000) == 110100
 
     # Ambiguous
-    with pytest.raises(LookupError):
+    with pytest.raises(AmbiguousRegionError):
         lookup(name_en='Hainan')
 
-    # Using the level parameter
-    lookup(name_en='Hainan', level=1) == 460000
-    lookup(name_en='Hainan', level=3) == 150303  # a district in Wuhai, NM
+    # Disambiguate using the level parameter
+    assert lookup(name_en='Hainan', level=1) == 460000
+    # a district in Wuhai, NM
+    assert lookup(name_en='Hainan', level=3) == 150303
+    assert lookup(name_en='Hainan', level='highest') == 460000
+    assert lookup(name_en='Hainan', level='lowest') == 150303
 
     # A nonexistent field
     with pytest.raises(ValueError):

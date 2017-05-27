@@ -32,7 +32,17 @@ __all__ = [
 __version__ = '0.2-dev'
 
 
-class InvalidCodeError(ValueError):
+class AmbiguousRegionError(LookupError):
+    """Exception for a lookup that returns multiple results."""
+    pass
+
+
+class RegionKeyError(KeyError):
+    """Exception for a lookup that returns nothing."""
+    pass
+
+
+class InvalidCodeError(LookupError):
     """Exception for an invalid code."""
     pass
 
@@ -45,8 +55,7 @@ def all_at(adm_level):
     >>> len(all_at(3))
     3136
     """
-    return _query('SELECT code FROM codes WHERE level=? ORDER BY code',
-                  (adm_level,), list)
+    return _select(['code'], 'level=? ORDER BY code', (adm_level,), list)
 
 
 def alpha(code, prefix='CN-'):
@@ -64,8 +73,7 @@ def alpha(code, prefix='CN-'):
     For divisions below level 2, no official alpha codes are provided, so
     :meth:`alpha` raises :py:class:`ValueError`.
     """
-    query = 'SELECT alpha FROM codes WHERE code in (?, ?, ?) ORDER BY code'
-    parts = _query(query, _parents(code), list)
+    parts = _select(['alpha'], 'code in (?, ?, ?)', _parents(code), list)
 
     if None in parts:
         raise ValueError('no alpha code for %d', code)
@@ -86,7 +94,7 @@ def level(code):
     For codes not in the database, raises :class:`InvalidCodeError`.
     """
     try:
-        return _query('SELECT level FROM codes WHERE code = ?', (code,))
+        return _select(['level'], 'code = ?', (code,), results=1)
     except LookupError:
         raise InvalidCodeError(code)
 
@@ -126,13 +134,25 @@ def lookup(fields='code', **kwargs):
         >>> lookup('code', name_zh='市辖区', within=110000)
         110100
 
-    - *level*: an administrative level. If specified, only entries at this
-      level are returned.
+    - *level*: an administrative level. If an integer (1, 2 or 3), only entries
+       at this level are returned.
 
         >>> lookup(name_en='Hainan', level=1)  # the province
         460000
         >>> lookup(name_en='Hainan', level=3)  # a district in Wuhai, NM
         150303
+
+        If 'highest' or 'lowest', then the entry at the highest or lowest
+        administrative level is returned:
+
+        >>> lookup(name_en='Hainan', level='highest')
+        460000
+        >>> lookup(name_en='Hainan', level='lowest')
+        150303
+
+    - *partial*: if True, the search value is matched at the beginning of
+      strings like name_zh and name_en, instead of matching the entire string.
+      The match is case sensitive.
 
     Further examples:
 
@@ -166,7 +186,16 @@ def lookup(fields='code', **kwargs):
     level = kwargs.pop('level', None)
 
     if level is not None:
-        conditions += ' AND level == %d' % level
+        if level in ('highest', 'lowest'):
+            conditions += ' ORDER BY level %s LIMIT 1' % (
+                'ASC' if level == 'highest' else 'DESC')
+        elif level in (1, 2, 3):
+            conditions += ' AND level == %d' % level
+        else:
+            raise ValueError(("level should be in (1, 2, 3, lowest, "
+                              "highest); received %s") % level)
+
+    partial = kwargs.pop('partial', False)
 
     # The only remaining argument's name is the column to query on; its value
     # is the value to look up.
@@ -176,15 +205,19 @@ def lookup(fields='code', **kwargs):
     elif key not in COLUMNS:
         raise ValueError('invalid field name: %s' % key)
 
-    # Assemble the query string
-    query = 'SELECT %s FROM codes WHERE %s = ?%s' % \
-            (', '.join(fields), key, conditions)
+    if partial:
+        condition = '%s GLOB ? %s' % (key, conditions)
+        value += '*'
+    else:
+        condition = '%s = ? %s' % (key, conditions)
 
-    # Return exactly one result
-    result = _query(query, (value,), columns=len(fields), results=1)
-    # commented: debugging
-    # print(result)
-    return result
+    # Retrieve the results
+    try:
+        return _select(fields, condition, (value,), columns=len(fields),
+                       results=1)
+    except KeyError:
+        raise RegionKeyError('%s = %s with conditions %s' % (key, value,
+                                                             conditions))
 
 
 def parent(code, parent_level=None):
@@ -204,9 +237,9 @@ def parent(code, parent_level=None):
     l = _level(code)
     parents_guess = _parents(code)
 
-    query = 'SELECT code FROM codes WHERE code IN (?, ?, ?) ORDER BY code'
     try:
-        parents_db = _query(query, parents_guess, list)
+        parents_db = _select(['code'], 'code in (?, ?, ?) ORDER BY code',
+                             parents_guess, list)
     except LookupError:
         raise InvalidCodeError('%d and its parents %s' %
                                (code, parents_guess[:2]))
@@ -228,24 +261,34 @@ def parent(code, parent_level=None):
         return guess
 
 
-def _query(sql, args, type=None, columns=1, results=-1):
+def _select(fields, condition='', args=(), type=None, columns=1, results=-1):
+    """Query the database."""
+    sql = 'SELECT %s FROM codes %s' % (
+        ', '.join(fields),
+        ('WHERE ' + condition) if len(condition) else '',
+        )
+    # print(sql, args)
     cur = _db_conn.execute(sql, args)
     rows = cur.fetchall()
 
     if len(rows) == 0 or (results > 0 and len(rows) != results):
-        expected = '1 or more' if results < -1 else results
-        raise LookupError('%d results; expected %d' % (len(rows), expected))
+        exc_class = KeyError if len(rows) == 0 else AmbiguousRegionError
+        expected = '1 or more' if results < 0 else results
+        raise exc_class('%d results; expected %s' % (len(rows), expected))
 
     if type is None:
-        if results == -1 or results == 1:
+        if results == 1:
             result = rows[0]
             if columns == 1:
                 result = result[0]
-        return result
+        else:
+            result = rows
     elif type is list and columns == 1:
-        return list(chain(*rows))
+        result = list(chain(*rows))
     else:
-        raise ValueError
+        raise ValueError('type = %s (valid: None, list)')
+
+    return result
 
 
 def split(code):
