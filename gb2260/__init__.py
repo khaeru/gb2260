@@ -15,12 +15,8 @@ True
 3
 """
 
-from .database import (
-    AmbiguousRegionError,
-    Database,
-    InvalidCodeError,
-    _parents,
-    )
+from .code import _level, _parents, split
+from .database import Database, AmbiguousRegionError, InvalidCodeError
 
 __all__ = [
     'AmbiguousRegionError',
@@ -68,15 +64,6 @@ def level(code):
     return divisions.get(code=code).level
 
 
-def _level(code):
-    """Return the administrative level of *code*.
-
-    Unlike :meth:`level`, does *not* raise an exception if *code* does not
-    describe an entry in the database.
-    """
-    return 3 - sum([1 if c == 0 else 0 for c in split(code)])
-
-
 def parent(code, parent_level=None):
     """Return a valid code that is the parent of *code*.
 
@@ -118,15 +105,6 @@ def parent(code, parent_level=None):
                          (code, l, parent_level))
     else:
         return guess
-
-
-def split(code):
-    """Return a tuple containing the three parts of *code*.
-
-    >>> split(331024)
-    (33, 10, 24)
-    """
-    return (code // 10000, (code % 10000) // 100, code % 100)
 
 
 def within(a, b):

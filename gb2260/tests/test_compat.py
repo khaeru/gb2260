@@ -75,6 +75,10 @@ def test_division(code, stack_name, is_province, is_prefecture, is_county):
             stack_name)
 
 
+# to silence flake8:
+unicode, Division, make_year_key = None, None, None
+
+
 @pytest.mark.skipif(sys.version_info[0] != 2, reason='requires python 2.x')
 @pytest.mark.parametrize('code,year,repr_result,unicode_result', [
     ('110101', None,

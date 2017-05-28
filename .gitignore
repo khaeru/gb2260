@@ -1,8 +1,9 @@
 *.egg-info/
+*.py,cover
 .cache
 .coverage
 __pycache__/
 build/
 doc/_build
 gb2260/data/*.db
-gb2260/data/cache/*.html
+gb2260/data/cache*/*.html
