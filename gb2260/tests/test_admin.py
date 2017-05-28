@@ -1,4 +1,5 @@
 import glob
+import os
 from os.path import basename, join
 
 import pytest
@@ -36,11 +37,14 @@ def test_load_csv(fn):
     load_csv(base, **kwargs)
 
 
-@pytest.mark.skip(reason="Don't spam the government's servers")
+@pytest.mark.skipif(os.environ.get('TRAVIS', False),
+                    reason="Don't spam the government's servers")
 def test_refresh_cache(tmpdir):
     refresh_cache(target=str(tmpdir))
 
 
+@pytest.mark.skipif(os.environ.get('TRAVIS', False),
+                    reason="Don't spam the government's servers")
 @pytest.mark.parametrize('version', URLS.keys())
 def test_update(version, tmpdir):
     update(version=version, use_cache=True, verbose=True, target=str(tmpdir))
