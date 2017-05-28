@@ -37,13 +37,13 @@ def test_load_csv(fn):
     load_csv(base, **kwargs)
 
 
-@pytest.mark.skipif(os.environ.get('TRAVIS', False),
+@pytest.mark.skipif(os.environ.get('TRAVIS', '') == 'true',
                     reason="Don't spam the government's servers")
 def test_refresh_cache(tmpdir):
     refresh_cache(target=str(tmpdir))
 
 
-@pytest.mark.skipif(os.environ.get('TRAVIS', False),
+@pytest.mark.skipif(os.environ.get('TRAVIS', '') == 'true',
                     reason="Don't spam the government's servers")
 @pytest.mark.parametrize('version', URLS.keys())
 def test_update(version, tmpdir):
