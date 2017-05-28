@@ -1,6 +1,6 @@
 import argparse
 
-from .database import URLS, refresh_cache, update
+from .admin import URLS, refresh_cache, update
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('action', metavar='ACTION',

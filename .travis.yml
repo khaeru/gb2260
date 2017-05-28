@@ -1,12 +1,19 @@
 language: python
+
 notifications:
   email: false
 
 python:
   # - 2.7
   - 3.5
-  # - 3.6
+  - 3.6
 
-install: python setup.py install
+install:
+  - pip install codecov pytest-cov
+  - pip install .
 
-script: py.test gb2260
+script: py.test gb2260 --cov gb2260 --cov-report term-missing
+
+after_success:
+  - coverage combine
+  - codecov
