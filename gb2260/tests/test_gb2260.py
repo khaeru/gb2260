@@ -1,8 +1,15 @@
 import pytest
 
-from gb2260 import \
-    all_at, alpha, level, lookup, parent, split, within, \
-    AmbiguousRegionError, InvalidCodeError
+from gb2260 import (
+    divisions,
+    isolike,
+    level,
+    parent,
+    split,
+    within,
+    AmbiguousRegionError,
+    InvalidCodeError
+    )
 
 
 def test_import():
@@ -10,22 +17,22 @@ def test_import():
 
 
 def test_all_at():
-    assert len(all_at(1)) == 34
-    assert len(all_at(2)) == 345
-    assert len(all_at(3)) == 3136
+    assert len(divisions.all_at_level(1)) == 34
+    assert len(divisions.all_at_level(2)) == 345
+    assert len(divisions.all_at_level(3)) == 3136
 
     # Invalid levels
-    with pytest.raises(KeyError):
-        all_at(4)
-    with pytest.raises(KeyError):
-        all_at(0)
-
-
-def test_alpha():
-    assert alpha(130100) == 'CN-HE-SJW'
-    assert alpha(130000) == 'CN-HE'
     with pytest.raises(ValueError):
-        alpha(542621)
+        divisions.all_at_level(4)
+    with pytest.raises(ValueError):
+        divisions.all_at_level(0)
+
+
+def test_isolike():
+    assert isolike(130100) == 'CN-HE-SJW'
+    assert isolike(130000) == 'CN-HE'
+    with pytest.raises(ValueError):
+        isolike(542621)
 
 
 def test_level():
@@ -34,56 +41,56 @@ def test_level():
         level(990000)
 
 
-def test_lookup():
+def test_search():
+    d = divisions
     # Default field
-    assert lookup(name_zh='海淀区') == 110108
+    # TODO as a separate test
+    assert d.search(name_zh='海淀区') == 110108
 
     # Single fields
-    assert lookup('name_en', code=110108) == 'Haidian'
-    assert lookup('name_pinyin', code=110108) == 'Beijing: Haidian qu'
-    assert lookup('name_zh', code=110108) == '海淀区'
+    result = d.search(code=110108)
+    assert result.name_en == 'Haidian'
+    assert result.name_pinyin == 'Beijing: Haidian qu'
+    assert result.name_zh == '海淀区'
 
     # Example of a division whose name_en & name_pinyin differ
-    assert lookup('name_pinyin', code=654326) == 'Jimunai'
+    assert d.search(code=654326).name_pinyin == 'Jimunai'
 
     # A shortcut function is provided for level
-    assert lookup('level', code=659001) == level(659001)
+    assert d.search(code=659001).level == level(659001)
 
     # Different return types
-    assert lookup('latitude', code=110000) == 39.9081726
+    assert d.search(code=110000).latitude == 39.9081726
 
     # Multiple fields
-    assert lookup(['name_zh', 'name_en'], code=110108) == \
+    result = d.search(code=110108)
+    assert tuple(result[n] for n in ['name_zh', 'name_en']) == \
         ('海淀区', 'Haidian')
 
     # Ambiguous
     with pytest.raises(AmbiguousRegionError):
-        lookup(name_zh='市辖区')
+        d.search(name_zh='市辖区')
 
     # Disambiguate using the within parameter
-    assert lookup(name_zh='市辖区', within=110000) == 110100
+    assert d.search(name_zh='市辖区', within=110000) == 110100
 
     # Ambiguous
     with pytest.raises(AmbiguousRegionError):
-        lookup(name_en='Hainan')
+        d.search(name_en='Hainan')
 
     # Disambiguate using the level parameter
-    assert lookup(name_en='Hainan', level=1) == 460000
+    assert d.search(name_en='Hainan', level=1) == 460000
     # a district in Wuhai, NM
-    assert lookup(name_en='Hainan', level=3) == 150303
-    assert lookup(name_en='Hainan', level='highest') == 460000
-    assert lookup(name_en='Hainan', level='lowest') == 150303
+    assert d.search(name_en='Hainan', level=3) == 150303
+    assert d.search(name_en='Hainan', level='highest') == 460000
+    assert d.search(name_en='Hainan', level='lowest') == 150303
 
     # A nonexistent field
     with pytest.raises(ValueError):
-        lookup('name_zh', foo=110108)
-
-    # Multiple nonexistent fields:
-    with pytest.raises(ValueError):
-        lookup(['name_zh', None], code=110000)
+        d.search(foo=110108)
 
     # Looking up the same field
-    assert lookup('name_zh', name_zh='海淀区') == '海淀区'
+    assert d.search(name_zh='海淀区').name_zh == '海淀区'
 
 
 def test_parent():

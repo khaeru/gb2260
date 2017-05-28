@@ -16,12 +16,17 @@ True
 """
 from itertools import chain
 
-from .database import COLUMNS, _parents, load_csv, open_sqlite
+from .database import (
+    COLUMNS,
+    Database,
+    InvalidCodeError,
+    _parents,
+    AmbiguousRegionError,
+    )
 
 __all__ = [
     'all_at',
-    'alpha',
-    'codes',
+    'isolike',
     'level',
     'lookup',
     'parent',
@@ -30,21 +35,6 @@ __all__ = [
     ]
 
 __version__ = '0.2-dev'
-
-
-class AmbiguousRegionError(LookupError):
-    """Exception for a lookup that returns multiple results."""
-    pass
-
-
-class RegionKeyError(KeyError):
-    """Exception for a lookup that returns nothing."""
-    pass
-
-
-class InvalidCodeError(LookupError):
-    """Exception for an invalid code."""
-    pass
 
 
 def all_at(adm_level):
@@ -58,7 +48,7 @@ def all_at(adm_level):
     return _select(['code'], 'level=? ORDER BY code', (adm_level,), list)
 
 
-def alpha(code, prefix='CN-'):
+def isolike(code, prefix='CN-'):
     """Return an 'ISO 3166-2-like' alpha code for *code*.
 
     `ISO 3166-2:CN <https://en.wikipedia.org/wiki/ISO_3166-2:CN>`_ defines
@@ -73,7 +63,7 @@ def alpha(code, prefix='CN-'):
     For divisions below level 2, no official alpha codes are provided, so
     :meth:`alpha` raises :py:class:`ValueError`.
     """
-    parts = _select(['alpha'], 'code in (?, ?, ?)', _parents(code), list)
+    parts = [d.alpha for d in divisions.stack(code)]
 
     if None in parts:
         raise ValueError('no alpha code for %d', code)
@@ -93,10 +83,7 @@ def level(code):
 
     For codes not in the database, raises :class:`InvalidCodeError`.
     """
-    try:
-        return _select(['level'], 'code = ?', (code,), results=1)
-    except LookupError:
-        raise InvalidCodeError(code)
+    return divisions.get(code=code).level
 
 
 def _level(code):
@@ -237,12 +224,14 @@ def parent(code, parent_level=None):
     l = _level(code)
     parents_guess = _parents(code)
 
-    try:
-        parents_db = _select(['code'], 'code in (?, ?, ?) ORDER BY code',
-                             parents_guess, list)
-    except LookupError:
-        raise InvalidCodeError('%d and its parents %s' %
-                               (code, parents_guess[:2]))
+    parents_db = divisions.stack(code)
+
+    # try:
+    #     parents_db = _select(['code'], 'code in (?, ?, ?) ORDER BY code',
+    #                          parents_guess, list)
+    # except LookupError:
+    #     raise InvalidCodeError('%d and its parents %s' %
+    #                            (code, parents_guess[:2]))
 
     if code not in parents_db:
         raise InvalidCodeError(code)
@@ -329,5 +318,4 @@ def within(a, b):
         return a == b
 
 
-codes = load_csv('unified')
-_db_conn = open_sqlite('unified')
+divisions = Database('unified')
