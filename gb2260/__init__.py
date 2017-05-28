@@ -16,10 +16,15 @@ True
 """
 
 from .code import _level, _parents, split
-from .database import Database, AmbiguousRegionError, InvalidCodeError
+from .database import (
+    Database,
+    AmbiguousRegionError, InvalidCodeError, RegionKeyError,
+    )
 
 __all__ = [
     'AmbiguousRegionError',
+    'InvalidCodeError',
+    'RegionKeyError',
     'isolike',
     'level',
     'parent',
