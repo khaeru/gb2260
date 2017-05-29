@@ -6,6 +6,7 @@ import re
 import sqlite3
 
 import jianfan
+from xpinyin import Pinyin
 
 from .code import _parents
 from .database import COLUMNS, SUFFIXES, data_fn
@@ -328,6 +329,8 @@ def update(version='2015-09-30', use_cache=False, verbose=False,
     # the type, not the name, of the area.
     name_re = re.compile('(?:[^:]*: )?(.*?)(?: (%s))?$' % '|'.join(SUFFIXES))
 
+    pinyin = Pinyin()
+
     # Merge using codes
     log.info('merging codes')
     for code, entry in codes.items():
@@ -377,6 +380,11 @@ def update(version='2015-09-30', use_cache=False, verbose=False,
             # Fill in blank with 'CITYNAME city area', where possible
             pname = codes[_parents(code)[1]]['name_en']
             entry['name_en'] = None if pname is None else pname + ' city area'
+
+        # Fill in pinyin names
+        if entry['name_pinyin'] is None:
+            entry['name_pinyin'] = pinyin.get_pinyin(entry['name_zh'],
+                                                     '').title()
 
         if len(message) > 1 and 'does not appear in CITAS' not in message[1]:
             log.info('\n'.join(message))
