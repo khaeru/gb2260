@@ -77,7 +77,7 @@ class Division:
         return self._row[key]
 
     def __eq__(self, other):
-        if isinstance(other, Division):
+        if hasattr(other, '_row'):
             return self._row == other._row
         else:
             other = _coerce(other)
@@ -184,6 +184,9 @@ class Database:
             raise LookupError('Could not find a record for %r' % value)
         return result[0]
 
+    _search_partial_replace = """replace(replace(%s," ",""),"'","") LIKE ?"""
+    _search_partial_translate = str.maketrans('', '', "' ")
+
     def search(self, **kwargs):
         """Lookup information from the database.
 
@@ -237,7 +240,7 @@ class Database:
         ('海淀区', 'Haidian')
         """
         # Query condition
-        conditions = ''
+        conditions = []
 
         # Limit search to divisions under the parent *within*
         within = kwargs.pop('within', None)
@@ -250,21 +253,22 @@ class Database:
             high = _join(parts)
 
             # Add to the query expressions
-            conditions += ' AND code BETWEEN %d AND %d' % (within, high)
+            conditions.append('AND code BETWEEN %d AND %d' % (within, high))
 
         # Limit search to administrative level *level*
         level = kwargs.pop('level', None)
 
         if level is not None:
             if level in ('highest', 'lowest'):
-                conditions += ' ORDER BY level %s LIMIT 1' % (
-                    'ASC' if level == 'highest' else 'DESC')
+                conditions.append('ORDER BY level %s LIMIT 1' % (
+                    'ASC' if level == 'highest' else 'DESC'))
             elif level in (1, 2, 3):
-                conditions += ' AND level == %d' % level
+                conditions.append('AND level == %d' % level)
             else:
                 raise ValueError(("level should be in (1, 2, 3, lowest, "
                                   "highest); received %s") % level)
 
+        # Partial match
         partial = kwargs.pop('partial', False)
 
         # The only remaining argument's name is the column to query on; its
@@ -276,15 +280,15 @@ class Database:
             raise ValueError('invalid field name: %s' % key)
 
         if partial:
-            condition = '%s GLOB ? %s' % (key, conditions)
-            value += '*'
+            conditions.insert(0, self._search_partial_replace % key)
+            value = value.translate(self._search_partial_translate) + '%'
         else:
-            condition = '%s = ? %s' % (key, conditions)
+            conditions.insert(0, '%s = ?' % key)
 
         # Retrieve the results
-        result = self._select(condition, (value,))
+        result = self._select(' '.join(conditions), (value,))
         if len(result) != 1:
-            error_str = '%s = %s with conditions %s' % (key, value, conditions)
+            error_str = '%s with args %s' % (conditions, value)
             ErrorCls = AmbiguousRegionError if len(result) else RegionKeyError
             raise ErrorCls(error_str)
 
