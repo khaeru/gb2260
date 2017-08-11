@@ -36,7 +36,7 @@ def test_isolike():
 
 
 def test_level():
-    assert level(110108) == 3
+    assert level(429021) == 3
     with pytest.raises(InvalidCodeError):
         level(990000)
 

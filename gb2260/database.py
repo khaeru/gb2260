@@ -117,6 +117,7 @@ class Database:
             result = self._select('code = ?', (code,))
             if len(result) == 0:
                 raise InvalidCodeError(code)
+            return result[0]
 
     @lazy_load
     def _select(self, condition='', args=()):
