@@ -8,7 +8,7 @@ import pytest
 # pycountry
 
 def test_country_list():
-    assert len(gb2260.divisions) == 3515
+    assert len(gb2260.divisions) == 3514
     assert isinstance(list(gb2260.divisions)[0], gb2260.database.Division)
 
 

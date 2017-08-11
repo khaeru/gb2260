@@ -18,8 +18,8 @@ def test_import():
 
 def test_all_at():
     assert len(divisions.all_at_level(1)) == 34
-    assert len(divisions.all_at_level(2)) == 345
-    assert len(divisions.all_at_level(3)) == 3136
+    assert len(divisions.all_at_level(2)) == 346
+    assert len(divisions.all_at_level(3)) == 3134
 
     # Invalid levels
     with pytest.raises(ValueError):
@@ -31,7 +31,7 @@ def test_all_at():
 def test_isolike():
     assert isolike(130100) == 'CN-HE-SJW'
     assert isolike(130000) == 'CN-HE'
-    with pytest.raises(ValueError):
+    with pytest.raises(InvalidCodeError):
         isolike(542621)
 
 
