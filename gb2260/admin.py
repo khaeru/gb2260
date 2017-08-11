@@ -14,15 +14,16 @@ from .database import COLUMNS, SUFFIXES, data_fn
 log = logging.getLogger(__name__)
 
 URLS = {
+    '2016-07-31': '201703/t20170310_1471429.html',
     '2015-09-30': '201608/t20160809_1386477.html',
     '2014-10-31': '201504/t20150415_712722.html',
     '2013-08-31': '201401/t20140116_501070.html',
     '2012-10-31': '201301/t20130118_38316.html',
     }
 
-for k in URLS.keys():
-    # Common prefix for all URLs
-    URLS[k] = 'http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/' + URLS[k]
+# Common prefix for all URLs
+_prefix = 'http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/'
+URLS = {k: _prefix + v for k, v in URLS.items()}
 
 
 def _configure_log(verbose=False):
@@ -446,12 +447,13 @@ def refresh_cache(target=None):
     For each URL in the :data:`URLS` variable, download the indicated HTML file
     and save it in the directory ``data/``.
     """
-    from urllib.request import urlopen
+    from urllib.request import urlopen, Request
 
     _configure_log()
 
     for date, url in URLS.items():
-        with urlopen(url) as f_in:
+        req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urlopen(req) as f_in:
             log.info('saving %s', url)
 
             cache_fn = data_fn(os.path.join('cache', date), 'html',
