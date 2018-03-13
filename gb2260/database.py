@@ -181,9 +181,10 @@ class Database:
                 continue
         condition = ' OR '.join(conditions) + 'LIMIT 1'
         result = self._select(condition, args)
-        if len(args) == 0:
+        if len(result):
+            return result[0]
+        else:
             raise LookupError('Could not find a record for %r' % value)
-        return result[0]
 
     _search_partial_replace = """replace(replace(%s," ",""),"'","") LIKE ?"""
     _search_partial_translate = str.maketrans('', '', "' ")
