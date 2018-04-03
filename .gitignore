@@ -2,6 +2,7 @@
 *.py,cover
 .cache
 .coverage
+.pytest_cache
 __pycache__/
 build/
 doc/_build
